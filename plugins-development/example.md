@@ -1,11 +1,10 @@
-
-## Example
+# Example
 
 this is simple example fontware plugins to store data in memory for cache
 
 plugin/cache/CacheStorage.js : declare a handler object
 
-```js
+```javascript
 var memory = {};
 
 module.exports = {
@@ -19,9 +18,9 @@ module.exports = {
 };
 ```
 
-plugins/cache/cache_fw.js : declare a fontware
+plugins/cache/cache\_fw.js : declare a fontware
 
-```js
+```javascript
 const CacheStorage = require("./CacheStorage");
 
 module.exports = {
@@ -36,7 +35,7 @@ module.exports = {
 
 plugins/cache/index.js
 
-```js
+```javascript
 module.exports = {
     fontware: require("./cache_fw")
 };
@@ -44,7 +43,7 @@ module.exports = {
 
 declare plugins in app.js
 
-```js
+```javascript
 const hyron = require("hyron");
 
 const instance = hyron.getInstance(4729);
@@ -61,9 +60,9 @@ instance.enableService({
 instance.startServer();
 ```
 
-custom running plugins in requestConfig() function
+custom running plugins in requestConfig\(\) function
 
-```js
+```javascript
 static requestConfig(){
     return {
         method_1 : "get",
@@ -80,14 +79,15 @@ static requestConfig(){
 }
 ```
 
-### Result
+## Result
 
 Now, you can access a fontware plugins from main handler thought this scope with :
 
-```js
+```javascript
 // Used to get a var from memory by name
 this.$cache.get("key");
 
 // Used to set a var into memory by name
 this.$cache.set("key", "val");
 ```
+
