@@ -1,9 +1,9 @@
 # Table of contents
 
 * [Initial page](README.md)
+* [introduction](introduction.md)
 * [geting-started](geting-started.md)
 * [app-example](app-example.md)
-* [introduction](introduction.md)
 * [service-development](service-development/README.md)
   * [overview](service-development/overview.md)
   * [build-unofficial-service](service-development/build-unofficial-service.md)

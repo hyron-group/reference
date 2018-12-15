@@ -2,7 +2,11 @@
 
 ![](https://i.imgur.com/mAjPWAu.png)
 
-HyronJS is a [powerful](benchmark.md) framework that helps build a Backend application faster and more efficiently
+Hyron is a [powerful](benchmark.md) NodeJS framework that helps build a backend application faster and more efficiently
+
+```bash
+npm install hyron
+```
 
 ## Who is the user ?
 
@@ -24,7 +28,7 @@ HyronJS is a [powerful](benchmark.md) framework that helps build a Backend appli
 
 ## What should Hyron become ?
 
-* Top \#1 framework for server side application development
+* Top **\#1** framework for server side application development
 * Fast, convenient, efficient, flexible, better serving large enterprise applications
 * A rich ecosystem revolves around the framework to better serve the user
 
