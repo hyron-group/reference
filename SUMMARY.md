@@ -20,5 +20,4 @@
 * [api-reference](api-reference.md)
 * [benchmark](benchmark.md)
 * [contribution](contribution.md)
-* [demo](demo.md)
 
