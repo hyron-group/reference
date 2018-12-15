@@ -1,3 +1,5 @@
+# benchmark
+
 ## Environment
 
 -   **tools** : wrk
@@ -30,8 +32,11 @@
 **Express**
 
 ```bash
-Running 10s test @ http://localhost:5477/showMyName?name=thang  2 threads and 10 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev    Latency     1.07ms  259.72us   4.74ms   88.75%    Req/Sec     4.68k   415.42     9.46k    93.53%
+Running 10s test @ http://localhost:5477/showMyName?name=thang
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.07ms  259.72us   4.74ms   88.75%
+    Req/Sec     4.68k   415.42     9.46k    93.53%
   93571 requests in 10.10s, 19.19MB read
 Requests/sec:   9263.46
 Transfer/sec:      1.90MB
@@ -62,4 +67,3 @@ Running 10s test @ http://localhost:5479/showMyName?name=thang
 Requests/sec:  12705.44
 Transfer/sec:      1.49MB
 ```
-
