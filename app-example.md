@@ -42,7 +42,9 @@ Next step : [getting started](geting-started.md)
 
 See more :
 
-* [Develop Plugins](https://github.com/hyron-group/reference/tree/3437eeb47ffad09baf95272f73ae3e71764436ce/plugins-developent/overview.md)
-* [Develop Service](https://github.com/hyron-group/reference/tree/3437eeb47ffad09baf95272f73ae3e71764436ce/service-developent/overview.md)
+* [Develop Plugins](plugins-development/overview.md)
+* [Develop Service](service-development/overview.md)
 * [Develop Addons](addons-development/overview.md)
+
+
 

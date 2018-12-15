@@ -115,5 +115,5 @@ After called, handle will change to idle mode if checksum\(\) has set, or final 
 * The name of the plugins should be unique
 * Development plugins should also adhere to the principles of application design and development, to facilitate maintenance and expansion for later.
 
-Next step : [View example](build-plugins.md)
+Next step : [View example](example.md)
 
