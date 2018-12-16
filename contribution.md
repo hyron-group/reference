@@ -6,8 +6,6 @@ To request membership of the organization hyron, please contact us by email : **
 
 To join the **community** hyron, to easily get support, please join the slack group : [https://hyron-group.slack.com/](https://hyron-group.slack.com/)
 
-
-
 Your contribution is unrestricted. You can contribute any content such as:
 
 * Plugins
@@ -16,3 +14,9 @@ Your contribution is unrestricted. You can contribute any content such as:
 * The outer part of the ecosystem of hyron
 * Develop and improve the core
 
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: ''
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
