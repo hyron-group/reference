@@ -8,6 +8,11 @@ Hyron is a [Powerful](benchmark.md) NodeJS framework that helps **build a backen
 npm install hyron
 ```
 
+#### Other linked :
+
+* **Github** : [https://github.com/hyron-group/hyron/](https://github.com/hyron-group/hyron/)
+* **npm registry** : [https://www.npmjs.com/package/hyron](https://www.npmjs.com/package/hyron)
+
 ## Who is the user ?
 
 * **Free programmers**, who want start a MVP server app
