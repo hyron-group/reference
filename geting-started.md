@@ -83,7 +83,7 @@ appInstance.enableServices({
 appInstance.startServer();
 ```
 
-After this step, a router registered on [http://localhost:3000/api/demo/showMyName?myName=\[var](http://localhost:3000/api/demo/showMyName?myName=[var)\]
+After this step, a router registered on \[[http://localhost:3000/api/demo/showMyName?myName=\[var\]\(http://localhost:3000/api/demo/showMyName?myName=\[var\)\](http://localhost:3000/api/demo/showMyName?myName=[var]%28http://localhost:3000/api/demo/showMyName?myName=[var%29\)\]
 
 That it, this is 5 step to create a simple hyron app. It's pretty simple right?
 

@@ -46,5 +46,3 @@ See more :
 * [Develop Service](service-development/overview.md)
 * [Develop Addons](addons-development/overview.md)
 
-
-

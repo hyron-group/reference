@@ -138,15 +138,15 @@ Used to description about route that server will listen into.
 object { method\_name : meta }
 
 * **method\_name** \( string \) : name of handle method declared in this class
-* **meta** \( string \| object \| Array.\ \) : declare info about this router
+* **meta** \( string \| object \| Array. \) : declare info about this router
   * \( **string** \) : method name, include : get, head, post, put, delete, patch, all, private
   * \(**Array.\**\) : set of method name like about
   * \(**object**\) : object description detail about route
-    * **method** \( string\|Array\ \) : like about
+    * **method** \( string\|Array \) : like about
     * **handle** \( function \) : handle function if handle method is not defined
-    * **fontware** \( Array.\ \) : list of enable or disable fontware by name
-    * **backware** \( Array.\ \) : list of enable or disable backware by name
-    * **plugins** \( Array.\ \) : list of enable or disable plugins by name. It is an acronym for fontware and backware
+    * **fontware** \( Array. \) : list of enable or disable fontware by name
+    * **backware** \( Array. \) : list of enable or disable backware by name
+    * **plugins** \( Array. \) : list of enable or disable plugins by name. It is an acronym for fontware and backware
     * **path** \( string \) : custom uri path for this router. If it not defined, a router with name _/method\_name_ will be registered
     * **enableREST** \( boolean \) : true if method is REST API, then handle function argument at index 0 will be pass path param.
 
