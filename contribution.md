@@ -1,3 +1,12 @@
+
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: ''
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
 # contribution
 
 As the creator of hyron, I welcome any contribution from you, to make hyron stronger and more complete.
@@ -13,10 +22,3 @@ Your contribution is unrestricted. You can contribute any content such as:
 * Idea to make it better
 * The outer part of the ecosystem of hyron
 * Develop and improve the core
-
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-    room: ''
-  };
-</script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
