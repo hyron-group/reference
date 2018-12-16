@@ -53,7 +53,7 @@ static requestConfig(){
 }
 ```
 
-After declaring and turning it on enableService\(\) method. The router will be registered with the specified path. As mentioned above, if you do not specify a path, Hyron default will be based on the key name in the description to register the router path.
+After declaring and turning it on enableServices\(\) method. The router will be registered with the specified path. As mentioned above, if you do not specify a path, Hyron default will be based on the key name in the description to register the router path.
 
 Example : /prefix/service_name/method_name
 
@@ -207,7 +207,7 @@ basicAuth
     |       |---- account.js                   : contain model object, mapping, in this case is mongodb model
     |
     |---- plugins                              : not required, if your service used own plugins, that is should be one-time plugins
-    |---- router.js                            : export hyron AbstractRouter, that can be used to enableService()
+    |---- router.js                            : export hyron AbstractRouter, that can be used to enableServices()
     |---- index.js                             : export instance of AbstractRouter. It can be used by another service
 ```
 

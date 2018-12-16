@@ -23,7 +23,7 @@ class DemoRouter {
     }
 }
 
-instance.enableService({
+instance.enableServices({
     "":DemoRouter
 })
 

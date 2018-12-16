@@ -9,7 +9,7 @@
 * **enableAddons** \( addonsList \)
 * **getConfig** \( name \)
 * _static_ **getInstanceContainer** \( \)
-* **enableService** \( moduleList \)
+* **enableServices** \( moduleList \)
 * **enablePlugins** \( pluginList \)
 * **startServer** \( callback \)
 
@@ -103,7 +103,7 @@ In addition to using plugins provided by third parties, you can also create plug
 
 #### **params :**
 
-> #### **enableService** \( moduleList \) : void
+> #### **enableServices** \( moduleList \) : void
 
 Register main handle \(logic of routers\)
 
@@ -127,7 +127,7 @@ Note : this class is only descriptive, you do not need to implement it to use it
 
 This class is base element of hyron framework, to declare routers, setup plugins, etc
 
-To used it, include it in \[_enableService\(\)_\]\(\#\#\#-**enableService**-\(-moduleList-\)-:-void\) method
+To used it, include it in \[_enableServices\(\)_\]\(\#\#\#-**enableServices**-\(-moduleList-\)-:-void\) method
 
 > #### _static_ **requestConfig** \(\) : Object
 

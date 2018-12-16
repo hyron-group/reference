@@ -76,7 +76,7 @@ So, after this step, you just registered a listener on showMyName\(\) method. It
 ## _Step 5 : declare created module to hyron & start server_
 
 ```javascript
-appInstance.enableService({
+appInstance.enableServices({
     demo : require(path_to_demo_class)
 })
 

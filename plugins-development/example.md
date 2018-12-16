@@ -53,7 +53,7 @@ instance.enablePlugins({
     cache: require("./plugins/cache")
 });
 
-instance.enableService({
+instance.enableServices({
     // declare your service in here
 });
 
