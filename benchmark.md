@@ -2,30 +2,30 @@
 
 ## Environment
 
--   **tools** : wrk
--   **time** : 16/12/2018
--   **device** : HP 15R-020TU, core-i5-4400U, 8GB ram
--   **opera-system** : Windows 10 with Ubuntu 18.04 installed (developer-mode)
--   **test case** :
-    -   **method** : get
-    -   **result** : return "hello " + query.name
-    -   **source code** : check it out in [hyron repo](https://github.com/hyron-group/hyron/tree/master/test)
--   **test method** :
-    -   remove the first result (cache time)
-    -   average of 5 runs
-    -   Pause all running applications
--   **test unit** : request per second (rps)
+* **tools** : wrk
+* **time** : 16/12/2018
+* **device** : HP 15R-020TU, core-i5-4400U, 8GB ram
+* **opera-system** : Windows 10 with Ubuntu 18.04 installed \(developer-mode\)
+* **test case** :
+  * **method** : get
+  * **result** : return "hello " + query.name
+  * **source code** : check it out in [hyron repo](https://github.com/hyron-group/hyron/tree/master/test)
+* **test method** :
+  * remove the first result \(cache time\)
+  * average of 5 runs
+  * Pause all running applications
+* **test unit** : request per second \(rps\)
 
 ## Load test
 
--   **nodejs** : ~12,200 rps
--   **hyron** : ~12,400 rps
--   **express** : ~9,200 rps
+* **nodejs** : ~12,200 rps
+* **hyron** : ~12,700 rps
+* **express** : ~9,200 rps
 
 ## Conclude
 
--   Hyron is about equivalent to the raw node (slightly better)
--   Hyron is ~40% more efficient than ExpressJS
+* Hyron is about equivalent to the raw node \(slightly better\)
+* Hyron is ~40% more efficient than ExpressJS
 
 ## result :
 
@@ -67,3 +67,4 @@ Running 10s test @ http://localhost:5479/showMyName?name=thang
 Requests/sec:  12705.44
 Transfer/sec:      1.49MB
 ```
+
