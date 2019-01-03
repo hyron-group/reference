@@ -111,7 +111,7 @@ Register main handle \(logic of routers\)
 
 * **module** \( object {**name** : **module**} \) : The set of functions is encapsulated to handle specific functions. Which will become the router
   * name \( **string** \) : name o module
-  * module \( **HyronClass** \) : a packet of functions and it config
+  * module \( **string** \| **HyronClass** \) : a packet of functions and it config
 
 > #### startServer \( callback \) : void
 
