@@ -100,7 +100,7 @@ After called, handle will change to idle mode if checksum\(\) has set, or final 
 
 * config : config of this router, declared in appcfg.ini file
 
-> ### checksum \(done\) : Function
+> ### checkout \(done\) : Function
 >
 > This function used to check if has any change for each request. If it return true, onCreate\(\) of this plugins will be revoke. If done\(\) is called, handle will be switched to final mode. And don't revoke onCreate\(\) anymore
 
