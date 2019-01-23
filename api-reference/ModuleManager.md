@@ -1,5 +1,3 @@
-# api-reference
-
 ## **Table of contents**
 
 ### class **ModuleManager** \(hyron\)
@@ -26,7 +24,9 @@ Used to register & management elements in project, like instance, service, plugi
 -   _prototype_.**plugins** : PluginsManager
 -   _prototype_.**services** : ServicesManager
 
-## **Details**
+# **Details**
+
+## class **ModuleManager**
 
 # function getInstance (+4)
 
