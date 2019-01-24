@@ -6,7 +6,7 @@
 * [A hyron app example](app-example.md)
 * [Service development](service-development/overview.md)
 * [Plugins development](plugins-development/overview.md)
-* [api reference](api-reference.md)
+* [api reference](https://github.com/hyron-group/reference/tree/9b5f14cffc45445f3301dec7c1b58dc99704e4ab/api-reference.md)
 * [Addons development](addons-development/overview.md)
 
 ## Create app step-by-step
@@ -83,7 +83,7 @@ appInstance.enableServices({
 appInstance.startServer();
 ```
 
-After this step, a router registered on \[[http://localhost:3000/api/demo/showMyName?myName=\[var\]\(http://localhost:3000/api/demo/showMyName?myName=\[var\)\](http://localhost:3000/api/demo/showMyName?myName=[var]%28http://localhost:3000/api/demo/showMyName?myName=[var%29\)\]
+After this step, a router registered on \[\[[http://localhost:3000/api/demo/showMyName?myName=\[var\]\(http://localhost:3000/api/demo/showMyName?myName=\[var\)\]\(http://localhost:3000/api/demo/showMyName?myName=\[var\]\(http://localhost:3000/api/demo/showMyName?myName=\[var\)\)\](http://localhost:3000/api/demo/showMyName?myName=[var]%28http://localhost:3000/api/demo/showMyName?myName=[var%29]%28http://localhost:3000/api/demo/showMyName?myName=[var]%28http://localhost:3000/api/demo/showMyName?myName=[var%29%29\)\]
 
 That it, this is 5 step to create a simple hyron app. It's pretty simple right?
 
@@ -93,7 +93,7 @@ Hyron will do it for you, with powerful plugins.
 
 The hyron helps you save significant time developing your application, by focusing on processing logic, high packaging between plugins and services, allowing you to reuse them for many different projects. and among members of the community
 
-Not only that, hyron offers many other useful features, check it out at : [API Reference](api-reference.md)
+Not only that, hyron offers many other useful features, check it out at : [API Reference](https://github.com/hyron-group/reference/tree/9b5f14cffc45445f3301dec7c1b58dc99704e4ab/api-reference.md)
 
 Next step : [How to develop own service ?](https://github.com/hyron-group/reference/tree/3437eeb47ffad09baf95272f73ae3e71764436ce/service-developemnt/overview.md)
 
