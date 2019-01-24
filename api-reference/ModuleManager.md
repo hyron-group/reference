@@ -69,42 +69,62 @@ Create a new instance with specified params
 
 ---
 
+> ## _static_ **getInstance** (serverConfig) : ModuleManager
+
+Create a new instance from a description object
+
+### **params**
+
+-   **serverConfig** : object contain server config. include : protocol, host, port, prefix
+
+---
+
+# function setting
+
 > ### **setting** \( config \) : void
 
 Used to config app and installed plugins. If appcfg.ini declared. all config will be append inside
 
 All default key supported :
 
--   **isDevMode** \( boolean \) : true if hyron collect & show logs. default is **true**
--   **enableRESTFul** \( boolean \) : true if you want turn all route become rest. You also turn of it in each route. default is **false**
--   **secret** \( string \) : is special key from appcfg.ini or random key it it not set yet
+-   **environment** \( string \) : dev or product. if it is dev, program should collect problem, else it should to optimized for performance
 -   **timeout** \( number \) : expert timeout for router connection. default is 60s
--   **poweredBy** \( string \) : provider name. default is "hyron"
--   **style** \( string \) : style of uri path. Hyron support for 4 style, include : camel \( likeThis \), snack \( like_this \), lisp \( like-this \), lower\(likethis\).
+-   **style** \( string \) : style of uri path. Hyron support for 4 style, include : **_camel_** \( likeThis \), **_snack_** \( like_this \), **_lisp_** \( like-this \), **_lower_**\(likethis\).
+-   **_secret_** : a private key that used to for encode a sensitive content
 
 ### **params :**
 
--   **config** \( object \) : config of app or it plugins
+-   **config** \( object \) : a description object contain config for this instance modules
 
-> #### _static_ **getConfig** \( name \) : string \| object&lt;?&gt;
+---
 
-Used to get config of app or installed plugins by name
+# function getConfig
 
-**params :**
+> ## _static_ **getConfig** \( name \) : any
 
--   **name** \(string\) : config item name or plugin name
+Retrieve config value for a key by name
 
-> #### **enableAddons** \(addonsList\) : void
+### **params :**
 
-Used to register addons for this instance. All addons have access to all the resources provided in this class.
+-   **name** \(string\) : config value or null if config not found
+
+---
+
+# function enableAddons
+
+> ## **enableAddons** \(addonsList\) : void
+
+Used to register addons for this instance. A addons could have access to all the resources provided in this class.
 
 If you want to build your own addons, see this topic : [how to build a addons ? ](addons-development/overview.md)
 
-**params :**
+### **params :**
 
--   addonsList \( Array \) : list of addons called on this instance
+-   addonsList \( Array<string,string> \) : list of addons called on this instance
 
-> #### _static_ **getInstanceContainer** \(\) : Object
+---
+
+> ## _static_ **getInstanceContainer** \(\) : Object
 
 Used to get all app instance created
 

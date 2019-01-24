@@ -6,7 +6,7 @@
 * [A hyron app example](app-example.md)
 * [Service development](service-development/overview.md)
 * [Plugins development](plugins-development/overview.md)
-* [api reference](api-reference.md)
+* [api reference](api-reference/ModuleManager.md)
 * [Addons development](addons-development/overview.md)
 
 ## Create app step-by-step
