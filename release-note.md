@@ -6,27 +6,21 @@
   * light syntax
   * allow deep value config and multi type provided by yaml. Includes : number, string, boolean, array, object
   * easy to learn & implement
-
-* **More powerful for config file(appcfg)**
+* **More powerful for config file\(appcfg\)**
   * lock key with '$' character at start of key. that ignore inherited on this field  
-  * internal referenced with syntax : <#key.field>
-  * external referenced with syntax : <~path>
+  * internal referenced with syntax : &lt;\#key.field&gt;
+  * external referenced with syntax : &lt;~path&gt;
   * allow implement inside modules include : addons, plugins, services, organization, self your app
-
-
 * **Build app with json file**
-  * auto download necessary modules (used yarn)
+  * auto download necessary modules \(used yarn\)
   * light & clear syntax
   * easy to management
-  
-*  **More powerful for addons**
-   *  more access onto core base
-
+* **More powerful for addons**
+  * more access onto core base
 * **Support for REST API**
   * separate request path into separate requestConfig properties : params with syntax : /:param1/:param2
-  * removed app setting -> enableRestFul, requestConfig -> enableREST. Replace by requestConfig -> params
+  * removed app setting -&gt; enableRestFul, requestConfig -&gt; enableREST. Replace by requestConfig -&gt; params
   * High performance index
-
 * **Support for multi instance on port**
 * **Support random port if port = 0**
 * **Support for another tcp protocols include : https, http2**
@@ -34,7 +28,6 @@
 * **Add override for some methods**
 * **Better document**
 * **Fix bug**
-
 
 ## 2.0.0 - 2018-12-12
 
@@ -48,3 +41,4 @@
 * Support for async function
 * Introduced animals into the world, we believe they're going to be a neat addition.
 * Fix bug
+
