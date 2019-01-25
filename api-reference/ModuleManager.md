@@ -54,7 +54,7 @@ Create a new instance from specified port and current machine host
 
 -   **port** (number) : a free port. if port is 0, server will listen on random available port
 
-#
+---
 
 > ## _static_ **getInstance**( port, host, prefix, protocol ): ModuleManager
 
@@ -67,7 +67,7 @@ Create a new instance with specified params
 -   **prefix** ( string - option ) : a path to separate your routers, used to group routers into an instance. Default is empty
 -   **protocol** ( string - option ) : a protocol for this instance. default is 'http'
 
-#
+---
 
 > ## _static_ **getInstance** (serverConfig) : ModuleManager
 
@@ -77,7 +77,7 @@ Create a new instance from a description object
 
 -   **serverConfig** : object contain server config. include : protocol, host, port, prefix
 
-#
+---
 
 
 # function getInstanceContainer
