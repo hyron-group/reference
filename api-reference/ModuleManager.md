@@ -15,20 +15,20 @@ Used to register & management elements in project, like instance, service, plugi
 -   **initServer** \( server \) : void
 -   _static_ **setServer** ( host, port, server ) : void
 -   **startServer** \( callback \) : void
--   _prototype_.**host** : string
--   _prototype_.**port** : number
--   _prototype_.**prefix** : string
--   _prototype_.**protocol** : string
--   _prototype_.**app** : Server
--   _prototype_.**addons** : AddonsManager
--   _prototype_.**plugins** : PluginsManager
--   _prototype_.**services** : ServicesManager
+-   **host** : string
+-   **port** : number
+-   **prefix** : string
+-   **protocol** : string
+-   **app** : Server
+-   **addons** : AddonsManager
+-   **plugins** : PluginsManager
+-   **services** : ServicesManager
 
 # **Details**
 
 ## class **ModuleManager**
 
-# function getInstance (+4)
+# function getInstance (+4 override)
 
 > ## _static_ **getInstance** () : ModuleManager
 
@@ -79,20 +79,32 @@ Create a new instance from a description object
 
 ---
 
+
+# function getInstanceContainer
+
+> ## _static_ **getInstanceContainer** \( \) : Array<ModuleManager>
+
+Used to get all app instance created. This feature usually used by addons and expanded module to handle a central problems
+
+### **return**
+Array< ModuleManager > : A list of instances represent by baseUrl and instances  
+
+---
+
 # function setting
 
 > ### **setting** \( config \) : void
 
-Used to config app and installed plugins. If appcfg.ini declared. all config will be append inside
+Used by modules from app, to make app more scalable & easy to management. setting will be overwrite onto setting value loaded by appcfg.yaml. Except lock field.
 
-All default key supported :
+All default key :
 
 -   **environment** \( string \) : dev or product. if it is dev, program should collect problem, else it should to optimized for performance
 -   **timeout** \( number \) : expert timeout for router connection. default is 60s
 -   **style** \( string \) : style of uri path. Hyron support for 4 style, include : **_camel_** \( likeThis \), **_snack_** \( like_this \), **_lisp_** \( like-this \), **_lower_**\(likethis\).
 -   **_secret_** : a private key that used to for encode a sensitive content
 
-### **params :**
+### **params**
 
 -   **config** \( object \) : a description object contain config for this instance modules
 
@@ -104,53 +116,81 @@ All default key supported :
 
 Retrieve config value for a key by name
 
-### **params :**
+### **params**
 
--   **name** \(string\) : config value or null if config not found
+-   **name** \( string \) : config value or null if config not found
 
 ---
 
-# function enableAddons
+# function enableAddons (+2 override)
 
-> ## **enableAddons** \(addonsList\) : void
+> ## **enableAddons** \( addonsPaths \) : void
 
-Used to register addons for this instance. A addons could have access to all the resources provided in this class.
+Used to register addons for this instance. A addons could have access to all the resources provided in this class via 'this' args. It used to bring more power for hyron to handle advanced problems 
 
 If you want to build your own addons, see this topic : [how to build a addons ? ](addons-development/overview.md)
 
 ### **params :**
 
--   addonsList \( Array<string,string> \) : list of addons called on this instance
+-   **addonsPaths** \( Array< name, path > \) : list of linked addons referenced by path from root
+    -   **name** ( string ) : name of addons. It used to load configs
+    -   **path** ( string ) : link to addons handler. It should be start at root dir
 
 ---
 
-> ## _static_ **getInstanceContainer** \(\) : Object
+> ## **enableAddons** \( addonsList \) : void
 
-Used to get all app instance created
+Used to register addons for this instance by addons handler function.
 
-> #### **enablePlugins** \( pluginsList \) : void
+### **params :**
+
+-   **addonsList** \( Array< name, handler > \) : list of addons called on this instance
+    -   **name** (string) : name of addons. It used to import configs
+    -   **handler** ( function (cfg) -> void ) : handler for addons
+
+---
+
+# function enablePlugins (+2 override)
+
+> ## **enablePlugins** \( pluginsPaths \) : void
 
 This method used to register plugins with name provided. After plugins declared, it can be used inside your app by name.
 
 You should declare the names of the plugins that match the name provided by the manufacturer, unless the name is identical, or you want a more memorable name :\)\)
 
-In addition to using plugins provided by third parties, you can also create plugins for yourself. See more in [How to create a plugins ?](https://github.com/hyron-group/reference/tree/3437eeb47ffad09baf95272f73ae3e71764436ce/plugins-developemt/overview/README.md) topic
+In addition to using plugins provided by third parties, you can also create plugins for yourself. See more in [How to create a plugins ?](./plugins-developent/README.md) topic
 
-**params**
+### **params**
 
--   **pluginsList** \( object { name : meta } \) : object declare plugins
+-   **pluginsPaths** \( Object< name, path > \) : object declare plugins
+    -   **name** ( string ) : name of this plugins. It used to load config
+    -   **path** ( string ) : link to plugins metadata. It should be start at root dir
+
+---
+
+> ## **enablePlugins** \( pluginsList \) : void
+
+Register plugins by directly by PluginsMeta. PluginsMeta is a object contain functions that will be called before (fontware) or after (backware) main-handler.
+
+### **params**
+
+-   **pluginsList** \( Object< name, PluginsMeta > \) : object declare plugins
+    -   **name** ( string ) : name of this plugins. It used to load config
+    -   **PluginsMeta** ( object ) : link to plugins metadata. It should be start at root dir. To find more about plugins structure, please visit : [PluginsMeta](./PluginsMeta)
+
+---
+
+# function enableServices (+2 override)
+
+> ## **enableServices** \( moduleList \) : void
+
+Used to register routers for this instance. Service is a Object contain set of function that serve for a specific business purpose. To distinguish whether a package is a hyron service or not based on the requestConfig method
 
 #### **params :**
 
-> #### **enableServices** \( moduleList \) : void
-
-Register main handle \(logic of routers\)
-
-#### **params :**
-
--   **module** \( object {**name** : **module**} \) : The set of functions is encapsulated to handle specific functions. Which will become the router
-    -   name \( **string** \) : name o module
-    -   module \( **string** \| **HyronClass** \) : a packet of functions and it config
+-   **module** \( Object< name, module > \) : The set of functions is encapsulated to handle specific functions. Which will become the router
+    -   **name** \( string \) : name o module
+    -   **module** \( string \) : a packet of functions and it config
 
 > #### startServer \( callback \) : void
 
@@ -159,73 +199,3 @@ Start this instance for listen client request
 #### **params :**
 
 -   **callback** \( function \) : event when server started
-
-### class **AbstractRouters**
-
-Note : this class is only descriptive, you do not need to implement it to use it
-
-This class is base element of hyron framework, to declare routers, setup plugins, etc
-
-To used it, include it in \[_enableServices\(\)_\]\(\#\#\#-**enableServices**-\(-moduleList-\)-:-void\) method
-
-> #### _static_ **requestConfig** \(\) : Object
-
-Used to description about route that server will listen into.
-
-#### **Return**
-
-object { method_name : meta }
-
--   **method_name** \( string \) : name of handle method declared in this class
--   **meta** \( string \| object \| Array. \) : declare info about this router
-    -   \( **string** \) : method name, include : get, head, post, put, delete, patch, all, private
-    -   \(\*\*Array.\*\*\) : set of method name like about
-    -   \(**object**\) : object description detail about route
-        -   **method** \( string\|Array \) : like about
-        -   **handle** \( function \) : handle function if handle method is not defined
-        -   **fontware** \( Array. \) : list of enable or disable fontware by name
-        -   **backware** \( Array. \) : list of enable or disable backware by name
-        -   **plugins** \( Array. \) : list of enable or disable plugins by name. It is an acronym for fontware and backware
-        -   **path** \( string \) : custom uri path for this router. If it not defined, a router with name _/method_name_ will be registered
-        -   **enableREST** \( boolean \) : true if method is REST API, then handle function argument at index 0 will be pass path param.
-
-### class **HTTPMessage**
-
-**Parent : Error**
-
-This class used to interrupt current flow and throw a http message to client
-
-> #### **constructor** \( code, message \)
-
-Used to create a Error instance description about your http error
-
-#### **params :**
-
--   **code** \( Number \) : it can be a HTTP error code from 1XX - 5XX. You can used class StatusCode if you don't remember error code
--   **message** \( String \) : string description for this error
-
-### class **StatusCode**
-
-contain HTTP code from 1XX to 5XX with friendly name. Used it with class HTTPMessage to make your code more readable
-
-### object **path**
-
-used to get uri path of a route that hyron manages
-
-> #### **build** \( baseURL, eventName, executer \)
-
-Used to add a router into scope that used for future searches. Hyron will auto call this function when route loaded. So, you can search it route inside your functions
-
-**params :**
-
--   **baseURL** \( string \) : base url of routes, like [http://example.com](http://example.com)
--   **eventName** \( string \) : is route path
--   **executer** \( function \) : is main handler
-
-> #### **findURL** \( query \)
-
-Used to get url of a router. It allow search by a part of string url, or by main handle function
-
-**params :**
-
--   **query** \( string \| function \) : key used to search url path. After search for first time, it will be cache for future search
