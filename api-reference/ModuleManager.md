@@ -2,8 +2,6 @@
 
 ### class **ModuleManager** \(hyron\)
 
-Used to register & management elements in project, like instance, service, plugins, addons. It is base of Hyron Framework
-
 -   **build** \( path \) : void
 -   _static_ **getInstance**\( ... \) : ModuleManager
 -   **setting** \( config \) : void
@@ -27,6 +25,8 @@ Used to register & management elements in project, like instance, service, plugi
 # **Details**
 
 ## class **ModuleManager**
+
+Used to register & management elements in project, like instance, service, plugins, addons. It is base of Hyron Framework
 
 # function getInstance (+4 override)
 
@@ -79,7 +79,6 @@ Create a new instance from a description object
 
 ---
 
-
 # function getInstanceContainer
 
 > ## _static_ **getInstanceContainer** \( \) : Array<ModuleManager>
@@ -87,7 +86,8 @@ Create a new instance from a description object
 Used to get all app instance created. This feature usually used by addons and expanded module to handle a central problems
 
 ### **return**
-Array< ModuleManager > : A list of instances represent by baseUrl and instances  
+
+Array< ModuleManager > : A list of instances represent by baseUrl and instances
 
 ---
 
@@ -101,7 +101,7 @@ All default key :
 
 -   **environment** \( string \) : dev or product. if it is dev, program should collect problem, else it should to optimized for performance
 -   **timeout** \( number \) : expert timeout for router connection. default is 60s
--   **style** \( string \) : style of uri path. Hyron support for 4 style, include : **_camel_** \( likeThis \), **_snack_** \( like_this \), **_lisp_** \( like-this \), **_lower_**\(likethis\).
+-   **style** \( string \) : style of uri path. Hyron support for 4 style, include : **_camel_** \( likeThis \), **_snack_** \( like\*this \), \*\*\_lisp**\* \( like-this \), **_lower_\*\*\(likethis\).
 -   **_secret_** : a private key that used to for encode a sensitive content
 
 ### **params**
@@ -126,7 +126,7 @@ Retrieve config value for a key by name
 
 > ## **enableAddons** \( addonsPaths \) : void
 
-Used to register addons for this instance. A addons could have access to all the resources provided in this class via 'this' args. It used to bring more power for hyron to handle advanced problems 
+Used to register addons for this instance. A addons could have access to all the resources provided in this class via 'this' args. It used to bring more power for hyron to handle advanced problems
 
 If you want to build your own addons, see this topic : [how to build a addons ? ](addons-development/overview.md)
 
@@ -182,17 +182,57 @@ Register plugins by directly by PluginsMeta. PluginsMeta is a object contain fun
 
 # function enableServices (+2 override)
 
-> ## **enableServices** \( moduleList \) : void
+> ## **enableServices** \( servicePaths \) : void
 
-Used to register routers for this instance. Service is a Object contain set of function that serve for a specific business purpose. To distinguish whether a package is a hyron service or not based on the requestConfig method
+Used to register routers for this instance. Service is a Object contain set of function that serve for a specific business purpose. To distinguish whether a package is a hyron service or not based on the requestConfig method. To know how to develop a service. Please visit topic : [how to build a service ?](./service-development/README.md)
 
-#### **params :**
+#### **params**
 
--   **module** \( Object< name, module > \) : The set of functions is encapsulated to handle specific functions. Which will become the router
+-   **modulePaths** \( Object< name, path > \) : The set of functions is encapsulated to handle specific functions. Which will become the router
     -   **name** \( string \) : name o module
-    -   **module** \( string \) : a packet of functions and it config
+    -   **path** \( string \) : link to service metadata. It should be start at root dir
 
-> #### startServer \( callback \) : void
+---
+
+> ## **enableServices** \( serviceList \) : void
+
+Used to register routers for this instance directly by hyron service
+
+### **params**
+
+-   **module** \( Object< name, path > \) : The set of functions is encapsulated to handle specific functions. Which will become the router
+    -   **name** \( string \) : name o module
+    -   **module** \( HyronService | UnofficialService \) : a packet of functions and it config
+
+---
+
+# function initServer
+
+> ## **initServer** ( server ) : void
+
+Used to custom server of this instance, and set it default listeners. By default, it called for the first time instance created with node http server.
+
+### **params**
+
+-   **server** ( Server ) : server to handle client request and response. default is http.Server
+
+---
+
+# function setServer
+
+> ## *static* **setServer** ( host, port, server ) : void
+
+This function could be used by addons to edit server for many instances
+
+### **params**
+
+- **host** ( string ) : host name of specified instance
+- **port** ( number ) : port number of specified instance
+- **server** ( Server ) : server to handle client request and response. default is http.Server
+
+# function startServer
+
+> ## startServer \( callback \) : void
 
 Start this instance for listen client request
 
