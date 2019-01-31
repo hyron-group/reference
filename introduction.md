@@ -13,12 +13,14 @@ npm install hyron
 ![](https://img.shields.io/github/last-commit/hyron-group/hyron.svg?style=flat-square)
 ![](https://img.shields.io/gitter/room/hyron-group/community.svg?style=flat-square&logo=gitter)
 ![](https://img.shields.io/npm/l/hyron.svg?style=flat-square)
-[![Beerpay](https://beerpay.io/hyron-group/hyron/badge.svg?style=flat-square)](https://beerpay.io/hyron-group/hyron)
-
 
 ![](https://img.shields.io/github/stars/hyron-group/hyron.svg?style=flat-square)
 ![](https://img.shields.io/github/forks/hyron-group/hyron.svg?style=flat-square)
 ![](https://img.shields.io/github/watchers/hyron-group/hyron.svg?style=flat-square)
+
+<script src="https://liberapay.com/thangdjw/widgets/button.js"></script>
+<noscript><a href="https://liberapay.com/thangdjw/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+
 
 # Feature
 
