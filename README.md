@@ -18,7 +18,6 @@ npm install hyron
 ![](https://img.shields.io/github/forks/hyron-group/hyron.svg?style=flat-square)
 ![](https://img.shields.io/github/watchers/hyron-group/hyron.svg?style=flat-square)
 
-<script src="https://liberapay.com/thangdjw/widgets/button.js"></script>
 <noscript><a href="https://liberapay.com/thangdjw/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 
 
