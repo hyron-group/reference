@@ -8,30 +8,17 @@ Hyron is a [Powerful](benchmark.md) NodeJS framework that helps **build a backen
 npm install hyron
 ```
 
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+![](https://img.shields.io/npm/dw/hyron.svg?style=flat-square)
+![](https://img.shields.io/npm/v/hyron.svg?style=flat-square)
+![](https://img.shields.io/github/last-commit/hyron-group/hyron.svg?style=flat-square)
+![](https://img.shields.io/gitter/room/hyron-group/community.svg?style=flat-square&logo=gitter)
+![](https://img.shields.io/npm/l/hyron.svg?style=flat-square)
+[![Beerpay](https://beerpay.io/hyron-group/hyron/badge.svg?style=flat-square)](https://beerpay.io/hyron-group/hyron)
 
-<style>
-.btn {
-    display:inline-block;
-    background:red;
-}
-</style>
 
-<!-- button follow -->
-<a class="github-button btn" href="https://github.com/hyron-group" data-show-count="true" aria-label="Follow @hyron-group on GitHub">Follow</a>
-
-<!-- button watch -->
-
-<a class="github-button btn" href="https://github.com/hyron-group/hyron/subscription" data-icon="octicon-eye" data-show-count="true" aria-label="Watch hyron-group/hyron on GitHub">Watch</a>
-
-<!-- button star -->
-
-<a class="github-button" href="https://github.com/hyron-group/hyron" data-icon="octicon-star" data-show-count="true" aria-label="Star hyron-group/hyron on GitHub">Star</a>
-
-<!-- button fork -->
-
-<a class="github-button" href="https://github.com/hyron-group/hyron/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork hyron-group/hyron on GitHub">Fork</a>
-
+![](https://img.shields.io/github/stars/hyron-group/hyron.svg?style=flat-square)
+![](https://img.shields.io/github/forks/hyron-group/hyron.svg?style=flat-square)
+![](https://img.shields.io/github/watchers/hyron-group/hyron.svg?style=flat-square)
 
 # Feature
 
