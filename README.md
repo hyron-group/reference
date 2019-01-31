@@ -14,8 +14,7 @@ npm install hyron
 ![chat](https://img.shields.io/gitter/room/hyron-group/community.svg?style=flat-square)
 ![license](https://img.shields.io/npm/l/hyron.svg?style=flat-square)
 
-
-[![git stars](https://img.shields.io/github/stars/hyron-group/hyron.svg?style=social)](https://github.com/user/starred/hyron-group/hyron)
+![git stars](https://img.shields.io/github/stars/hyron-group/hyron.svg?style=social)
 ![git forks](https://img.shields.io/github/forks/hyron-group/hyron.svg?style=social)
 ![git watchs](https://img.shields.io/github/watchers/hyron-group/hyron.svg?style=social)
 
