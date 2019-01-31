@@ -6,7 +6,7 @@
 -   _static_ **getInstance**\( ... \) : ModuleManager
 -   **setting** \( config \) : void
 -   _static_ **getConfig** \( name \) : any
--   _static_ **getInstanceContainer** \( \) : Array\<ModuleManager\>
+-   _static_ **getInstanceContainer** \( \) : Array<ModuleManager>
 -   **enableAddons** \( ... \) : void
 -   **enablePlugins** \( ... \) : void
 -   **enableServices** \( ... \) : void

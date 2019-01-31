@@ -1,6 +1,6 @@
 # introduction
 
-![](https://i.imgur.com/mAjPWAu.png)
+<img src='https://i.imgur.com/mAjPWAu.png' width=240/>
 
 Hyron is a [Powerful](benchmark.md) NodeJS framework that helps **build a backend application** Faster and more Efficiently
 
@@ -8,16 +8,18 @@ Hyron is a [Powerful](benchmark.md) NodeJS framework that helps **build a backen
 npm install hyron
 ```
 
-![](https://img.shields.io/npm/dw/hyron.svg?style=flat-square)
-![](https://img.shields.io/npm/v/hyron.svg?style=flat-square)
-![](https://img.shields.io/github/last-commit/hyron-group/hyron.svg?style=flat-square)
-![](https://img.shields.io/gitter/room/hyron-group/community.svg?style=flat-square&logo=gitter)
-![](https://img.shields.io/npm/l/hyron.svg?style=flat-square)
+![downloads](https://img.shields.io/npm/dw/hyron.svg?style=flat-square)
+![version](https://img.shields.io/npm/v/hyron.svg?style=flat-square)
+![last-commit](https://img.shields.io/github/last-commit/hyron-group/hyron.svg?style=flat-square)
+![chat](https://img.shields.io/gitter/room/hyron-group/community.svg?style=flat-square)
+![license](https://img.shields.io/npm/l/hyron.svg?style=flat-square)
 
-![](https://img.shields.io/github/stars/hyron-group/hyron.svg?style=flat-square)
-![](https://img.shields.io/github/forks/hyron-group/hyron.svg?style=flat-square)
-![](https://img.shields.io/github/watchers/hyron-group/hyron.svg?style=flat-square)
 
+[![git stars](https://img.shields.io/github/stars/hyron-group/hyron.svg?style=social)](https://github.com/user/starred/hyron-group/hyron)
+![git forks](https://img.shields.io/github/forks/hyron-group/hyron.svg?style=social)
+![git watchs](https://img.shields.io/github/watchers/hyron-group/hyron.svg?style=social)
+
+<script src="https://liberapay.com/thangdjw/widgets/button.js"></script>
 <noscript><a href="https://liberapay.com/thangdjw/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 
 
@@ -34,11 +36,13 @@ npm install hyron
 
     [See more build-in feature](./buildin-features)
 
-# Key of values
+# Key of Values
 
-Hyron is built based on 4 main pillars :
+Hyron is built based on 2 main pillars :
 
-1. Easy to use : all components need to be guaranteed to be easily used by users with the least amount of effort.
+1. **Effective** : In addition to performance, the ecosystem of the hyron aims to improve the software development process, help optimize the cost of time as much as possible, helping you shorten the time and effort when developing applications.
+2. **Easy to use** : all components need to be guaranteed to be easily used by users with the least amount of effort.
+
 
 # Who is the user ?
 
@@ -50,18 +54,13 @@ Hyron is built based on 4 main pillars :
 
 -   **I'm new** NodeJS programmer, and have not much knowledge about application development
 -   I want my application to be **high performance**, easy to **grow** and **expand**
+-   I want to develop my application using **Micro-Service Architecture**
 -   I want my code to have the highest **reusability** possible even for different projects
 
-## What think make Hyron become difference ?
+## Strategic Vision
 
--   It is designed to be used immediately with just a little knowledge of javascript, It is quite **easy to learn** and use.
--   It is **highly recyclable** and **reusable**, and you can take advantage of the community's help \[!\]
--   It is **constantly being improved** to become better, more effective, and better serve the community
-
-## What should Hyron become ?
-
--   **Top \#1 framework** for server side application development
--   **Fast**, **convenient**, **efficient**, **flexible**, better serving large enterprise applications
--   A **rich ecosystem** revolves around the framework to better serve the user
+-   **Top \#1 Framework** for server side application development
+-   **Fast**, **Convenient**, **Efficient**, **Flexible**, better serving large enterprise applications
+-   A **Rich Ecosystem** revolves around the framework to better serve the user
 
 Next step : [getting started](geting-started.md)

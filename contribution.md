@@ -22,4 +22,5 @@ If you want to contribute and build a project, donate to us in one of the follow
 
 - Paypal : https://paypal.me/thangdjw
 
+<script src="https://liberapay.com/thangdjw/widgets/button.js"></script>
 <noscript><a href="https://liberapay.com/thangdjw/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
