@@ -1,4 +1,4 @@
-# contribution
+# Contribution
 
 As the creator of hyron, I welcome any contribution from you, to make hyron stronger and more complete.
 
@@ -14,3 +14,9 @@ Your contribution is unrestricted. You can contribute any content such as:
 * The outer part of the ecosystem of hyron
 * Develop and improve the core
 
+# Donate
+
+In addition, we are also looking forward to receiving investments from the community. This amount will be used 100% for business purposes and product development
+
+If you want to contribute and build a project, donate to us in one of the following ways :
+- Paypal : https://paypal.me/thangdjw
