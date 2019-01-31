@@ -8,19 +8,30 @@ Hyron is a [Powerful](benchmark.md) NodeJS framework that helps **build a backen
 npm install hyron
 ```
 
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<style>
+.btn {
+    display:inline-block;
+    background:red;
+}
+</style>
+
 <!-- button follow -->
-<a class="github-button" href="https://github.com/hyron-group" data-show-count="true" aria-label="Follow @hyron-group on GitHub">Follow @hyron-group</a>
+<a class="github-button btn" href="https://github.com/hyron-group" data-show-count="true" aria-label="Follow @hyron-group on GitHub">Follow</a>
 
 <!-- button watch -->
-<a class="github-button" href="https://github.com/hyron-group/hyron/subscription" data-icon="octicon-eye" data-show-count="true" aria-label="Watch hyron-group/hyron on GitHub">Watch</a>
+
+<a class="github-button btn" href="https://github.com/hyron-group/hyron/subscription" data-icon="octicon-eye" data-show-count="true" aria-label="Watch hyron-group/hyron on GitHub">Watch</a>
 
 <!-- button star -->
+
 <a class="github-button" href="https://github.com/hyron-group/hyron" data-icon="octicon-star" data-show-count="true" aria-label="Star hyron-group/hyron on GitHub">Star</a>
 
 <!-- button fork -->
+
 <a class="github-button" href="https://github.com/hyron-group/hyron/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork hyron-group/hyron on GitHub">Fork</a>
 
-<script async defer src="https://buttons.github.io/buttons.js"></script>
 
 # Feature
 
@@ -38,6 +49,7 @@ npm install hyron
 # Key of values
 
 Hyron is built based on 4 main pillars :
+
 1. Easy to use : all components need to be guaranteed to be easily used by users with the least amount of effort.
 
 # Who is the user ?
