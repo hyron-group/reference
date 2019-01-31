@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/hyron-group/reference#readme",
   "dependencies": {
+    "gitbook-plugin-adsense": "^1.0.3",
     "gitbook-plugin-include-html": "^0.2.0"
   }
 }

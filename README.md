@@ -1,5 +1,6 @@
 # introduction
 
+
 <img src='https://i.imgur.com/mAjPWAu.png' width=240/>
 
 Hyron is a [Powerful](benchmark.md) NodeJS framework that helps **build a backend application** Faster and more Efficiently
@@ -8,13 +9,14 @@ Hyron is a [Powerful](benchmark.md) NodeJS framework that helps **build a backen
 npm install hyron
 ```
 
+
 ![downloads](https://img.shields.io/npm/dw/hyron.svg?style=flat-square)
 ![version](https://img.shields.io/npm/v/hyron.svg?style=flat-square)
-![last-commit](https://img.shields.io/github/last-commit/hyron-group/hyron.svg?style=flat-square)
-![chat](https://img.shields.io/gitter/room/hyron-group/community.svg?style=flat-square)
+[![chat](https://img.shields.io/gitter/room/hyron-group/community.svg?style=flat-square)](https://gitter.im/hyron-group/community)
 ![license](https://img.shields.io/npm/l/hyron.svg?style=flat-square)
 
-{%
+
+
 <p>
 
 <iframe src="https://ghbtns.com/github-btn.html?user=hyron-group&repo=hyron&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
@@ -29,8 +31,6 @@ npm install hyron
 <script src="https://liberapay.com/thangdjw/widgets/button.js"></script>
 <noscript><a href="https://liberapay.com/thangdjw/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 
-
- %}
 
 # Feature
 

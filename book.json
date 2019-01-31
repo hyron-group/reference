@@ -1,3 +1,12 @@
 {
-    "plugins" : [ "include-html" ]
+    "plugins": ["adsense"],
+    "pluginsConfig": {
+        "adsense": {
+          "client": "ca-pub-XXXXXXXXXXXXXXXX",
+          "slot": "XXXXXXXXXX",
+          "format": "auto",
+          "element": ".page-inner section",
+          "position": "top"
+        }
+      }
 }
