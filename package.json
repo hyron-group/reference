@@ -1,0 +1,22 @@
+{
+  "name": "reference",
+  "version": "1.0.0",
+  "description": "<img src='https://i.imgur.com/mAjPWAu.png' width=240/>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyron-group/reference.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyron-group/reference/issues"
+  },
+  "homepage": "https://github.com/hyron-group/reference#readme",
+  "dependencies": {
+    "gitbook-plugin-github-buttons": "^3.0.0"
+  }
+}
