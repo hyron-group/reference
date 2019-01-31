@@ -16,5 +16,7 @@
     "url": "https://github.com/hyron-group/reference/issues"
   },
   "homepage": "https://github.com/hyron-group/reference#readme",
-  "dependencies": {}
+  "dependencies": {
+    "gitbook-plugin-include-html": "^0.2.0"
+  }
 }
