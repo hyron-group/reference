@@ -14,9 +14,16 @@ npm install hyron
 ![chat](https://img.shields.io/gitter/room/hyron-group/community.svg?style=flat-square)
 ![license](https://img.shields.io/npm/l/hyron.svg?style=flat-square)
 
-![git stars](https://img.shields.io/github/stars/hyron-group/hyron.svg?style=social)
-![git forks](https://img.shields.io/github/forks/hyron-group/hyron.svg?style=social)
-![git watchs](https://img.shields.io/github/watchers/hyron-group/hyron.svg?style=social)
+<p>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=hyron-group&repo=hyron&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+
+</p>
+
 
 <script src="https://liberapay.com/thangdjw/widgets/button.js"></script>
 <noscript><a href="https://liberapay.com/thangdjw/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
