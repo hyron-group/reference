@@ -34,6 +34,10 @@ Used to register & management elements in project, like instance, service, plugi
 
 Used to create a new instance, that can be used to create difference server. default server will listen on http://localhost:3000
 
+### **return**
+
+Current instance, that could be used to do something else
+
 ---
 
 > ## _static_ **getInstance** \( baseURL : string \) : ModuleManager
@@ -44,21 +48,29 @@ Create a new instance from specified port and current machine host
 
 -   **baseURL** (string) : specified url. example : https://localhost:1234
 
+### **return**
+
+ModuleManager : Current instance, that could be used to do something else
+
 ---
 
 > ## _static_ **getInstance** ( port : number ) : ModuleManager
 
-Create a new instance from specified port and current machine host
+ModuleManager : Create a new instance from specified port and current machine host
 
 ### **params**
 
 -   **port** (number) : a free port. if port is 0, server will listen on random available port
 
+### **return**
+
+Current instance, that could be used to do something else
+
 ---
 
 > ## _static_ **getInstance**( port, host, prefix, protocol ): ModuleManager
 
-Create a new instance with specified params
+ModuleManager : Create a new instance with specified params
 
 ### **params**
 
@@ -67,6 +79,9 @@ Create a new instance with specified params
 -   **prefix** ( string - option ) : a path to separate your routers, used to group routers into an instance. Default is empty
 -   **protocol** ( string - option ) : a protocol for this instance. default is 'http'
 
+### **return**
+
+ModuleManager : Current instance, that could be used to do something else
 ---
 
 > ## _static_ **getInstance** (serverConfig) : ModuleManager
@@ -77,11 +92,15 @@ Create a new instance from a description object
 
 -   **serverConfig** : object contain server config. include : protocol, host, port, prefix
 
+### **return**
+
+ModuleManager : Current instance, that could be used to do something else
+
 ---
 
 # function getInstanceContainer
 
-> ## _static_ **getInstanceContainer** \( \) : Array<ModuleManager>
+> ## _static_ **getInstanceContainer** \( \) : Array<**ModuleManager**>
 
 Used to get all app instance created. This feature usually used by addons and expanded module to handle a central problems
 

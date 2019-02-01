@@ -8,7 +8,15 @@ It very easy to learn and use. You don't need worry about how to learn it
 
 ## Feature
 
-### **1. Allow inheritance**
+- Allow **Inheritance**, auto load at runtime
+- Allow **Lock Field**, ignore inherit
+- Allow **Multi Data Type**, power from yaml
+- Allow **Internal Referenced**, import from another field
+- Allow **External Referenced**, import from external file
+
+# Details
+
+## **1. Allow inheritance**
 
 appcfg could be inherit kind like parent-child type.
 It mean you can declare appcfg from itself your module and it could be implement and overwrite by parent (appcfg at root)
@@ -23,11 +31,11 @@ The hyron will prefer to load the config files in the following preferred order 
 - Root dir appcfg
 - Your declared appcfg
 
-### **2. Look field**
+## **2. Look field**
 
 This feature helps freeze sensitive fields from overwrite. Meaning that its value will be fixed and cannot be changed. To used this feature, Please add dollar character ('$') before key name like follow syntax :
 
-> ### $key = val
+> ## $key = val
 
 Example :
 
@@ -38,11 +46,11 @@ $database:
     connection : # mongo-connection
 ```
 
-### **3. Multi data type**
+## **3. Multi data type**
 
 This feature provided by **yaml**. This could help you used multi datatype as value from javascript primitive type, include : ***string***, ***number***, ***boolean***, ***array***, ***object***
 
-### **4. Internal referenced**
+## **4. Internal referenced**
 
 This feature used to reference to another field in current file. This feature could make you can reuse another declared config.
 To used internal import. Please use follow syntax :
@@ -65,7 +73,7 @@ key1:
 ref_field : <#key1.field1>
 ```
 
-### 5. **External referenced**
+## 5. **External referenced**
 
 This feature that allow you can import setting from another file into current field. To used external referenced, please use follow syntax :
 
@@ -89,7 +97,7 @@ appcfg.yaml
 account-service: <~./database/account-info.yaml>
 ```
 
-## How to used
+# How to used
 
 Using appcfg is very simple. Just declare it by create **appcfg.yaml** file in root or your modules. Hyron will load it at runtime.
 
@@ -97,3 +105,11 @@ Depending on your project size you can use appcfg in many different ways.
 
 - **If you just want to build simple app.** You just need to declare appcfg in root dir
 - **If you want to build a large application**, with modules that can be separated and reused. We recommend that you write appcfg of modules into it self directory
+
+
+Hyron also supports some special fields, allowing you to better control your application (Commonly used in modules)
+
+- **fontware** : enable a global fontware
+- **backware** : enable a global backware
+- **plugins** : enable a global plugins
+- **addons** : enable a global addons
