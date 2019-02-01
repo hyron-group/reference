@@ -43,7 +43,7 @@ npm install hyron
 7. **High performance**. Hyron has 40% higher initial performance than Express
 8. **Automation**, Hyron helps automate your application development process, and makes it easier for third party addons and plugins
 
-    [See more build-in feature](./buildin-features)
+    [See more build-in feature](./buildin-features/README.md)
 
 # Key of Values
 
@@ -59,14 +59,14 @@ Hyron is built based on 2 main pillars :
 -   Those companies that **outsource**, have high demand for code reuse and assembly
 -   **New programmers** start with NodeJS
 
-## Why should i choice Hyron for my app ?
+# Why should i choice Hyron for my app ?
 
 -   **I'm new** NodeJS programmer, and have not much knowledge about application development
 -   I want my application to be **high performance**, easy to **grow** and **expand**
 -   I want to develop my application using **Micro-Service Architecture**
 -   I want my code to have the highest **reusability** possible even for different projects
 
-## Strategic Vision
+# Strategic Vision
 
 -   **Top \#1 Framework** for server side application development
 -   **Fast**, **Convenient**, **Efficient**, **Flexible**, better serving large enterprise applications

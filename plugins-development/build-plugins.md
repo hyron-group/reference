@@ -1,4 +1,4 @@
-# build-plugins
+# Build-plugins
 
 This topic will taling about how to build a plugins
 
