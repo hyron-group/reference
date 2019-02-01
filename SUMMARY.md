@@ -19,7 +19,7 @@
 * [Api Reference](api-reference/README.md)
   * [ModuleManager](api-reference/ModuleManager.md)
   * [HyronService](api-reference/HyronService.md)
-  * [buildIn Feature](buildin-features/README.md)
+  * [buildIn Feature](buildIn-features/README.md)
     * [Plugins param-parser](buildIn-features/param-parser.plugins.md)
     * [Plugins custom-response](buildIn-features/custom-response.plugins.md)
 * [appcfg.yaml File](appcfg-file.md)
