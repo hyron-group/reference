@@ -1,6 +1,3 @@
-# introduction
-
-
 <img src='https://i.imgur.com/mAjPWAu.png' width=240/>
 
 Hyron is a [Powerful](benchmark.md) NodeJS framework that helps **build a backend application** Faster and more Efficiently
