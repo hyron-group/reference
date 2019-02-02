@@ -9,7 +9,7 @@ Custom-response is a default backware plugins that help to pass result from main
 -   Light syntax, easy to tracking
 -   Support attributes that are frequently used in [http.ServerResponse](https://nodejs.org/api/http.html#http_class_http_serverresponse)
 
-# Details
+# Guide
 
 ## 1. Light syntax
 

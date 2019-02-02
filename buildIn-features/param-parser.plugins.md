@@ -10,7 +10,7 @@ Param-parser is a default fontware plugins supported by Hyron. That help pass pa
 -   **Dynamic data type** in request, include : string, number, boolean, array, object
 -   High performance passing
 
-# Details
+# Guide
 
 ## 1. Pass params from request
 

@@ -36,7 +36,7 @@ Used to create a new instance, that can be used to create difference server. def
 
 ### **return**
 
-Current instance, that could be used to do something else
+- ModuleManager : Current instance, that could be used to do something else
 
 ---
 
@@ -50,7 +50,7 @@ Create a new instance from specified port and current machine host
 
 ### **return**
 
-ModuleManager : Current instance, that could be used to do something else
+- ModuleManager : Current instance, that could be used to do something else
 
 ---
 
@@ -64,7 +64,7 @@ ModuleManager : Create a new instance from specified port and current machine ho
 
 ### **return**
 
-Current instance, that could be used to do something else
+- Current instance, that could be used to do something else
 
 ---
 
@@ -81,7 +81,8 @@ ModuleManager : Create a new instance with specified params
 
 ### **return**
 
-ModuleManager : Current instance, that could be used to do something else
+-   ModuleManager : Current instance, that could be used to do something else
+
 ---
 
 > ## _static_ **getInstance** (serverConfig) : ModuleManager
@@ -94,7 +95,7 @@ Create a new instance from a description object
 
 ### **return**
 
-ModuleManager : Current instance, that could be used to do something else
+- ModuleManager : Current instance, that could be used to do something else
 
 ---
 
@@ -106,7 +107,7 @@ Used to get all app instance created. This feature usually used by addons and ex
 
 ### **return**
 
-Array< ModuleManager > : A list of instances represent by baseUrl and instances
+- Array< ModuleManager > : A list of instances represent by baseUrl and instances
 
 ---
 
@@ -131,13 +132,18 @@ All default key :
 
 # function getConfig
 
-> ## _static_ **getConfig** \( name \) : any
+> ## _static_ **getConfig** \( name, defaultValue \) : any
 
 Retrieve config value for a key by name
 
 ### **params**
 
--   **name** \( string \) : config value or null if config not found
+-   **name** \( string \) : config value or null if config not found. It allow support to browse child values, separated by '.' character
+-   **defaultValue** ( any ) : value if do not found config by abort key
+
+### **return**
+
+- any : config data
 
 ---
 
@@ -149,7 +155,7 @@ Used to register addons for this instance. A addons could have access to all the
 
 If you want to build your own addons, see this topic : [how to build a addons ? ](addons-development/overview.md)
 
-### **params :**
+### **params**
 
 -   **addonsPaths** \( Array< name, path > \) : list of linked addons referenced by path from root
     -   **name** ( string ) : name of addons. It used to load configs
@@ -161,7 +167,7 @@ If you want to build your own addons, see this topic : [how to build a addons ? 
 
 Used to register addons for this instance by addons handler function.
 
-### **params :**
+### **params**
 
 -   **addonsList** \( Array< name, handler > \) : list of addons called on this instance
     -   **name** (string) : name of addons. It used to import configs
@@ -239,15 +245,15 @@ Used to custom server of this instance, and set it default listeners. By default
 
 # function setServer
 
-> ## *static* **setServer** ( host, port, server ) : void
+> ## _static_ **setServer** ( host, port, server ) : void
 
 This function could be used by addons to edit server for many instances
 
 ### **params**
 
-- **host** ( string ) : host name of specified instance
-- **port** ( number ) : port number of specified instance
-- **server** ( Server ) : server to handle client request and response. default is http.Server
+-   **host** ( string ) : host name of specified instance
+-   **port** ( number ) : port number of specified instance
+-   **server** ( Server ) : server to handle client request and response. default is http.Server
 
 # function startServer
 
