@@ -6,12 +6,12 @@ Hyron is a [Powerful](benchmark.md) NodeJS framework that helps **build a backen
 npm install hyron
 ```
 
-
-![downloads](https://img.shields.io/npm/dw/hyron.svg?style=flat-square)
-![version](https://img.shields.io/npm/v/hyron.svg?style=flat-square)
-[![chat](https://img.shields.io/gitter/room/hyron-group/community.svg?style=flat-square)](https://gitter.im/hyron-group/community)
-![license](https://img.shields.io/npm/l/hyron.svg?style=flat-square)
-
+![CircleCI](https://img.shields.io/circleci/project/github/hyron-group/hyron/master.svg?style=flat)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/488552ae62744dd7bf6bb34028adcc36)](https://www.codacy.com/app/thangdjw/hyron?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hyron-group/hyron&amp;utm_campaign=Badge_Grade)
+![downloads](https://img.shields.io/npm/dm/hyron.svg?style=flat)
+![version](https://img.shields.io/npm/v/hyron.svg?style=flat)
+[![chat](https://img.shields.io/gitter/room/hyron-group/community.svg?style=flat)](https://gitter.im/hyron-group/community)
+[![license](https://img.shields.io/npm/l/hyron.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 
 <p>
