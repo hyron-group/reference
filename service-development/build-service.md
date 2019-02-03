@@ -13,7 +13,7 @@
 
 ## Main handle flow
 
-![](https://imgur.com/K4OhtaE.png)
+![](/res/router-life-circle.png)
 
 ## Declare config
 

@@ -2,7 +2,10 @@
 
 This topic will taling about how to build a plugins
 
-![](https://imgur.com/Y3I7nIm.png)
+![](/res/plugins-struct.png)
+
+![](/res/router-struct.png)
+
 
 ## Table of contents
 
