@@ -49,9 +49,9 @@ This is a diagram about a plugins
 Like you see, a plugins include at lest one part : fontware or backware or a both
 
 Each middleware contains functions defined for itself as :
-- **handle** ( req, res, prev ) : contain a function that can be called each time a request to target router have make
-- **onCreate** () : a function that could be called for the first time to init values
-- **checkout** ( done ) : a function that could be to used to revoke onCreate if have any change
+- **handle** ( req, res, prev, cfg ) : contain a function that can be called each time a request to target router have make
+- **onCreate** ( cfg ) : a function that could be called for the first time to init values
+- **checkout** ( done, cfg ) : a function that could be to used to revoke onCreate if have any change
 - **typeFilter** : decide whether this middleware is executed by checking the type of prev
 - **global** : decide whether the middleware is automatically called for each router or not
 
