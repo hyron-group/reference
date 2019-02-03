@@ -2,121 +2,161 @@
 
 This topic will taling about how to build a plugins
 
-![](/res/plugins-struct.png)
-
-![](/res/router-struct.png)
-
-
 ## Table of contents
 
 1. [Plugins structure](build-plugins.md##1.-Plugins-structure)
 2. [Functions and features](build-plugins.md##2.-Functions-and-features)
 3. [Recommendations](build-plugins.md##3.-Recommendations)
 
-## 1.Plugins structure
+# Concept
 
-### **A plugins should be package to handle a certain business function**
+Can be said, the hyron is a framework based on plugins. The main power of Hyron is actually largely based on external modules, such as plugins
 
-Example, if you want to handle auth function, you may want to start with a plugins only handle events related to session management
+First of all, let's learn a little bit about the concept, and why using plugins is essential.
 
-This unique feature not only makes your code more powerful, it also allows you to easily manage your plugins.
+## **Question** : What is plugins ?
 
-### **A plugins need to declare to used**
+### **Answer** :
 
-A plugins like a black-box. Therefore, you need to declare that hyron can load and use the plugins
+> ### Plugins are a module that can be used to handle input and output for a router
 
-**With the plugins themselves**
+## **Question** : Structure of a plugins ?
 
-```javascript
-module.exports = {
-    // a function will be execute before main handle
-    fontware: {
-        // handle function for this font-middleware
-        handle: Function,
-         // true if enable auto run per each service for this font-middleware
-        global: Boolean,
-        // a function called for first time plugins loaded
-        onCreate: Function,
-        // a check function to revoke onCreate if it return true
-        checkout: Function,
-        // list of type that font-middleware handle
-        typeFilter: [String]
-    },
-    // (option) : a function will be execute after main handle
-    backware: {...}
-};
+### **Answer** :
+
+> ### A plugins based on 2 parts, fontware and backware
+
+## **Question** : What is a fontware ?
+
+### **Answer** :
+
+> ### fontware is a middleware running in front of main-hander (is a function that processing business logic), used to process input for main-handler
+
+## **Question** : What is a backware ?
+
+### **Answer** :
+
+> ### backware is a middleware running in back of main-hander, used to process output of main-handler
+
+## **Question** : So, what a plugins look like ?
+
+### **Answer** :
+
+This is a diagram about a plugins
+
+![](/res/plugins-struct.png)
+
+Like you see, a plugins include at lest one part : fontware or backware or a both
+
+Each middleware contains functions defined for itself as :
+- **handle** ( req, res, prev ) : contain a function that can be called each time a request to target router have make
+- **onCreate** () : a function that could be called for the first time to init values
+- **checkout** ( done ) : a function that could be to used to revoke onCreate if have any change
+- **typeFilter** : decide whether this middleware is executed by checking the type of prev
+- **global** : decide whether the middleware is automatically called for each router or not
+
+You can see [PluginsMeta reference](/api-reference/PluginsMeta.md) to find more about a plugins
+
+## **Question** : Why we use plugins ?
+
+### **Answer** :
+
+- It's easy to reuse and share
+- It helps separate the IO processing block from logic processing, makes it easy to reuse the logic block, test and fix errors, and your code becomes more concise.
+- Can take advantage of help from the community through their push-up plugins
+
+![](/res/router-struct.png)
+
+
+## **Question** : How can i custom a plugins ?
+
+### **Answer** :
+
+In addition to modifying the code in the same way as the traditional way, hyron provides a solution that allows you to customize a plugins from 3rd parties through appcfg.yaml
+
+appcfg is a special file that contains variables and settings for your modules and projects.
+With override mechanism, lock field of appcfg.yaml. You can change the value of configuration properties to custom that plugins
+
+But you should also note, you need to build a plugins so that they can be customized by other users. and the settings or processing should be cached and optimized to achieve the highest performance
+
+You can use the following methods to access the config :
+- args cfg at last argument of onCreate, checkout, handle
+- Use hyron.**getConfig** ( pluginsName, defaultValue )
+
+## **Questions** : How can i deploy my plugins ?
+
+### **Answer** :
+
+At the present time, we have not provided features to support deploying and sharing. We will try to release this feature as soon as possible to serve the community
+
+
+## **Questions** : Do Hyron supports asynchronous plugins ?
+
+### **Answer** :
+
+Yes, so are all other ingredients
+
+
+## **Questions** : I have many plugins, so how will the plugins run? ?
+
+### **Answer** :
+
+You can refer to the life of a router :
+
+![](res/../../res/router-life-circle.png)
+
+As you can see, the plugins will run sequentially, the value of the previous plugins will be used as the input value for the following plugins (via variables prev)
+
+As you can see, the plugins will run sequentially, the value of the previous plugins will be used as the input value for the following plugins (via variables prev)
+
+## **Questions** : Can I run my plugins without being declared ?
+
+### **Answer** :
+
+Yes, you can. By becoming a member of the Hyron organization, your package under @hyron scope if declared in appcfg will be able to be run automatically without requiring the user to declare it.
+
+This is a great privilege. It allows your package to be much more convenient, and can be used as a third library
+
+## **Questions** : Why is the package of the hyron organization preferred ?
+
+### **Answer** :
+
+Its package will be better moderated, so it is more reliable than other regular packages. In addition, you can also get help, and other benefits from the hyron developer community. See more at [developer policies]()
+
+
+# Guide
+
+Bellow is way to create a plugins
+
+## Step 1 : Create a new plugins directory
+
+create a new forder as bellow (or difference if you want - skip this step)
+```
+plugins
+    `-- plugins-name
+            |-- src
+            |-- lib
+            |-- index.js
+            |-- appcfg.yaml
+            |-- plugins-name.fw.js
+            `-- plugins-bane.bw.js
 ```
 
-**With in hyron framework**
+## Step 2 : create plugins structure
 
-to used plugins in hyron, you should declare it in each instance with _enablePlugins\(\)_ function
+in plugins-name.fw.js & plugins-name.fw.js
+```js
 
-```javascript
-var myapp = hyron.getInstance();
-
-myapp.enablePlugins({
-    plugin_name: require(plugin_path)
-});
 ```
 
-after declared, you can call it in your router by name
 
-```javascript
-static requestConfig(){
-    return {
-        method_name : {
-            ... method config
-            plugins : [plugin_name]
-        }
-    }
-}
-```
+# Note
 
-you also disable global plugins by add '!' character at begin of this plugins name \('!plugin\_name'\)
-
-## 2. Functions and features
-
-**With the plugins themselves**
-
-> ### handle \( req, res, prev, config \) : Function
-
-This function called for each time route is called. If it is fontware, this function will be called before main handle, otherwise, it will call after main handle.
-
-Note :
-
-If it is a fontware, pre-defined plugins will run first. Otherwise, i it is a backware the following declaration will run later
-
-**param:**
-
-* **req** \( ClientRequest \) : request data by node http
-* **res** \( ServerResponse \) : response data from server by node http
-* **prev** \( Array&lt;?&gt; \| any \) : preview data return by another plugins, or by main handle. If it is fontware, prev is param used as input of main handle. else, if it is backware, prev as out put of main handle
-* **config** : config of this plugins, declared in appcfg.ini, with name same name with that plugin declared in _enablePlugins\(\)_ method
-
-> ### onCreate \( config \) : Function
->
-> This function called on the first time the router is called. It should be used to initialize content for that router, like load needed file, load feature into this scope, compiler, etc.
-
-After called, handle will change to idle mode if checksum\(\) has set, or final mode if not \(for better performance\)
-
-**param** :
-
-* config : config of this router, declared in appcfg.ini file
-
-> ### checkout \(done\) : Function
->
-> This function used to check if has any change for each request. If it return true, onCreate\(\) of this plugins will be revoke. If done\(\) is called, handle will be switched to final mode. And don't revoke onCreate\(\) anymore
-
-**param** :
-
-* done \(function\) : A function will be called without any further changes
-
-## 3. Recommendations
-
-* You should name plugins handle with format : name\_fw.js if it is fontware, or name\_bw.js if it is backware
+* You should name plugins handle with format : name.fw.js if it is fontware, or name\_bw.js if it is backware
 * Plugins should be identical to the declared name
 * The name of the plugins should be unique
 * Development plugins should also adhere to the principles of application design and development, to facilitate maintenance and expansion for later.
+
 
 Next step : [View example](example.md)
 

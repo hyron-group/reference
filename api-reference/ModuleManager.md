@@ -24,7 +24,7 @@
 
 # **Details**
 
-## class **ModuleManager**
+## *class **ModuleManager***
 
 Used to register & management elements in project, like instance, service, plugins, addons. It is base of Hyron Framework
 
