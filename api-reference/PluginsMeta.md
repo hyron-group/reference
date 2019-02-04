@@ -11,7 +11,7 @@
 -   **handle** ( req, res, prev, cfg ) : any | Promise< any >
 -   **onCreate** ( cfg ) : any | Promise< any >
 -   **checkout** ( done, cfg ) : boolean | Promise< boolean >
--   **typeFilter** : Array< String | Object >
+-   **typeFilter** : Array< any >
 -   **global** : boolean
 
 
@@ -87,7 +87,7 @@ boolean | Promise< boolean > : true if has change, or not
 ---
 
 # var typeFilter
-> ## **typeFilter** : Array< string >
+> ## **typeFilter** : Array< any >
 
 It is used to filter which type of data from prev will be processed. if type of 'prev' don't contain in array. It will be skip
 
