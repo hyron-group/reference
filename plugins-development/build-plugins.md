@@ -26,21 +26,15 @@ First of all, let's learn a little bit about the concept, and why using plugins 
 
 > ### A plugins based on 2 parts, fontware and backware
 
-## **Question** : What is a fontware ?
-
-### **Answer** :
+## What is a fontware ?
 
 > ### fontware is a middleware running in front of main-hander (is a function that processing business logic), used to process input for main-handler
 
-## **Question** : What is a backware ?
-
-### **Answer** :
+## What is a backware ?
 
 > ### backware is a middleware running in back of main-hander, used to process output of main-handler
 
-## **Question** : So, what a plugins look like ?
-
-### **Answer** :
+## So, what a plugins look like ?
 
 This is a diagram about a plugins
 
@@ -57,9 +51,7 @@ Each middleware contains functions defined for itself as :
 
 You can see [PluginsMeta reference](/api-reference/PluginsMeta.md) to find more about a plugins
 
-## **Question** : Why we use plugins ?
-
-### **Answer** :
+## Why we use plugins ?
 
 - It's easy to reuse and share
 - It helps separate the IO processing block from logic processing, makes it easy to reuse the logic block, test and fix errors, and your code becomes more concise.
@@ -68,9 +60,7 @@ You can see [PluginsMeta reference](/api-reference/PluginsMeta.md) to find more 
 ![](/res/router-struct.png)
 
 
-## **Question** : How can i custom a plugins ?
-
-### **Answer** :
+## How can i custom a plugins ?
 
 In addition to modifying the code in the same way as the traditional way, hyron provides a solution that allows you to customize a plugins from 3rd parties through appcfg.yaml
 
@@ -83,23 +73,17 @@ You can use the following methods to access the config :
 - args cfg at last argument of onCreate, checkout, handle
 - Use hyron.**getConfig** ( pluginsName, defaultValue )
 
-## **Questions** : How can i deploy my plugins ?
-
-### **Answer** :
+## How can i deploy my plugins ?
 
 At the present time, we have not provided features to support deploying and sharing. We will try to release this feature as soon as possible to serve the community
 
 
-## **Questions** : Do Hyron supports asynchronous plugins ?
-
-### **Answer** :
+## Do Hyron supports asynchronous plugins ?
 
 Yes, so are all other ingredients
 
 
-## **Questions** : I have many plugins, so how will the plugins run? ?
-
-### **Answer** :
+## I have many plugins, so how will the plugins run? ?
 
 You can refer to the life of a router :
 
@@ -109,17 +93,13 @@ As you can see, the plugins will run sequentially, the value of the previous plu
 
 As you can see, the plugins will run sequentially, the value of the previous plugins will be used as the input value for the following plugins (via variables prev)
 
-## **Questions** : Can I run my plugins without being declared ?
-
-### **Answer** :
+## Can I run my plugins without being declared ?
 
 Yes, you can. By becoming a member of the Hyron organization, your package under @hyron scope if declared in appcfg will be able to be run automatically without requiring the user to declare it.
 
 This is a great privilege. It allows your package to be much more convenient, and can be used as a third library
 
-## **Questions** : Why is the package of the hyron organization preferred ?
-
-### **Answer** :
+## Why is the package of the hyron organization preferred ?
 
 Its package will be better moderated, so it is more reliable than other regular packages. In addition, you can also get help, and other benefits from the hyron developer community. See more at [developer policies]()
 
