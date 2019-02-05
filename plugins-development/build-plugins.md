@@ -88,7 +88,7 @@ As you can see, the plugins will run sequentially, the value of the previous plu
 
 As you can see, the plugins will run sequentially, the value of the previous plugins will be used as the input value for the following plugins (via variables prev)
 
-# State of middleware (fontware & backware) ?
+## State of middleware (fontware & backware) ?
 
 Hyron uses state control mechanisms, which allow optimal function to run down to the smallest level, minimizing the time delay when a plugins are called.
 
