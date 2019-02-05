@@ -82,6 +82,8 @@ Customize the path for this router instead of the default path. Use this attribu
 
 # var params
 
+> ## **params** : string
+
 An attribute used by param-parser plugins allows to parse parameters from url strings following the path of this router
 
 Use it with syntax : /:param1/:param2
