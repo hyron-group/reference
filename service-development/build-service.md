@@ -1,15 +1,24 @@
-# build-service
+# Build-service
 
-## Table of contents
+# Concept
 
-1. Main handle flow
-2. Declare config
-   * Inside mta config
-   * config multi route
-   * Style uri path
-3. Declare method
-4. Separate class into multi-file
-5. Service structure
+## What is service ?
+
+> ### Service is a group of functions used to handle a specific business logic
+
+## What is Micro-Service ?
+
+> ### microservice is an application programming architecture that focuses on separating application features into the smallest processing services
+
+## Why should I build on the micro-service architecture ?
+Design your app used micro-service architecture gives you a lot of advantages compared to developing applications in monolithic architecture
+
+We can mention the main advantages
+- Easy to develop and expand
+- Easy to reuse and control
+- Easy testing and deployment
+
+
 
 ## Main handle flow
 
@@ -17,7 +26,7 @@
 
 ## Declare config
 
-To enable router. you need to declare it into **requestConfig\(\)** method :
+To enable router. you need to declare it into **requestConfig()** method :
 
 ```javascript
 static requestConfig(){
@@ -29,22 +38,6 @@ static requestConfig(){
 
 The requestConfig method created to makes it easy for you to control the routers. It is a description of how hyron knows what it needs to do with the routers as specifying the main processing methods, plugins and their order of run, paths and more.
 
-### **Inside meta config**
-
-* **method** \( string \| Array. \) : Specifies the method that will handle this method, supported method include :
-  * **get**, **head** \(query type\)
-  * **post**, **put**, **patch** \(body type\)
-  * **all** \(include all method\)
-  * **private** \( experiment - allows internal access to the server\)
-* **handle** \( function \) : by default, hyron will select the methods of the same name as the key name described in the requestConfig. But you can still use this properties to specify a specific function as the main handle if build-in class method is undefined
-* **fontware** \( Array. \| string \) : enable fontware by name. Or you can off global fontware with '!' character at the beginning of name
-* **backware** \( Array. \| string \) : enable backware by name. Or you can off global backware with '!' character at the beginning of name
-* **plugins** \( Array. \| string \) : You can abbreviate the two propertiess above with this properties. If you do not care about them as fontware or backware
-* **enableREST** \( boolean \) : Turn this router into a rest. The path followed by it from the '/' character position becomes the input variable
-* **path** \( string \) : By default, hyron will use the key name described in this method to become url. You can customize it with this properties
-
-The meta is quite flexible, if no advanced configuration, you can write short into
-
 ```javascript
 static requestConfig(){
     return {
@@ -53,7 +46,7 @@ static requestConfig(){
 }
 ```
 
-After declaring and turning it on enableServices\(\) method. The router will be registered with the specified path. As mentioned above, if you do not specify a path, Hyron default will be based on the key name in the description to register the router path.
+After declaring and turning it on enableServices() method. The router will be registered with the specified path. As mentioned above, if you do not specify a path, Hyron default will be based on the key name in the description to register the router path.
 
 Example : /prefix/service\_name/method\_name
 
@@ -65,7 +58,6 @@ If you have many of route with same config. You can used $all properties to sett
 static requestConfig(){
     return {
         $all : {
-            enableREST : true,
             fontware : ["stringer"]
         },
         sayHi : "get",
@@ -74,13 +66,12 @@ static requestConfig(){
 }
 ```
 
-The preference of the $all properties is less than meta. Therefore, you can also override the declared properties in$ all normally
+The preference of the $all properties is less than meta. Therefore, you can also override the declared properties in $all normally
 
 ```javascript
 static requestConfig(){
     return {
         $all : {
-            enableREST : true,
             fontware : ["stringer"]
         },
         ...
@@ -110,7 +101,7 @@ yourApp.setting({
 
 hyron support for 4 type of style, include :
 
-* **camel** : like showMyName \( as default \)
+* **camel** : like showMyName ( as default )
 * **snake** : like show\_my\_name
 * **lisp** : like show-my-name
 * **lower** : like showmyname
@@ -129,24 +120,24 @@ showMyName(firstName, lastName){
 }
 ```
 
-Good new :D, you do not to care about how to dissection data from request \(as query or body\), you also do not need to care about the type of input data. It support dynamic for url-encoded, multi-part, file-upload, raw data.
+Good new :D, you do not to care about how to dissection data from request (as query or body), you also do not need to care about the type of input data. It support dynamic for url-encoded, multi-part, file-upload, raw data.
 
 Below are the rules you need to remember of param-parser plugins
 
-* If method is **GET**, **HEAD** \(**query type**\) : param-parser will extract data from query
-* If method is **POST**, **PUT**, **PATCH** \(**body type**\) : param-parser will extract data from body. It support for both of multipart and urlencoded, include upload file
+* If method is **GET**, **HEAD** (query type) : param-parser will extract data from query
+* If method is **POST**, **PUT**, **PATCH** (body type) : param-parser will extract data from body. It support for both of multipart and urlencoded, include upload file
 * If you pass a file into body. It will wrapped by a "**ClientFile**" object, with properties is :
   * **name** : name of file
   * **content** : file data, in buffer
   * **encoding** : encoder algorithm of this file
   * **type** : file mime type
-* If you pass **raw data** into body \(with content-type is different with multipart and urlencoded\), you need to add argument with name $body to receive data.
-* If **enableREST** option is on, first argument will be pass path value from url. Example : args at index 0 will be equal "iphone" if url is /search/byKeyword/iphone
+* If you pass **raw data** into body (with content-type is different with multipart and urlencoded), you need to add argument with name $body to receive data.
+* If **params** option is set, then param-parser plugins will parse url and pass it as variable string is defined according to the syntax : /:arg1_name/:arg2_name
 * param-parser also support for array or object input type for urlencoded and multipart. So, you can pass it in string format. Example : /search?sort=\[date,price\]&filter={local:vietnam}
 
 ### **Separate class into multi-file**
 
-If your class too long \(upto 200 line or more\) You can separate your class into many of file. Example
+If your class too long (upto 200 line or more) You can separate your class into many of file. Example
 
 ```text
 basic-auth

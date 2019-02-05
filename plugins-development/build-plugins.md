@@ -1,12 +1,6 @@
 # Build-plugins
 
-This topic will taling about how to build a plugins
-
-## Table of contents
-
-1. [Plugins structure](build-plugins.md##1.-Plugins-structure)
-2. [Functions and features](build-plugins.md##2.-Functions-and-features)
-3. [Recommendations](build-plugins.md##3.-Recommendations)
+This topic will introduct about plugins how to build it
 
 # Concept
 
@@ -94,6 +88,20 @@ As you can see, the plugins will run sequentially, the value of the previous plu
 
 As you can see, the plugins will run sequentially, the value of the previous plugins will be used as the input value for the following plugins (via variables prev)
 
+# State of middleware (fontware & backware) ?
+
+Hyron uses state control mechanisms, which allow optimal function to run down to the smallest level, minimizing the time delay when a plugins are called.
+
+Note: if typeFilter is not set, it will skip this step for optimization
+
+![](res/../../res/middleware-status.png)
+
+As you can see, if the plugins are called for the first time of this instance, if the onCreate event is declared, it will run this event first in the **Init State**.
+
+After the call is complete, it will switch to **IDLE State** to wait for changes from checkout or will move to **Final State** with the most streamlined processing functions if checkout is not set
+
+**Final State** can also be set if you call parameter done (args index 0 of checkout)
+
 ## Can I run my plugins without being declared ?
 
 Yes, you can. By becoming a member of the Hyron organization, your package under @hyron scope if declared in appcfg will be able to be run automatically without requiring the user to declare it.
@@ -166,7 +174,7 @@ module.exports = {
 };
 ```
 
-if you as a member of hyron organization, you could make your plugins register automatic when user install it by this way :
+If you as a member of hyron organization, you could make your plugins **registered automatic when user install** it by this way :
 
 **Step 1 : change your package name into : @hyron/plugins-name**
 or, simple is init your package with hyron organization from begin
@@ -174,7 +182,7 @@ or, simple is init your package with hyron organization from begin
 package.json
 ```json
 {
-  "name": "@hyron/plugin-name",
+  "name": "@hyron/package-name",
   ...
 }
 ```
@@ -199,15 +207,15 @@ In the future, we plan to build a separate hub so that users can share their mod
 
 But now, you can used follow way to deploy your plugins
 
-npm : check it out at [npm document](https://docs.npmjs.com/cli/publish)
+**npm** : check it out at [npm document](https://docs.npmjs.com/cli/publish)
 
 ```
 npm publish --access public
 ```
 
-github : check it out at [github document](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
+**github** : check it out at [github document](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
 
-bitsrc : check it out at [bitsrc document](https://docs.bitsrc.io/docs/quick-start.html)
+**bitsrc** : check it out at [bitsrc document](https://docs.bitsrc.io/docs/quick-start.html)
 
 # Note
 

@@ -43,6 +43,6 @@ To join Hyron organization, you must meet the following criteria
 ## Note
 
 * You may be excluded from the community if you have not been active for a long time. Please contact us if you are working again
-* The community members are based on the criteria of comfort, fun is leading, consider them as their own friends :\)\)\)
+* The community members are based on the criteria of comfort, fun is leading, consider them as their own friends :)))
 * Packages by the hyron organization will be placed under the identifier @hyron/package\_name
 

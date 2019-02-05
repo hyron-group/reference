@@ -19,7 +19,7 @@ const hyron = require('hyron');
 var appInstance = hyron.getInstance(3000, "localhost", "api");
 ```
 
-instance is used to setup host, post server listen inside. If you have different app, run in same folder. getInstance\(\) can make it more easy to management by declaring the prefix variable. In this case is 'api'
+instance is used to setup host, post server listen inside. If you have different app, run in same folder. getInstance() can make it more easy to management by declaring the prefix variable. In this case is 'api'
 
 result of this step, sever will create a watcher at [http://localhost:3000/api](http://localhost:3000/api)
 
@@ -53,9 +53,9 @@ class demo {
 }
 ```
 
-## step 4 : declare metadata for handle class \( module \)
+## step 4 : declare metadata for handle class ( module )
 
-add method static **requestConfig\(\)** to description about router
+add method static **requestConfig()** to description about router
 
 ```javascript
 class demo {
@@ -69,7 +69,7 @@ class demo {
 }
 ```
 
-So, after this step, you just registered a listener on showMyName\(\) method. It also called is 'main handle'. every plugins will focused to this method.
+So, after this step, you just registered a listener on showMyName() method. It also called is 'main handle'. every plugins will focused to this method.
 
 ![](https://imgur.com/K4OhtaE.png)
 

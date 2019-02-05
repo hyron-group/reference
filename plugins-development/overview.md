@@ -36,24 +36,24 @@ In general, to build a plugins is relatively easy. You need to equip yourself wi
 
 **1. Hyron supports 2 types of plugins : Fontware and Backware**
 
-* **Fontware** : is a plugins run before [main handle](overview.md) \(contain logic function\) to handing input data
+* **Fontware** : is a plugins run before [main handle](overview.md) (contain logic function) to handing input data
 * **Backware** : is a plugins run after [main handle](overview.md) to handling output data
 * A plugin can be used and distribution by packaged in a package just with few config
 
 **2. A plugin handle will receive 4 parameters as input :**
 
-* **req** \( IncomingMessage \) : a object by node http, to describe client request
-* **res** \( ServerResponse \) : a object by node http, to describe server response
-* **prev** \( any \) : a response data return by before plugins or main handle. It can be used to become input of after plugins
-* **config** \( object \) : config of this plugins, declared in appcfg.ini file
+* **req** ( IncomingMessage ) : a object by node http, to describe client request
+* **res** ( ServerResponse ) : a object by node http, to describe server response
+* **prev** ( any ) : a response data return by before plugins or main handle. It can be used to become input of after plugins
+* **config** ( object ) : config of this plugins, declared in appcfg.ini file
 
 **3. A plugin also used 'this' like shared-parameter :**
 
 * Plugins use this param to communicate with each other, or provide functionality to the main handle
-* Functions or variables loaded in this scope should begin with the '$' \(dollar\) character. example : this.$stringer
+* Functions or variables loaded in this scope should begin with the '$' (dollar) character. example : this.$stringer
 * hyron supports some default variables, which gives you more customization, such as :
-  * $eventName \( string \) : The name of the listener that was registered for an event handler
-  * $executer \( function \) : is main handle function can be used to analyze and develop features related to this function
+  * $eventName ( string ) : The name of the listener that was registered for an event handler
+  * $executer ( function ) : is main handle function can be used to analyze and develop features related to this function
 
 **4. Plugins can be declared and customized easily :**
 

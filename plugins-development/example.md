@@ -60,7 +60,7 @@ instance.enableServices({
 instance.startServer();
 ```
 
-custom running plugins in requestConfig\(\) function
+custom running plugins in requestConfig() function
 
 ```javascript
 static requestConfig(){

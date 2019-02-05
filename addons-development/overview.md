@@ -23,7 +23,7 @@ If you want to handle something at runtime, or you want your app more powerful w
 
 **3. Addons loaded on runtime**
 
-* After declared, with _enableAddons\(\)_, it will be execute
+* After declared, with _enableAddons()_, it will be execute
 * You can custom runtime of addons by add listener to 'this.app', when listener registered
 
 Next step : [write a addons](overview.md)

@@ -1,18 +1,18 @@
 ## **Table of contents**
 
-### class **ModuleManager** \(hyron\)
+### class **ModuleManager** (hyron)
 
--   **build** \( path \) : void
--   _static_ **getInstance**\( ... \) : ModuleManager
--   **setting** \( config \) : void
--   _static_ **getConfig** \( name \) : any
--   _static_ **getInstanceContainer** \( \) : Array<ModuleManager>
--   **enableAddons** \( ... \) : void
--   **enablePlugins** \( ... \) : void
--   **enableServices** \( ... \) : void
--   **initServer** \( server \) : void
+-   **build** ( path ) : void
+-   _static_ **getInstance**( ... ) : ModuleManager
+-   **setting** ( config ) : void
+-   _static_ **getConfig** ( name ) : any
+-   _static_ **getInstanceContainer** ( ) : Array<ModuleManager>
+-   **enableAddons** ( ... ) : void
+-   **enablePlugins** ( ... ) : void
+-   **enableServices** ( ... ) : void
+-   **initServer** ( server ) : void
 -   _static_ **setServer** ( host, port, server ) : void
--   **startServer** \( callback \) : void
+-   **startServer** ( callback ) : void
 -   **host** : string
 -   **port** : number
 -   **prefix** : string
@@ -24,7 +24,7 @@
 
 # **Details**
 
-## *class **ModuleManager***
+## \*class **ModuleManager\***
 
 Used to register & management elements in project, like instance, service, plugins, addons. It is base of Hyron Framework
 
@@ -36,11 +36,11 @@ Used to create a new instance, that can be used to create difference server. def
 
 ### **return**
 
-- ModuleManager : Current instance, that could be used to do something else
+-   ModuleManager : Current instance, that could be used to do something else
 
 ---
 
-> ## _static_ **getInstance** \( baseURL : string \) : ModuleManager
+> ## _static_ **getInstance** ( baseURL : string ) : ModuleManager
 
 Create a new instance from specified port and current machine host
 
@@ -50,7 +50,7 @@ Create a new instance from specified port and current machine host
 
 ### **return**
 
-- ModuleManager : Current instance, that could be used to do something else
+-   ModuleManager : Current instance, that could be used to do something else
 
 ---
 
@@ -64,7 +64,7 @@ ModuleManager : Create a new instance from specified port and current machine ho
 
 ### **return**
 
-- Current instance, that could be used to do something else
+-   Current instance, that could be used to do something else
 
 ---
 
@@ -95,61 +95,61 @@ Create a new instance from a description object
 
 ### **return**
 
-- ModuleManager : Current instance, that could be used to do something else
+-   ModuleManager : Current instance, that could be used to do something else
 
 ---
 
 # function getInstanceContainer
 
-> ## _static_ **getInstanceContainer** \( \) : Array<**ModuleManager**>
+> ## _static_ **getInstanceContainer** ( ) : Array<**ModuleManager**>
 
 Used to get all app instance created. This feature usually used by addons and expanded module to handle a central problems
 
 ### **return**
 
-- Array< ModuleManager > : A list of instances represent by baseUrl and instances
+-   Array < ModuleManager > : A list of instances represent by baseUrl and instances
 
 ---
 
 # function setting
 
-> ### **setting** \( config \) : void
+> ### **setting** ( config ) : void
 
 Used by modules from app, to make app more scalable & easy to management. setting will be overwrite onto setting value loaded by appcfg.yaml. Except lock field.
 
 All default key :
 
--   **environment** \( string \) : dev or product. if it is dev, program should collect problem, else it should to optimized for performance
--   **timeout** \( number \) : expert timeout for router connection. default is 60s
--   **style** \( string \) : style of uri path. Hyron support for 4 style, include : **_camel_** \( likeThis \), **_snack_** \( like\*this \), \*\*\_lisp**\* \( like-this \), **_lower_\*\*\(likethis\).
+-   **environment** ( string ) : dev or product. if it is dev, program should collect problem, else it should to optimized for performance
+-   **timeout** ( number ) : expert timeout for router connection. default is 60s
+-   **style** ( string ) : style of uri path. Hyron support for 4 style, include : _camel_ ( likeThis ), _snake_ ( like*this ), \_lisp* ( like-this ), _lower_ ( likethis ).
 -   **_secret_** : a private key that used to for encode a sensitive content
 
 ### **params**
 
--   **config** \( object \) : a description object contain config for this instance modules
+-   **config** ( object ) : a description object contain config for this instance modules
 
 ---
 
 # function getConfig
 
-> ## _static_ **getConfig** \( name, defaultValue \) : any
+> ## _static_ **getConfig** ( name, defaultValue ) : any
 
 Retrieve config value for a key by name
 
 ### **params**
 
--   **name** \( string \) : config value or null if config not found. It allow support to browse child values, separated by '.' character
+-   **name** ( string ) : config value or null if config not found. It allow support to browse child values, separated by '.' character
 -   **defaultValue** ( any ) : value if do not found config by abort key
 
 ### **return**
 
-- any : config data
+-   any : config data
 
 ---
 
 # function enableAddons (+2 override)
 
-> ## **enableAddons** \( addonsPaths \) : void
+> ## **enableAddons** ( addonsPaths ) : void
 
 Used to register addons for this instance. A addons could have access to all the resources provided in this class via 'this' args. It used to bring more power for hyron to handle advanced problems
 
@@ -157,19 +157,19 @@ If you want to build your own addons, see this topic : [how to build a addons ? 
 
 ### **params**
 
--   **addonsPaths** \( Array< name, path > \) : list of linked addons referenced by path from root
+-   **addonsPaths** ( Array < name, path > ) : list of linked addons referenced by path from root
     -   **name** ( string ) : name of addons. It used to load configs
     -   **path** ( string ) : link to addons handler. It should be start at root dir
 
 ---
 
-> ## **enableAddons** \( addonsList \) : void
+> ## **enableAddons** ( addonsList ) : void
 
 Used to register addons for this instance by addons handler function.
 
 ### **params**
 
--   **addonsList** \( Array< name, handler > \) : list of addons called on this instance
+-   **addonsList** ( Array< name, handler > ) : list of addons called on this instance
     -   **name** (string) : name of addons. It used to import configs
     -   **handler** ( function (cfg) -> void ) : handler for addons
 
@@ -177,29 +177,29 @@ Used to register addons for this instance by addons handler function.
 
 # function enablePlugins (+2 override)
 
-> ## **enablePlugins** \( pluginsPaths \) : void
+> ## **enablePlugins** ( pluginsPaths ) : void
 
 This method used to register plugins with name provided. After plugins declared, it can be used inside your app by name.
 
-You should declare the names of the plugins that match the name provided by the manufacturer, unless the name is identical, or you want a more memorable name :\)\)
+You should declare the names of the plugins that match the name provided by the manufacturer, unless the name is identical, or you want a more memorable name :))
 
 In addition to using plugins provided by third parties, you can also create plugins for yourself. See more in [How to create a plugins ?](./plugins-developent/README.md) topic
 
 ### **params**
 
--   **pluginsPaths** \( Object< name, path > \) : object declare plugins
+-   **pluginsPaths** ( Object< name, path > ) : object declare plugins
     -   **name** ( string ) : name of this plugins. It used to load config
     -   **path** ( string ) : link to plugins metadata. It should be start at root dir
 
 ---
 
-> ## **enablePlugins** \( pluginsList \) : void
+> ## **enablePlugins** ( pluginsList ) : void
 
 Register plugins by directly by PluginsMeta. PluginsMeta is a object contain functions that will be called before (fontware) or after (backware) main-handler.
 
 ### **params**
 
--   **pluginsList** \( Object< name, PluginsMeta > \) : object declare plugins
+-   **pluginsList** ( Object< name, PluginsMeta > ) : object declare plugins
     -   **name** ( string ) : name of this plugins. It used to load config
     -   **PluginsMeta** ( object ) : link to plugins metadata. It should be start at root dir. To find more about plugins structure, please visit : [PluginsMeta](./PluginsMeta)
 
@@ -207,27 +207,27 @@ Register plugins by directly by PluginsMeta. PluginsMeta is a object contain fun
 
 # function enableServices (+2 override)
 
-> ## **enableServices** \( servicePaths \) : void
+> ## **enableServices** ( servicePaths ) : void
 
 Used to register routers for this instance. Service is a Object contain set of function that serve for a specific business purpose. To distinguish whether a package is a hyron service or not based on the requestConfig method. To know how to develop a service. Please visit topic : [how to build a service ?](./service-development/README.md)
 
 #### **params**
 
--   **modulePaths** \( Object< name, path > \) : The set of functions is encapsulated to handle specific functions. Which will become the router
-    -   **name** \( string \) : name o module
-    -   **path** \( string \) : link to service metadata. It should be start at root dir
+-   **modulePaths** ( Object< name, path > ) : The set of functions is encapsulated to handle specific functions. Which will become the router
+    -   **name** ( string ) : name o module
+    -   **path** ( string ) : link to service metadata. It should be start at root dir
 
 ---
 
-> ## **enableServices** \( serviceList \) : void
+> ## **enableServices** ( serviceList ) : void
 
 Used to register routers for this instance directly by hyron service
 
 ### **params**
 
--   **module** \( Object< name, path > \) : The set of functions is encapsulated to handle specific functions. Which will become the router
-    -   **name** \( string \) : name o module
-    -   **module** \( HyronService | UnofficialService \) : a packet of functions and it config
+-   **module** ( Object< name, path > ) : The set of functions is encapsulated to handle specific functions. Which will become the router
+    -   **name** ( string ) : name o module
+    -   **module** ( HyronService | UnofficialService ) : a packet of functions and it config
 
 ---
 
@@ -257,10 +257,10 @@ This function could be used by addons to edit server for many instances
 
 # function startServer
 
-> ## startServer \( callback \) : void
+> ## startServer ( callback ) : void
 
 Start this instance for listen client request
 
 #### **params :**
 
--   **callback** \( function \) : event when server started
+-   **callback** ( function ) : event when server started

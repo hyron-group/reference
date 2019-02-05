@@ -2,7 +2,7 @@
 
 \[ experiment \]
 
-Addons is a very simple and powerful feature. It allows you to customize and extend the hyron framework. By allowing access to resources that are managed from the ModuleManager class \( base of hyron \) via this scope
+Addons is a very simple and powerful feature. It allows you to customize and extend the hyron framework. By allowing access to resources that are managed from the ModuleManager class ( base of hyron ) via this scope
 
 ## Declaration syntax
 
@@ -56,5 +56,5 @@ To develop addons effectively, in addition to the documentation we have develope
 >
 > ## ./addons
 >
-> Contains the default addons of the framework. Currently it has no content. Hope your addons can become part of that? ;\)
+> Contains the default addons of the framework. Currently it has no content. Hope your addons can become part of that? ;)
 
