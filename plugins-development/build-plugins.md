@@ -47,6 +47,7 @@ You can see [PluginsMeta reference](/api-reference/PluginsMeta.md) to find more 
 -   It's easy to reuse and share
 -   It helps separate the IO processing block from logic processing, makes it easy to reuse the logic block, test and fix errors, and your code becomes more concise.
 -   Can take advantage of help from the community through their push-up plugins
+-   It makes it easy to monitor and manage source code
 
 ![](/res/router-struct.png)
 
@@ -86,7 +87,11 @@ You can refer to the life of a router :
 
 As you can see, the plugins will run sequentially, the value of the previous plugins will be used as the input value for the following plugins (via variables prev)
 
-As you can see, the plugins will run sequentially, the value of the previous plugins will be used as the input value for the following plugins (via variables prev)
+If a middleware throws an exception (it is possible to throw if it is a normal function, or promise reject if it is an asynchronous method).
+in the case of a fontware, it will ignore any subsequent middleware, and the main-handler to jump directly to the backware.
+in the case of backware, it will jump to the reponse-handler (which is the default function of the hyron to handle default response, it is res.end but  extension for handle data type, error, async, etc)
+
+This mechanism allows plugins to be flexible, even inheriting each other to solve a problem. You should also pay attention to their order
 
 ## State of middleware (fontware & backware) ?
 
