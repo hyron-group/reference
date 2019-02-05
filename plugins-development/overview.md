@@ -103,6 +103,15 @@ After the call is complete, it will switch to **IDLE State** to wait for changes
 
 **Final State** can also be set if you call parameter done (args index 0 of checkout)
 
+## I heard that you can access this variable from the router. Is that true ?
+
+Yes, plugins and main handlers share a this variable (run in sandbox) and you can use them to share information between plugins, or with main-handle. Hyron allows some default fields like
+
+- **$eventName** : event name of this router
+- **$executer** : is main-handler function of this router
+- **$requestConfig** : Installation information for this router
+- **$config** : contain this service config
+
 ## Can I run my plugins without being declared ?
 
 Yes, you can. By becoming a member of the Hyron organization, your package under @hyron scope if declared in appcfg will be able to be run automatically without requiring the user to declare it.

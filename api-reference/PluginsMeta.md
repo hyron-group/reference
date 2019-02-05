@@ -42,6 +42,8 @@ It used to declare middleware that used to run before or after each services
 
 This is a heart of a plugins. It will be called when a request has make. Used to handle input or output data or something else
 
+This function has the ability to access the 'this' variable of this route
+
 ### **params**
 - **req** ( IncomingMessange ) : contain request data from client
 - **res** ( ServerResponse ) : contain response from server
@@ -59,6 +61,8 @@ any | Promise < any > : A result that could be used by bellow plugins, or as mai
 
 This function called for the fist time request of this instance has make. Used to prepare value for later activities
 
+This function has the ability to access the 'this' variable of this route
+
 ### **params**
 - **cfg** ( any ) : config of this plugins
 
@@ -74,6 +78,8 @@ void | Promise< void > : it not required, just notify in async case that it comp
 > ## **checkout** ( done, cfg ) : boolean | Promise< boolean >
 
 Used to check if some value has changed. If a change has make, onCreate will be revoke again
+
+This function has the ability to access the 'this' variable of this route
 
 ### **params**
 
