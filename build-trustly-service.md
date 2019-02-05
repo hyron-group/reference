@@ -1,4 +1,4 @@
-# build-trustly-service
+# Build trustly service
 
 Reliable packets are packages developed by the [Hyron Organization](https://www.npmjs.com/settings/hyron/members). With many exciting privileges like
 
