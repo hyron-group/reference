@@ -26,7 +26,7 @@
 * [Build-In Feature](buildIn-features/README.md)
   * [Plugins param-parser](buildIn-features/param-parser.plugins.md)
   * [Plugins custom-response](buildIn-features/custom-response.plugins.md)
-  * [lib HTTPMessenge](buildIn-features/HTTPMessage.md)
+  * [lib HTTPMessenge](buildIn-features/HTTPMessage.lib.md)
 * [appcfg.yaml File](appcfg-file.md)
 *   [Build Trustly Module](plugins-development/build-trustly-module.md)
 * [Benchmark](benchmark.md)

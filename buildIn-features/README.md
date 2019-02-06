@@ -6,4 +6,4 @@
 2. **[custom-response](./custom-response.plugins.md)** : response to client as function return
 
 ## Lib
-1. **[HTTPMessange](./HTTPMessage.md)** :  break processing with a throw as a js Error
+1. **[HTTPMessange](./HTTPMessage.lib.md)** :  break processing with a throw as a js Error
