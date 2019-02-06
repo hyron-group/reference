@@ -28,33 +28,3 @@ this.var_name = val'
 You can also use the above method to override the default method. However, that is not recommended. If it's a bundle of Hyrons, we'd love to be able to contribute an edit from you.
 
 To develop addons effectively, in addition to the documentation we have developed, you can study Hyron code to get a better view of the framework.
-
-## **Here are some files that you need to keep in mind :**
-
-> ## ./core/moduleManager.js
->
-> This is the main running file of the program. It is used to manage instances, plugins, addons, services, and store configurations in the application
->
-> ## ./core/routerFactory.js
->
-> This class is used to initialize and run plugins and services. For convenience, it is separated into subclasses
->
-> * **./core/eventWrapper.js** : This object is used to wrap the event router, which specifies how the route is executed
-> * **./core/configParser.js** : This object is used to load configurations and standardize them for the router
->
-> ## ./core/middleware.js
->
-> This class is used for storing and managing, executing plugins
->
-> ## ./lib
->
-> It contains libraries for secondary purposes, which can be reused by other components in the framework
->
-> ## ./plugins
->
-> Contains the default plugins of Hyron. You can also rely on it to build your plugins
->
-> ## ./addons
->
-> Contains the default addons of the framework. Currently it has no content. Hope your addons can become part of that? ;)
-

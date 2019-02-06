@@ -2,9 +2,9 @@
 
 As the creator of Hyron, I welcome any contribution from you, to make Hyron stronger and more complete.
 
-To request membership of the organization Hyron, please contact us by email : **Hyron.dev@gmail.com**
+To request membership of the organization Hyron, please contact us by email : **hyron.dev@gmail.com**
 
-To join the **community** Hyron, to easily get support, please join the slack group : [https://Hyron-group.slack.com/](https://Hyron-group.slack.com/)
+To join the **community** Hyron, to easily get support, please join the Gitter group : https://gitter.im/hyron-group/community
 
 Your contribution is unrestricted. You can contribute any content such as:
 
