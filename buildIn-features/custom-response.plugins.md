@@ -1,5 +1,3 @@
-# Plugins Custom-response
-
 Custom-response is a default backware plugins that help to pass result from main-handler into server response
 
 \*) note : custom-response is not a global plugins. so, you need to declared it in router if used

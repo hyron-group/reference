@@ -6,21 +6,21 @@ Hyron is a [Powerful](benchmark.md) NodeJS framework that helps **build a backen
 npm install Hyron
 ```
 
-![CircleCI](https://img.shields.io/circleci/project/github/Hyron-group/Hyron/master.svg?style=flat)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/488552ae62744dd7bf6bb34028adcc36)](https://www.codacy.com/app/thangdjw/Hyron?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Hyron-group/Hyron&amp;utm_campaign=Badge_Grade)
-![downloads](https://img.shields.io/npm/dm/Hyron.svg?style=flat)
-![version](https://img.shields.io/npm/v/Hyron.svg?style=flat)
-[![chat](https://img.shields.io/gitter/room/Hyron-group/community.svg?style=flat)](https://gitter.im/Hyron-group/community)
-[![license](https://img.shields.io/npm/l/Hyron.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+![CircleCI](https://img.shields.io/circleci/project/github/hyron-group/hyron/master.svg?style=flat)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/488552ae62744dd7bf6bb34028adcc36)](https://www.codacy.com/app/thangdjw/hyron?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hyron-group/hyron&amp;utm_campaign=Badge_Grade)
+![downloads](https://img.shields.io/npm/dm/hyron.svg?style=flat)
+![version](https://img.shields.io/npm/v/hyron.svg?style=flat)
+[![chat](https://img.shields.io/gitter/room/hyron-group/community.svg?style=flat)](https://gitter.im/Hyron-group/community)
+[![license](https://img.shields.io/npm/l/hyron.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 
 <p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=Hyron-group&repo=Hyron&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=hyron-group&repo=hyron&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=Hyron-group&repo=Hyron&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=hyron-group&repo=hyron&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=Hyron-group&repo=Hyron&type=fork&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=hyron-group&repo=hyron&type=fork&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
 
 </p>
 

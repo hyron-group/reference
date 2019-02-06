@@ -26,6 +26,8 @@ This function has the ability to access the 'this' variable of this route
 - **res** ( ServerResponse ) : contain response from server
 - **prev** ( any ) : preview result from abort plugins or main-handler if it is a first backware
 - **cfg** ( any ) : config of this plugins
+- **this** : variable this with scope in this router
+
 
 ### **return**
 any | Promise < any > : A result that could be used by bellow plugins, or as main-handler function if it is last fontware. It also support for async function or function return with a Promise
@@ -41,7 +43,9 @@ This function called for the fist time request of this instance has make. Used t
 This function has the ability to access the 'this' variable of this route
 
 ### **params**
+
 - **cfg** ( any ) : config of this plugins
+- **this** : variable this with scope in this router
 
 
 ### **return**
@@ -62,6 +66,7 @@ This function has the ability to access the 'this' variable of this route
 
 - **done** ( function ) : a function that break checkout life circle loops
 - **cfg** ( any ) : config of this plugins
+- **this** : variable this with scope in this router
 
 
 ### **return**

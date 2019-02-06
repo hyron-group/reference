@@ -1,5 +1,3 @@
-# Plugins param-parser
-
 Param-parser is a default fontware plugins supported by Hyron. That help pass params from request into handler function
 
 ## Features

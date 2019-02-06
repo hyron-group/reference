@@ -47,6 +47,15 @@ Turn on registered a plugins by name, or turn off global plugins by marking with
 
 Specifies the main-handler for this router. If this function is not set, Hyron will select the function inside this class that have the name the same name declared for this RouterMeta. This attribute has a higher priority
 
+### **params**
+
+- **argument** : The variables are input as a result of fontware plugins
+- **this** : variable this with scope in this router
+
+### **return**
+
+- any | Promise < any > : result of logic block that could be used as input of backware plugins
+
 # var path
 
 > ## **path** : string

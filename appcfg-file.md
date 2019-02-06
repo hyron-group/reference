@@ -1,5 +1,3 @@
-# appcfg.yaml file
-
 **appcfg.yaml** is file contain all of config or variable in app, include your app, plugins, addons and services
 separate config from modules will help you easy to management and custom it modules. Besides, it could help you and another user can plugs your module with minimum effort
 
@@ -25,11 +23,11 @@ Hyron only detect and load declared appcfg from declared module, except module t
 
 Hyron will prefer to load the config files in the following preferred order :
 
-- Hyron framework itself appcfg
-- Default Hyron modules appcfg
-- Hyron organization modules appcfg
-- Root dir appcfg
-- Your declared appcfg
+![](res/appcfg-priority.png)
+
+As you can see, the hyron will prefer the load config first in sequence
+
+self-hyron appcfg -> hyron organization modules appcfg -> your app appcfg -> your appcfg inside each modules
 
 ## **2. Look field**
 
@@ -107,7 +105,7 @@ Depending on your project size you can use appcfg in many different ways.
 - **If you want to build a large application**, with modules that can be separated and reused. We recommend that you write appcfg of modules into it self directory
 
 
-Hyron also supports some special fields, allowing you to better control your application (Commonly used in modules)
+Hyron also supports some special fields ( only valid in root-appcfg and hyron-organization appcfg ), allowing you to better control your application (Commonly used in modules)
 
 - **fontware** : enable a global fontware
 - **backware** : enable a global backware

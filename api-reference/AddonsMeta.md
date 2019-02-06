@@ -2,7 +2,7 @@
 
 ### interface **AddonsMeta**
 
-- handle ( cfg ) : void
+- **handle** ( cfg ) : void
 
 # **Details**
 
