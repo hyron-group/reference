@@ -80,7 +80,7 @@ With StatusCode - a class mapping http code with a readable name, you can easy t
 |  412  | PRECONDITION_FAILED              |
 |  413  | PAYLOAD_TOO_LARGE                |
 |  414  | URI_TOO_LONG                     |
-|  415  | UNSUPPORTED_MEDIA_TYPE           |
+|  415  | UNSUPPORTED<br>_MEDIA_TYPE           |
 |  416  | RANGE_NOT_SATISFIABLE            |
 |  417  | EXPECTATION_FAILED               |
 |  418  | I_AM_A_TEAPOT                    |
@@ -99,7 +99,7 @@ With StatusCode - a class mapping http code with a readable name, you can easy t
 |  503  | SERVICE_UNAVAILABLE              |
 |  504  | GATEWAY_TIMEOUT                  |
 |  505  | HTTP_VERSION<br>_NOT_SUPPORTED       |
-|  506  | VARIANT_ALSO_NEGOTIATES          |
+|  506  | VARIANT_ALSO<br>_NEGOTIATES          |
 |  507  | INSUFFICIENT_STORAGE             |
 |  508  | LOOP_DETECTED                    |
 |  510  | NOT_EXTENDED                     |
