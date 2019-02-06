@@ -69,14 +69,21 @@ We are very grateful for your trust and use of Hyron during the past time. We wi
 
 If you feel it is helpful, please support us by
 
-Add a git star :
+### 1. Add a git star
 
 [![](https://img.shields.io/github/stars/hyron-group/hyron.svg?style=social)](https://github.com/hyron-group/hyron)
 
-Introduce the Hyron to your friends :
+### 2. Introduce the Hyron to your friends
 
-<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c5b17918579b60011d06c32&product=sticky-share-buttons' async='async'></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c5b290ed3e3aa21"></script>
 
-<div class="sharethis-inline-share-buttons"></div>
+
+<div class="addthis_inline_share_toolbox"></div>
+
+### 3. Donate to us
+
+[![](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/thangdjw/donate)
+
+---
 
 Next step : [getting started](geting-started.md)

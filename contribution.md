@@ -20,7 +20,4 @@ In addition, we are also looking forward to receiving investments from the commu
 
 If you want to contribute and build a project, donate to us in one of the following ways :
 
-- Paypal : https://paypal.me/thangdjw
-
-<script src="https://liberapay.com/thangdjw/widgets/button.js"></script>
-<noscript><a href="https://liberapay.com/thangdjw/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+[![](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/thangdjw/donate)
