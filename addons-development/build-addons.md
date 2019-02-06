@@ -2,7 +2,7 @@
 
 \[ experiment \]
 
-Addons is a very simple and powerful feature. It allows you to customize and extend the hyron framework. By allowing access to resources that are managed from the ModuleManager class ( base of hyron ) via this scope
+Addons is a very simple and powerful feature. It allows you to customize and extend Hyron framework. By allowing access to resources that are managed from the ModuleManager class ( base of Hyron ) via this scope
 
 ## Declaration syntax
 
@@ -25,9 +25,9 @@ Object.assign(this, args) // merge this var with args
 this.var_name = val'
 ```
 
-You can also use the above method to override the default method. However, that is not recommended. If it's a bundle of hyrons, we'd love to be able to contribute an edit from you.
+You can also use the above method to override the default method. However, that is not recommended. If it's a bundle of Hyrons, we'd love to be able to contribute an edit from you.
 
-To develop addons effectively, in addition to the documentation we have developed, you can study the hyron code to get a better view of the framework.
+To develop addons effectively, in addition to the documentation we have developed, you can study Hyron code to get a better view of the framework.
 
 ## **Here are some files that you need to keep in mind :**
 
@@ -52,7 +52,7 @@ To develop addons effectively, in addition to the documentation we have develope
 >
 > ## ./plugins
 >
-> Contains the default plugins of hyron. You can also rely on it to build your plugins
+> Contains the default plugins of Hyron. You can also rely on it to build your plugins
 >
 > ## ./addons
 >

@@ -9,7 +9,7 @@
 -   **test case** :
     -   **method** : get
     -   **result** : return "hello " + query.name
-    -   **source code** : check it out in [hyron repo](https://github.com/hyron-group/hyron/tree/master/test)
+    -   **source code** : check it out in [Hyron repo](https://github.com/Hyron-group/Hyron/tree/master/test)
 -   **test method** :
     -   remove the first result (cache time)
     -   average of 5 runs
@@ -19,7 +19,7 @@
 ## Load test
 
 -   **nodejs** : ~12,200 rps
--   **hyron** : ~12,700 rps
+-   **Hyron** : ~12,700 rps
 -   **express** : ~9,200 rps
 
 ## Conclude

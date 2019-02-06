@@ -1,12 +1,12 @@
 # app-example
 
-This is simple hello-world app that help you have overview about hyron framework
+This is simple hello-world app that help you have overview about Hyron framework
 
 ```javascript
-const hyron = require('hyron');
+const Hyron = require('Hyron');
 
 // init instance that listen on localhost, port 3000 by default
-var instance = hyron.getInstance();
+var instance = Hyron.getInstance();
 
 class DemoRouter {
     // return a object that description about routers
@@ -36,7 +36,7 @@ A router registered on :
 
 > ## GET : [http://localhost:3000/sayHi](http://localhost:3000/sayHi)
 
-So, that really easy, right. You can do more with hyron framework :D check it out in next step
+So, that really easy, right. You can do more with Hyron framework :D check it out in next step
 
 Next step : [getting started](geting-started.md)
 

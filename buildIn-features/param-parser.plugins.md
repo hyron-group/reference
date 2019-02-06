@@ -57,7 +57,7 @@ export class api {
 }
 ```
 
-As you can see, it's extremely easy, isn't it? This is one of the features supported by the hyron, so you don't need to declare any more syntax
+As you can see, it's extremely easy, isn't it? This is one of the features supported by Hyron, so you don't need to declare any more syntax
 
 In addition, param-parser also supports some other interesting features such as bellow
 
@@ -100,7 +100,7 @@ The good news is that Hyron supports this 😆
 
 Hyron supports the included parser to analyze a string into  javascript native types with high-performance, including: **number**, **string**, **boolean**, **array**, **object**
 
-You can find it in : [hyron/lib/objectParser](https://github.com/hyron-group/hyron/blob/master/lib/objectParser.js)
+You can find it in : [Hyron/lib/objectParser](https://github.com/Hyron-group/Hyron/blob/master/lib/objectParser.js)
 
 And in server. That it !
 ```js

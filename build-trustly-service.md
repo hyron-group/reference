@@ -1,22 +1,22 @@
 # Build trustly service
 
-Reliable packets are packages developed by the [Hyron Organization](https://www.npmjs.com/settings/hyron/members). With many exciting privileges like
+Reliable packets are packages developed by the [Hyron Organization](https://www.npmjs.com/settings/Hyron/members). With many exciting privileges like
 
 * Can load at boot without having passed the declaration in enablePlugins via it own appcfg.ini
-* Can be easily found with the npm registry included with hyron
+* Can be easily found with the npm registry included with Hyron
 * It is more reliable than free packages, because it is better reviewed by the members of the organization
 
-The launch of the hyron organization ensures that pre-malware users' rights can be embedded in your application by installing packages from untrusted vendors.
+The launch of Hyron organization ensures that pre-malware users' rights can be embedded in your application by installing packages from untrusted vendors.
 
-As a developer, you can also join our organization by sending a registration email to hyron.dev@gmail.com
+As a developer, you can also join our organization by sending a registration email to Hyron.dev@gmail.com
 
 ## Benefit
 
-* Be involved in the programming community in the hyron organization
+* Be involved in the programming community in Hyron organization
 * Better support in the development of the ecosystem
 * Get the earliest reviews on your product
 * have the opportunity to receive rewards through donate activities
-* Packages belonging to the hyron organization are based on the ownership, creativity of the individual who developed the package
+* Packages belonging to Hyron organization are based on the ownership, creativity of the individual who developed the package
 
 ## Responsibility
 
@@ -44,5 +44,5 @@ To join Hyron organization, you must meet the following criteria
 
 * You may be excluded from the community if you have not been active for a long time. Please contact us if you are working again
 * The community members are based on the criteria of comfort, fun is leading, consider them as their own friends :)))
-* Packages by the hyron organization will be placed under the identifier @hyron/package\_name
+* Packages by Hyron organization will be placed under the identifier @Hyron/package\_name
 

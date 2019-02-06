@@ -3,24 +3,24 @@
 Hyron is a [Powerful](benchmark.md) NodeJS framework that helps **build a backend application** Faster and more Efficiently
 
 ```
-npm install hyron
+npm install Hyron
 ```
 
-![CircleCI](https://img.shields.io/circleci/project/github/hyron-group/hyron/master.svg?style=flat)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/488552ae62744dd7bf6bb34028adcc36)](https://www.codacy.com/app/thangdjw/hyron?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hyron-group/hyron&amp;utm_campaign=Badge_Grade)
-![downloads](https://img.shields.io/npm/dm/hyron.svg?style=flat)
-![version](https://img.shields.io/npm/v/hyron.svg?style=flat)
-[![chat](https://img.shields.io/gitter/room/hyron-group/community.svg?style=flat)](https://gitter.im/hyron-group/community)
-[![license](https://img.shields.io/npm/l/hyron.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+![CircleCI](https://img.shields.io/circleci/project/github/Hyron-group/Hyron/master.svg?style=flat)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/488552ae62744dd7bf6bb34028adcc36)](https://www.codacy.com/app/thangdjw/Hyron?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Hyron-group/Hyron&amp;utm_campaign=Badge_Grade)
+![downloads](https://img.shields.io/npm/dm/Hyron.svg?style=flat)
+![version](https://img.shields.io/npm/v/Hyron.svg?style=flat)
+[![chat](https://img.shields.io/gitter/room/Hyron-group/community.svg?style=flat)](https://gitter.im/Hyron-group/community)
+[![license](https://img.shields.io/npm/l/Hyron.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 
 <p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=hyron-group&repo=hyron&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=Hyron-group&repo=Hyron&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=hyron-group&repo=hyron&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=Hyron-group&repo=Hyron&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=hyron-group&repo=hyron&type=fork&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=Hyron-group&repo=Hyron&type=fork&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
 
 </p>
 
@@ -36,17 +36,17 @@ npm install hyron
 3. **High sharing capacity**. Modules are designed to minimize dependency and increase flexibility.
 4. Get **help from the community**. Hyron allows you to **install** and **share**, **customize** modules easily
 5. Help your source code **independent of the platform**. It makes it easy to switch between platforms, ensuring that the source code is always intuitive
-6. **Easy to learn and use**. One of hyron's top goals is to help the platform be accessible by a beginner
+6. **Easy to learn and use**. One of Hyron's top goals is to help the platform be accessible by a beginner
 7. **High performance**. Hyron has 40% higher initial performance than Express
 8. **Automation**, Hyron helps automate your application development process, and makes it easier for third party addons and plugins
 
-    [See more build-in feature](https://hyron.gitbook.io/reference/api-reference/buildin-features)
+    [See more build-in feature](https://Hyron.gitbook.io/reference/api-reference/buildin-features)
 
 # Key of Values
 
 Hyron is built based on 2 main pillars :
 
-1. **Effective** : In addition to performance, the ecosystem of the hyron aims to improve the software development process, help optimize the cost of time as much as possible, helping you shorten the time and effort when developing applications.
+1. **Effective** : In addition to performance, the ecosystem of Hyron aims to improve the software development process, help optimize the cost of time as much as possible, helping you shorten the time and effort when developing applications.
 2. **Easy to use** : all components need to be guaranteed to be easily used by users with the least amount of effort.
 
 

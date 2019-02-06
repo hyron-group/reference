@@ -36,7 +36,7 @@ static requestConfig(){
 }
 ```
 
-The requestConfig method created to makes it easy for you to control the routers. It is a description of how hyron knows what it needs to do with the routers as specifying the main processing methods, plugins and their order of run, paths and more.
+The requestConfig method created to makes it easy for you to control the routers. It is a description of how Hyron knows what it needs to do with the routers as specifying the main processing methods, plugins and their order of run, paths and more.
 
 ```javascript
 static requestConfig(){
@@ -88,9 +88,9 @@ static requestConfig(){
 The good news is that you can customize the type of path that suits your interests by adding a bit to the settings in app instance
 
 ```javascript
-const hyron = require('hyron')
+const Hyron = require('Hyron')
 
-var yourApp = hyron.createInstance();
+var yourApp = Hyron.createInstance();
 
 yourApp.setting({
     style : "lisp" // it will change path become : .../show-my-name
@@ -99,7 +99,7 @@ yourApp.setting({
 ...
 ```
 
-hyron support for 4 type of style, include :
+Hyron support for 4 type of style, include :
 
 * **camel** : like showMyName ( as default )
 * **snake** : like show\_my\_name
@@ -110,7 +110,7 @@ hyron support for 4 type of style, include :
 
 Method contain business logic of your app, and just it
 
-The hyron allows you to focus more on building processing logic with powerful of fontware param-parser. Now, you can turn a normal function into a router.
+Hyron allows you to focus more on building processing logic with powerful of fontware param-parser. Now, you can turn a normal function into a router.
 
 Hyron is friendly will [ECMAScript6](http://es6-features.org/). You should used them in your project because it has a fairly short syntax and is easy to use
 
@@ -161,7 +161,7 @@ static requestConfig(){
 }
 ```
 
-In addition, there is another way. That is you merge 2 class used 'hyron/type/route'
+In addition, there is another way. That is you merge 2 class used 'Hyron/type/route'
 
 ```javascript
 // file login.js
@@ -178,7 +178,7 @@ class Login {
 // class Signup as the same
 
 //file AccountManager
-const route = require('hyron/type/route');
+const route = require('Hyron/type/route');
 module.exports = route.merge(
     require('./login'),
     require('./signup)
@@ -192,13 +192,13 @@ You can configure according to any model you want, which is not required. You ca
 ```text
 basicAuth
     |---- controller                           : that contain handler function
-    |          |---- AccountManager.js         : is hyron AbstractRouter
+    |          |---- AccountManager.js         : is Hyron AbstractRouter
     |
     |---- model
     |       |---- account.js                   : contain model object, mapping, in this case is mongodb model
     |
     |---- plugins                              : not required, if your service used own plugins, that is should be one-time plugins
-    |---- router.js                            : export hyron AbstractRouter, that can be used to enableServices()
+    |---- router.js                            : export Hyron AbstractRouter, that can be used to enableServices()
     |---- index.js                             : export instance of AbstractRouter. It can be used by another service
 ```
 
@@ -211,7 +211,7 @@ http://localhost/
 http://localhost/getting-started
 ```
 
-don't worry, you can do it with hyron, it very easy. Has two way to do that
+don't worry, you can do it with Hyron, it very easy. Has two way to do that
 
 * used path properties in requestConfig
 * change method name and key name to "".

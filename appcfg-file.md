@@ -21,9 +21,9 @@ It very easy to learn and use. You don't need worry about how to learn it
 appcfg could be inherit kind like parent-child type.
 It mean you can declare appcfg from itself your module and it could be implement and overwrite by parent (appcfg at root)
 
-Hyron only detect and load declared appcfg from declared module, except module that publish by hyron organization ( module start with **@hyron** ).
+Hyron only detect and load declared appcfg from declared module, except module that publish by Hyron organization ( module start with **@Hyron** ).
 
-The hyron will prefer to load the config files in the following preferred order :
+Hyron will prefer to load the config files in the following preferred order :
 
 - Hyron framework itself appcfg
 - Default Hyron modules appcfg
@@ -61,7 +61,7 @@ with ***field_path*** is path to referenced field separated by dot character ('.
 
 Internal referenced also used multi time in same value
 
-This will be compiled and import by hyron at runtime. and used like js object
+This will be compiled and import by Hyron at runtime. and used like js object
 
 Example :
 

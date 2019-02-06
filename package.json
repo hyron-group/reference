@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hyron-group/reference.git"
+    "url": "git+https://github.com/Hyron-group/reference.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hyron-group/reference/issues"
+    "url": "https://github.com/Hyron-group/reference/issues"
   },
-  "homepage": "https://github.com/hyron-group/reference#readme",
+  "homepage": "https://github.com/Hyron-group/reference#readme",
   "dependencies": {
     "gitbook-plugin-adsense": "^1.0.3",
     "gitbook-plugin-include-html": "^0.2.0"

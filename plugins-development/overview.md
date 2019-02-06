@@ -1,6 +1,6 @@
 # Concept
 
-Can be said, the hyron is a framework based on plugins. The main power of Hyron is actually largely based on external modules, such as plugins
+Can be said, Hyron is a framework based on plugins. The main power of Hyron is actually largely based on external modules, such as plugins
 
 First of all, let's learn a little bit about the concept, and why using plugins is essential.
 
@@ -49,7 +49,7 @@ You can see [PluginsMeta reference](/api-reference/PluginsMeta.md) to find more 
 
 ## How can i custom a plugins ?
 
-In addition to modifying the code in the same way as the traditional way, hyron provides a solution that allows you to customize a plugins from 3rd parties through appcfg.yaml
+In addition to modifying the code in the same way as the traditional way, Hyron provides a solution that allows you to customize a plugins from 3rd parties through appcfg.yaml
 
 appcfg is a special file that contains variables and settings for your modules and projects.
 With override mechanism, lock field of appcfg.yaml. You can change the value of configuration properties to custom that plugins
@@ -59,7 +59,7 @@ But you should also note, you need to build a plugins so that they can be custom
 You can use the following methods to access the config :
 
 -   args cfg at last argument of onCreate, checkout, handle
--   Use hyron.**getConfig** ( pluginsName, defaultValue )
+-   Use Hyron.**getConfig** ( pluginsName, defaultValue )
 
 ## How to deploy my plugins ?
 
@@ -85,7 +85,7 @@ As you can see, the plugins will run sequentially, the value of the previous plu
 
 If a middleware throws an exception (it is possible to throw if it is a normal function, or promise reject if it is an asynchronous method).
 in the case of a fontware, it will ignore any subsequent middleware, and the main-handler to jump directly to the backware.
-in the case of backware, it will jump to the reponse-handler (which is the default function of the hyron to handle default response, it is res.end but  extension for handle data type, error, async, etc)
+in the case of backware, it will jump to the reponse-handler (which is the default function of Hyron to handle default response, it is res.end but  extension for handle data type, error, async, etc)
 
 This mechanism allows plugins to be flexible, even inheriting each other to solve a problem. You should also pay attention to their order
 
@@ -103,7 +103,7 @@ After the call is complete, it will switch to **IDLE State** to wait for changes
 
 **Final State** can also be set if you call parameter done (args index 0 of checkout)
 
-## I heard that you can access this variable from the router. Is that true ?
+## I heard that i can access this variable from the router. Is that true ?
 
 Yes, plugins and main handlers share a this variable (run in sandbox) and you can use them to share information between plugins, or with main-handle. Hyron allows some default fields like
 
@@ -114,10 +114,10 @@ Yes, plugins and main handlers share a this variable (run in sandbox) and you ca
 
 ## Can I run my plugins without being declared ?
 
-Yes, you can. By becoming a member of the Hyron organization, your package under @hyron scope if declared in appcfg will be able to be run automatically without requiring the user to declare it.
+Yes, you can. By becoming a member of Hyron organization, your package under @Hyron scope if declared in appcfg will be able to be run automatically without requiring the user to declare it.
 
 This is a great privilege. It allows your package to be much more convenient, and can be used as a third library
 
-## Why is the package of the hyron organization preferred ?
+## Why is the package of Hyron organization preferred ?
 
-Its package will be better moderated, so it is more reliable than other regular packages. In addition, you can also register to become developer with benefits like get help, rewards and other benefits from the hyron developer community. See more at [developer policies]()
+Its package will be better moderated, so it is more reliable than other regular packages. In addition, you can also register to become developer with benefits like get help, rewards and other benefits from Hyron developer community. See more at [developer policies]()

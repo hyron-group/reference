@@ -1,6 +1,6 @@
 # overview
 
-This feature is used when you want to load / load the necessary resources, used to write hyron ecosystem features, such as debug tools, document tools, analysis tools, etc.
+This feature is used when you want to load / load the necessary resources, used to write Hyron ecosystem features, such as debug tools, document tools, analysis tools, etc.
 
 ## What is addons ?
 
@@ -12,7 +12,7 @@ If you want to handle something at runtime, or you want your app more powerful w
 
 ## Basic concepts
 
-**1. Addons can access and add resource / feature into hyron**
+**1. Addons can access and add resource / feature into Hyron**
 
 * You can add / edit function or var of ModuleManager at runtime
 * You can access into **'this' scope**

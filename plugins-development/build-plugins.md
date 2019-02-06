@@ -49,6 +49,21 @@ You don't need to implement all of method abort, you only need to implement the 
 
 After that, you need to write logic for middleware. What do you want to do with this
 
+Hyron supports a mechanism that allows plugins to communicate with each other, and with that router itself, to increase the flexibility of plugins.
+
+By having access to the 'this' variable, on that range is the entire router
+
+With this variable, you can access some of the default variables loaded by Hyron. These special variables start with a '$' character
+
+```js
+function handle(req, res, prev, cfg) {
+    this.$config // get module config
+    this.$eventName // name to trigger this router
+    this.$executer // get main-executer of this router
+    ...
+}
+```
+
 ## Step 3 : Wrap middleware in index.js
 
 index.js
@@ -60,15 +75,15 @@ module.exports = {
 };
 ```
 
-If you as a member of hyron organization, you could make your plugins **registered automatic when user install** it by this way :
+If you as a member of Hyron organization, you could make your plugins **registered automatic when user install** it by this way :
 
-**Step 1 : change your package name into : @hyron/plugins-name**
-or, simple is init your package with hyron organization from begin
+**Step 1 : change your package name into : @Hyron/plugins-name**
+or, simple is init your package with Hyron organization from begin
 
 package.json
 ```json
 {
-  "name": "@hyron/package-name",
+  "name": "@Hyron/package-name",
   ...
 }
 ```
@@ -81,15 +96,15 @@ And as user, you also avoid named you modules with name is the same with this
 
 ```yaml
 fontware:
-    plugins-name: '@hyron/package-name/plugins-name.fw.js'
+    plugins-name: '@Hyron/package-name/plugins-name.fw.js'
 
 backware:
-    plugins-name: '@hyron/package-name/plugins-name.bw.js'
+    plugins-name: '@Hyron/package-name/plugins-name.bw.js'
 ```
 
 ## Step 4 : publish you plugins
 
-In the future, we plan to build a separate hub so that users can share their modules, with stronger support for hyron and users.
+In the future, we plan to build a separate hub so that users can share their modules, with stronger support for Hyron and users.
 
 But now, you can used follow way to deploy your plugins
 

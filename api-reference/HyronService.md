@@ -21,7 +21,7 @@
 
 ## inteface **HyronService**
 
-Used to define a service that was controlled by Hyron. Create class that implement this, and declare it in hyron.enableServices to use
+Used to define a service that was controlled by Hyron. Create class that implement this, and declare it in Hyron.enableServices to use
 
 # function requestConfig
 
@@ -34,7 +34,7 @@ This function makes it possible to describe in a more centralized and synchroniz
 ### **return**
 
  - Object < name, meta | method > : a object that contain descriptions about routes
-    - **name** ( string ) : name of method declared bellow, that could be use to register a event. By default, hyron will take that name and register it as a child-path for this service
+    - **name** ( string ) : name of method declared bellow, that could be use to register a event. By default, Hyron will take that name and register it as a child-path for this service
     - **meta** ( RouterMeta ) : a object that description detail about this router
     - **method** ( RouterMeta.method ) : a method or a list of method that could be used to register event for this method
 
@@ -72,7 +72,7 @@ Turn on registered a plugins by name, or turn off global plugins by marking with
 
 > ## **handle** : function
 
-Specifies the main-handler for this router. If this function is not set, the hyron will select the function inside this class that have the name the same name declared for this RouterMeta. This attribute has a higher priority
+Specifies the main-handler for this router. If this function is not set, Hyron will select the function inside this class that have the name the same name declared for this RouterMeta. This attribute has a higher priority
 
 # var path
 

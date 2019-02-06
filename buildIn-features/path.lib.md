@@ -3,7 +3,7 @@
 Used to reference to a url
 
 ```
-require('hyron/lib/path')
+require('Hyron/lib/path')
 ```
 
 ## Features
@@ -20,7 +20,7 @@ require('hyron/lib/path')
 Used to get complete url that was management by Hyron by a part of it (or full path if necessary). Example
 
 ```js
-const {findURL} = require('hyron/lib/path');
+const {findURL} = require('Hyron/lib/path');
 
 ...
 // router with this path need to register first
@@ -41,7 +41,7 @@ By default, Hyron auto register url on runtime. You also register by you self us
 Example
 
 ```js
-var {build} = require('hyron/lib/path');
+var {build} = require('Hyron/lib/path');
 
 
 function doSomethingAction(val){
@@ -51,7 +51,7 @@ function doSomethingAction(val){
 
 // register path for abort url
 build (
-    "https://hyron.gitbook.io",
+    "https://Hyron.gitbook.io",
     "/reference",
     doSomethingAction);
 ```
@@ -63,7 +63,7 @@ You also could retrieve handler corresponding with a url used getHandleOfURL fun
 Example
 
 ```js
-var {getHandleOfURL} = require('hyron/lib/path');
+var {getHandleOfURL} = require('Hyron/lib/path');
 
 var doSomethingAction = getHandleOfURL("/reference");
 

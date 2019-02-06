@@ -1,6 +1,6 @@
 ## **Table of contents**
 
-### class **ModuleManager** (hyron)
+### class **ModuleManager** (Hyron)
 
 -   **build** ( path ) : void
 -   _static_ **getInstance**( ... ) : ModuleManager
@@ -151,7 +151,7 @@ Retrieve config value for a key by name
 
 > ## **enableAddons** ( addonsPaths ) : void
 
-Used to register addons for this instance. A addons could have access to all the resources provided in this class via 'this' args. It used to bring more power for hyron to handle advanced problems
+Used to register addons for this instance. A addons could have access to all the resources provided in this class via 'this' args. It used to bring more power for Hyron to handle advanced problems
 
 If you want to build your own addons, see this topic : [how to build a addons ? ](addons-development/overview.md)
 
@@ -209,7 +209,7 @@ Register plugins by directly by PluginsMeta. PluginsMeta is a object contain fun
 
 > ## **enableServices** ( servicePaths ) : void
 
-Used to register routers for this instance. Service is a Object contain set of function that serve for a specific business purpose. To distinguish whether a package is a hyron service or not based on the requestConfig method. To know how to develop a service. Please visit topic : [how to build a service ?](./service-development/README.md)
+Used to register routers for this instance. Service is a Object contain set of function that serve for a specific business purpose. To distinguish whether a package is a Hyron service or not based on the requestConfig method. To know how to develop a service. Please visit topic : [how to build a service ?](./service-development/README.md)
 
 #### **params**
 
@@ -221,7 +221,7 @@ Used to register routers for this instance. Service is a Object contain set of f
 
 > ## **enableServices** ( serviceList ) : void
 
-Used to register routers for this instance directly by hyron service
+Used to register routers for this instance directly by Hyron service
 
 ### **params**
 

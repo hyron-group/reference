@@ -44,9 +44,9 @@ module.exports = {
 declare plugins in app.js
 
 ```javascript
-const hyron = require("hyron");
+const Hyron = require("Hyron");
 
-const instance = hyron.getInstance(4729);
+const instance = Hyron.getInstance(4729);
 
 // declare fontware by name. So, you can config to run it just by registered name
 instance.enablePlugins({
