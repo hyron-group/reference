@@ -49,7 +49,7 @@ With StatusCode - a class mapping http code with a readable name, you can easy t
 |  200  | OK                               | Standard response for successful HTTP requests                                                                   |
 |  201  | CREATED                          | Resulting in the creation of a new resource                                                                      |
 |  202  | ACCEPTED                         | Request has been accepted for processing, but the processing has not been completed                              |
-|  203  | NON_AUTHORIZED_INFORMATION       | Transforming proxy server notify that missing auth info                                                          |
+|  203  | NON_AUTHORIZED<br>_INFORMATION       | Transforming proxy server notify that missing auth info                                                          |
 |  204  | NO_CONTENT                       | Server success with no response content                                                                          |
 |  205  | RESET_CONTENT                    | Response has no content and request client to reset view                                                         |
 |  206  | PARTIAL_CONTENT                  | The server is delivering only part of the resource because interrupted download                                  |
@@ -72,7 +72,7 @@ With StatusCode - a class mapping http code with a readable name, you can easy t
 |  404  | NOT_FOUND                        |
 |  405  | METHOD_NOT_ALLOWED               |
 |  406  | NOT_ACCEPTABLE: 406,             |
-|  407  | PROXY_AUTHORIZED_REQUIRED        |
+|  407  | PROXY_AUTHORIZED<br>_REQUIRED        |
 |  408  | REQUEST_TIMEOUT                  |
 |  409  | CONFLICT                         |
 |  410  | GONE                             |
@@ -91,19 +91,19 @@ With StatusCode - a class mapping http code with a readable name, you can easy t
 |  426  | UPGRADE_REQUIRED                 |
 |  428  | PRECONDITION_REQUIRED            |
 |  429  | TOO_MANY_REQUESTS                |
-|  431  | REQUEST_HEADER_FIELDS_TOO_LARGE  |
-|  451  | UN_AVAILABLE_FOR_LEGAL_REASONS   |
+|  431  | REQUEST_HEADER_FIELDS<br>_TOO_LARGE  |
+|  451  | UN_AVAILABLE_FOR<br>_LEGAL_REASONS   |
 |  500  | INTERNAL_SERVER_ERROR            |
 |  501  | NOT_IMPLEMENTED                  |
 |  502  | BAD_GATEWAY                      |
 |  503  | SERVICE_UNAVAILABLE              |
 |  504  | GATEWAY_TIMEOUT                  |
-|  505  | HTTP_VERSION_NOT_SUPPORTED       |
+|  505  | HTTP_VERSION<br>_NOT_SUPPORTED       |
 |  506  | VARIANT_ALSO_NEGOTIATES          |
 |  507  | INSUFFICIENT_STORAGE             |
 |  508  | LOOP_DETECTED                    |
 |  510  | NOT_EXTENDED                     |
-|  511  | NETWORK_AUTHENTICATION_REQUESTED |
+|  511  | NETWORK_AUTHENTICATION<br>_REQUESTED |
 
 ## 3. Support custom status messange
 
