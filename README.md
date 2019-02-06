@@ -14,15 +14,7 @@ npm install Hyron
 [![license](https://img.shields.io/npm/l/hyron.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 [![](http://img.shields.io/liberapay/patrons/thangdjw.svg?logo=liberapay)](https://liberapay.com/thangdjw/donate)
 
-<div>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=hyron-group&repo=hyron&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-
-<iframe src="https://ghbtns.com/github-btn.html?user=hyron-group&repo=hyron&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-
-<iframe src="https://ghbtns.com/github-btn.html?user=hyron-group&repo=hyron&type=fork&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-
-</div>
 
 # Feature
 
