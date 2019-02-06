@@ -7,14 +7,14 @@ npm install Hyron
 ```
 
 ![CircleCI](https://img.shields.io/circleci/project/github/hyron-group/hyron/master.svg?style=flat)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/488552ae62744dd7bf6bb34028adcc36)](https://www.codacy.com/app/thangdjw/hyron?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hyron-group/hyron&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/488552ae62744dd7bf6bb34028adcc36)](https://www.codacy.com/app/thangdjw/hyron?utm_source=github.com&utm_medium=referral&utm_content=hyron-group/hyron&utm_campaign=Badge_Grade)
 ![downloads](https://img.shields.io/npm/dm/hyron.svg?style=flat)
 ![version](https://img.shields.io/npm/v/hyron.svg?style=flat)
 [![chat](https://img.shields.io/gitter/room/hyron-group/community.svg?style=flat)](https://gitter.im/Hyron-group/community)
 [![license](https://img.shields.io/npm/l/hyron.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+[![](http://img.shields.io/liberapay/patrons/thangdjw.svg?logo=liberapay)](https://liberapay.com/thangdjw/donate)
 
-
-<p>
+<div>
 
 <iframe src="https://ghbtns.com/github-btn.html?user=hyron-group&repo=hyron&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
 
@@ -22,12 +22,7 @@ npm install Hyron
 
 <iframe src="https://ghbtns.com/github-btn.html?user=hyron-group&repo=hyron&type=fork&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
 
-</p>
-
-
-<script src="https://liberapay.com/thangdjw/widgets/button.js"></script>
-<noscript><a href="https://liberapay.com/thangdjw/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
-
+</div>
 
 # Feature
 
@@ -49,7 +44,6 @@ Hyron is built based on 2 main pillars :
 1. **Effective** : In addition to performance, the ecosystem of Hyron aims to improve the software development process, help optimize the cost of time as much as possible, helping you shorten the time and effort when developing applications.
 2. **Easy to use** : all components need to be guaranteed to be easily used by users with the least amount of effort.
 
-
 # Who is the user ?
 
 -   **Free programmers**, who want start a MVP server app
@@ -68,5 +62,21 @@ Hyron is built based on 2 main pillars :
 -   **Top \#1 Framework** for server side application development
 -   **Fast**, **Convenient**, **Efficient**, **Flexible**, better serving large enterprise applications
 -   A **Rich Ecosystem** revolves around the framework to better serve the user
+
+# Gratitude
+
+We are very grateful for your trust and use of Hyron during the past time. We will constantly improve Hyron to make it better and better
+
+If you feel it is helpful, please support us by
+
+Add a git star :
+
+[![](https://img.shields.io/github/stars/hyron-group/hyron.svg?style=social)](https://github.com/hyron-group/hyron)
+
+Introduce the Hyron to your friends :
+
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c5b17918579b60011d06c32&product=sticky-share-buttons' async='async'></script>
+
+<div class="sharethis-inline-share-buttons"></div>
 
 Next step : [getting started](geting-started.md)
