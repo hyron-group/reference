@@ -27,7 +27,7 @@ npm install Hyron
 7. **High performance**. Hyron has 40% higher initial performance than Express
 8. **Automation**, Hyron helps automate your application development process, and makes it easier for third party addons and plugins
 
-    [See more build-in feature](https://Hyron.gitbook.io/reference/api-reference/buildin-features)
+    [See more build-in feature](https://Hyron.gitbook.io/reference/api-reference/buildIn-features)
 
 # Key of Values
 

@@ -1,5 +1,3 @@
-# Extension lib/path
-
 Used to reference to a url
 
 ```
@@ -13,7 +11,7 @@ require('Hyron/lib/path')
 -   Allow to add other source
 -   Get main-handler by a url
 
-# Guide
+# Details
 
 ## 1. Find a router url by path or function
 
@@ -91,7 +89,7 @@ Used to register a url scope, that can be use for another action
 -   **eventName** ( string ) : path of target site
 -   **executer** ( function ) : a function to handle when retrieve this
 
-# function findURL ( condition ) : string
+# function findURL
 
 > ## **findURL** ( condition ) : string
 
