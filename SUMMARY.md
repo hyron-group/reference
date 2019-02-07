@@ -24,6 +24,7 @@
   * [Middleware](api-reference/Middleware.md)
   * [AddonsMeta](api-reference/AddonsMeta.md)
 * [Build-In Feature](buildIn-features/README.md)
+  * [core AppLoader](buildIn-features/appLoader.core.md)
   * [Plugins param-parser](buildIn-features/param-parser.plugins.md)
   * [Plugins custom-response](buildIn-features/custom-response.plugins.md)
   * [lib HTTPMessenge](buildIn-features/HTTPMessage.lib.md)

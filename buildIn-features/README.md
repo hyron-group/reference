@@ -1,5 +1,9 @@
 # BuildIn-Feature
 
+## Core
+1.   **[AppLoader](./appLoader.core.md)**
+ : build app with a json file
+
 ## Plugins
 
 1. **[param-parser](./param-parser.plugins.md)** : turn a logic function into a router
