@@ -7,7 +7,7 @@ HTTPMessage is an inherited Error class, which allows to break the processing th
 -   Human readable status code from 1XX - 5XX
 -   Support custom status message
 
-# Guide
+# Details
 
 ## 1. Break processing with 'thow'
 

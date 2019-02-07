@@ -28,6 +28,15 @@
 
 Used to register & management elements in project, like instance, service, plugins, addons. It is base of Hyron Framework
 
+# function build
+
+> ## static **build** ( path ) : void
+
+Used to build a Hyron app by that not through other javascript declaration
+
+### **params**
+- **path** ( string ) : referenced to JSON build file from root
+
 # function getInstance (+4 override)
 
 > ## _static_ **getInstance** () : ModuleManager

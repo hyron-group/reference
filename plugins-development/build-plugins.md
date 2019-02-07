@@ -53,7 +53,7 @@ Hyron supports a mechanism that allows plugins to communicate with each other, a
 
 By having access to the 'this' variable, on that range is the entire router
 
-With this variable, you can access some of the default variables loaded by Hyron. These special variables start with a '$' character
+With this variable, you can access some of the default variables loaded by Hyron. These special variables start with a '\$' character
 
 ```js
 function handle(req, res, prev, cfg) {
@@ -77,13 +77,14 @@ module.exports = {
 
 If you as a member of Hyron organization, you could make your plugins **registered automatic when user install** it by this way :
 
-**Step 1 : change your package name into : @Hyron/plugins-name**
+**Step 1 : change your package name into : @hyron/plugins-name**
 or, simple is init your package with Hyron organization from begin
 
 package.json
+
 ```json
 {
-  "name": "@Hyron/package-name",
+  "name": "@hyron/package-name",
   ...
 }
 ```
@@ -96,10 +97,10 @@ And as user, you also avoid named you modules with name is the same with this
 
 ```yaml
 fontware:
-    plugins-name: '@Hyron/package-name/plugins-name.fw.js'
+    plugins-name: "@hyron/package-name/plugins-name.fw.js"
 
 backware:
-    plugins-name: '@Hyron/package-name/plugins-name.bw.js'
+    plugins-name: "@hyron/package-name/plugins-name.bw.js"
 ```
 
 ## Step 4 : publish you plugins
