@@ -1,8 +1,7 @@
 # BuildIn-Feature
 
 ## Core
-1.   **[AppLoader](./appLoader.core.md)**
- : build app with a json file
+1.   **[AppLoader](./appLoader.core.md)** : build app with a json file
 
 ## Plugins
 

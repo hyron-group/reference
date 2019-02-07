@@ -28,7 +28,7 @@ const hyron = require("hyron");
 hyron.build(jsonBuildFile);
 ```
 
-Below is an attribute you should note
+Below is some attributes you should to remember
 
 ```json
 // this is single instance meta
@@ -57,7 +57,7 @@ Below is an attribute you should note
         "name" : "path"
     },
 
-    // like ModuleManager.enableService
+    // like ModuleManager.enableServices
     "services" : {
         "api" : "path"
     }
