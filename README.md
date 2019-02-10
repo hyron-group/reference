@@ -3,7 +3,7 @@
 Hyron is a [Powerful](benchmark.md) NodeJS framework that helps **build a backend application** Faster and more Efficiently
 
 ```
-npm install Hyron
+npm install hyron
 ```
 
 ![CircleCI](https://img.shields.io/circleci/project/github/hyron-group/hyron/master.svg?style=flat)
@@ -27,7 +27,7 @@ npm install Hyron
 7. **High performance**. Hyron has 40% higher initial performance than Express
 8. **Automation**, Hyron helps automate your application development process, and makes it easier for third party addons and plugins
 
-    [See more build-in feature](https://Hyron.gitbook.io/reference/api-reference/buildIn-features)
+    [See more build-in feature](https://hyron.gitbook.io/reference/buildin-features)
 
 # Key of Values
 

@@ -121,7 +121,7 @@ npm publish --access public
 
 # Note
 
--   You should name plugins handle with format : name.fw.js if it is fontware, or name_bw.js if it is backware
+-   You should name plugins handle with format : name.fw.js if it is fontware, or name.bw.js if it is backware
 -   Plugins should be identical to the declared name
 -   The name of the plugins should be unique
 -   Development plugins should also adhere to the principles of application design and development, to facilitate maintenance and expansion for later.
