@@ -14,12 +14,12 @@ Design your app used micro-service architecture gives you a lot of advantages co
 
 We can mention the main advantages
 
-- Easy to develop
-- Easy to scale-up
-- Easy to reuse code
-- Easy testing
-- Easy to development
-- Easy to apply development processes
+-   Easy to develop
+-   Easy to scale-up
+-   Easy to reuse code
+-   Easy testing
+-   Easy to development
+-   Easy to apply development processes
 
 ## Can i develop according to my wishes ?
 
@@ -27,17 +27,17 @@ Yes, you can, microservice is just an option, you can choose another architectur
 
 ## The main points of a service ?
 
-- A service should have own database model
-- A service should be a blackbox, to communicate with the service through an interface
-- A service should only solve a single business logic
-- A service can be called by both the client and server
-- A service can be configured from the outside
+-   A service should have own database model
+-   A service should be a blackbox, to communicate with the service through an interface
+-   A service should only solve a single business logic
+-   A service can be called by both the client and server
+-   A service can be configured from the outside
 
 ## What makes hyron a good choice for microservice application development ?
 
-- Hyron helps your service be packed more standard
-- Hyron makes managing and configuring services easier
-- Hyron can help you reuse the higher level modules
+-   Hyron helps your service be packed more standard
+-   Hyron makes managing and configuring services easier
+-   Hyron can help you reuse the higher level modules
 
 ## I heard that building a service in hyron is very simple, isn't it?
 
@@ -46,6 +46,7 @@ Yes, with the help of plugins, you can almost build a service just need to know 
 Example : Below is a section of BookManagerService
 
 ./services/books/controller/BookManager.js
+
 ```js
 // used mongoose model
 const BookModel = require('../model/books');
@@ -81,19 +82,19 @@ module.exports = class BookManager {
 ./services/books/router.js
 
 ```js
-module.export = require('./controller/BookManager');
+module.export = require("./controller/BookManager");
 ```
 
 ./server.js
 
 ```js
-const hyron = require('hyron');
+const hyron = require("hyron");
 
 var demoApp = hyron.getInstance(3001);
 
 demoApp.enableService({
-    "books":"./services/books/router.js"
-})
+    books: "./services/books/router.js"
+});
 
 demoApp.startServer();
 
@@ -117,4 +118,3 @@ You can even do more than that. You can install plugins from 3rd party, or even 
 ![](res/../../res/service-life-circle.short.png)
 
 ![](res/../../res/router-life-circle.png)
-

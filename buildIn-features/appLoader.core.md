@@ -22,6 +22,7 @@ In the future, we plan to make it more powerful with CLI tools, allowing you to 
 Used method [ModuleManager.build](../api-reference/ModuleManager.md#function_build) to reference to a json build file
 
 index.js
+
 ```js
 const hyron = require("hyron");
 
@@ -130,6 +131,6 @@ If the file has not yet existed, it will proceed to download it quickly, before 
 
 Hyron uses the yarn engine to download, it is an extremely fast and stable engine (more than npm-install), you should also use them later.
 
-If you are missing, you will automatically install ``yarn`` on your computer
+If you are missing, you will automatically install `yarn` on your computer
 
 For more information about sources you can install, please refer to https://yarnpkg.com/en/docs/cli/add

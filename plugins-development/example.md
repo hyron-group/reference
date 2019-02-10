@@ -18,7 +18,7 @@ module.exports = {
 };
 ```
 
-plugins/cache/cache\_fw.js : declare a fontware
+plugins/cache/cache_fw.js : declare a fontware
 
 ```javascript
 const CacheStorage = require("./CacheStorage");
@@ -44,7 +44,7 @@ module.exports = {
 declare plugins in app.js
 
 ```javascript
-const Hyron = require("Hyron");
+const hyron = require("hyron");
 
 const instance = Hyron.getInstance(4729);
 
@@ -90,4 +90,3 @@ this.$cache.get("key");
 // Used to set a var into memory by name
 this.$cache.set("key", "val");
 ```
-

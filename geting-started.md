@@ -2,19 +2,19 @@
 
 ## Roadmap to lean Hyron
 
-* [Basic about javascript](https://www.w3schools.com/js/)
-* [A Hyron app example](app-example.md)
-* [Service development](service-development/overview.md)
-* [Plugins development](plugins-development/overview.md)
-* [api reference](api-reference/ModuleManager.md)
-* [Addons development](addons-development/overview.md)
+-   [Basic about javascript](https://www.w3schools.com/js/)
+-   [A Hyron app example](app-example.md)
+-   [Service development](service-development/overview.md)
+-   [Plugins development](plugins-development/overview.md)
+-   [api reference](api-reference/ModuleManager.md)
+-   [Addons development](addons-development/overview.md)
 
 ## Create app step-by-step
 
 ## _Step 1 : Create a app instance_
 
 ```javascript
-const Hyron = require('Hyron');
+const hyron = require("hyron");
 
 var appInstance = Hyron.getInstance(3000, "localhost", "api");
 ```
@@ -77,8 +77,8 @@ So, after this step, you just registered a listener on showMyName() method. It a
 
 ```javascript
 appInstance.enableServices({
-    demo : require(path_to_demo_class)
-})
+    demo: require(path_to_demo_class)
+});
 
 appInstance.startServer();
 ```
@@ -96,4 +96,3 @@ Hyron helps you save significant time developing your application, by focusing o
 Not only that, Hyron offers many other useful features, check it out at : [API Reference](./api-reference/README.md)
 
 Next step : [How to develop own service ?](https://github.com/Hyron-group/reference/tree/3437eeb47ffad09baf95272f73ae3e71764436ce/service-developemnt/overview.md)
-

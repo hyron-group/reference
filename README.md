@@ -1,4 +1,4 @@
-<img src='https://i.imgur.com/mAjPWAu.png' width=240/>
+<img src='https://i.imgur.com/mAjPWAu.png' width=240 />
 
 Hyron is a [Powerful](benchmark.md) NodeJS framework that helps **build a backend application** Faster and more Efficiently
 
@@ -15,7 +15,6 @@ npm install hyron
 [![](http://img.shields.io/liberapay/patrons/thangdjw.svg?logo=liberapay)](https://liberapay.com/thangdjw/donate)
 
 
-
 # Feature
 
 1. **Easy to manage source code**, even with large applications. Hyron helps modules to be rigorously structured. Suitable for microservice architecture application development
@@ -27,7 +26,7 @@ npm install hyron
 7. **High performance**. Hyron has 40% higher initial performance than Express
 8. **Automation**, Hyron helps automate your application development process, and makes it easier for third party addons and plugins
 
-    [See more build-in feature](https://hyron.gitbook.io/reference/buildin-features)
+    [See more build-in feature](buildIn-feature/README.md)
 
 # Key of Values
 

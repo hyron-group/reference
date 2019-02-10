@@ -1,200 +1,205 @@
-# Build-service
+## Step 1 : Create Service Structure
 
-## Main handle flow
+To make your service easy to reuse, maintain and upgrade, you should write your services under micro-service architecture. If you haven't worked with microservice yet, don't worry, hyron can help you easily to implement it. You should also refer to the microservice online course, or application programming instructions for more knowledge about it.
 
-![](/res/router-life-circle.png)
+The following is a reference architecture to build a service according to microservice architecture
 
-## Declare config
+### Folder Structure
 
-To enable router. you need to declare it into **requestConfig()** method :
-
-```javascript
-static requestConfig(){
-    return {
-        method_name : meta
-    }
-}
+```
+services
+  |-- service_name
+        |-- controller
+        |-- model
+        |-- router.js
+        |-- index.js
+        |-- appcfg.ini
 ```
 
-The requestConfig method created to makes it easy for you to control the routers. It is a description of how Hyron knows what it needs to do with the routers as specifying the main processing methods, plugins and their order of run, paths and more.
+Each service is like a small application, to handle a specific business. Therefore, it should also follow a programming architecture to help you source code more clearly.
 
-```javascript
-static requestConfig(){
-    return {
-        method_name : method_type
-    }
-}
+Specifically, you should apply the **MCI architecture** for your service
+
+MCI (model-controller-interface) is a variant of **MVC**, which separates processing logic, data models, and interfaces to interact with other services into independent parts. This makes your application easily manageable, easy to upgrade, maintain, and edit
+
+### MCI consists of 3 main components :
+
+![](res/../../res/MCI-Architecture.png)
+
+- **Model** : contains sections that interact with the database, the interface to store the file, or define a model to store data
+- **Controller** : contains processing logic for this service, controllers interact with the model to retrieve data and process them based on them
+- **Interface**: contains interfaces (loose) to help interact with other services (via index.js), and with hyron (via router.js)
+
+### Rule :
+
+- A service like a black box, other services that want to communicate with it need to go through the interface layer
+- The interface layer needs to aggregate the necessary methods defined based on the behavior of that service
+
+## Step 2 : Define Model
+
+Before starting any application, the first step should be to analyze and design the data that will be used in this service.
+
+In the ``model`` file, where the Schema defines the data type, the model will be stored in the database, initialize for db, or methods that can be used to interact with the database
+
+### Example :
+
+Below is a model to handle student management, used [mongoose](https://mongoosejs.com/)
+This service is responsible for processing information about a student
+
+./models/StudentsInfo
+```js
+const {model, Schema} = require('mongoose');
+
+var studentSchema = new Schema({
+    name : String,
+    class : Schema.ObjectId,
+    strength : [String],
+    weakness : [String],
+    height : Number,
+    weight : Number
+});
+
+studentSchema.index({name: 'text'});
+
+module.exports = new model("student_info", studentSchema);
 ```
 
-After declaring and turning it on enableServices() method. The router will be registered with the specified path. As mentioned above, if you do not specify a path, Hyron default will be based on the key name in the description to register the router path.
+As you can see, this model is only responsible for processing information about a student, and exporting a model that can be used to interact with the database.
 
-Example : /prefix/service\_name/method\_name
+➜ **Fact** : mongodb is a popular non-link database management system (noSQL), it can work with json, or JSObject with high speed, and discrete data. It is quite friendly with nodejs
 
-### **Config multi route**
+## Step 3 : Write Controller ( business logic )
 
-If you have many of route with same config. You can used $all properties to setting global properties that router of this service used. Example
+As you know, **controllers** are an important part of a service, which is used to define how that service works
 
-```javascript
-static requestConfig(){
-    return {
-        $all : {
-            fontware : ["stringer"]
-        },
-        sayHi : "get",
-        sayBye : "get"
-    }
-}
-```
+The service will receive data from the model, and process the data in some way depending on the service feature provided to your project.
 
-The preference of the $all properties is less than meta. Therefore, you can also override the declared properties in $all normally
+### Example : 
 
-```javascript
-static requestConfig(){
-    return {
-        $all : {
-            fontware : ["stringer"]
-        },
-        ...
-        sayNothing : {
-            method : "post",
-            fontware : ["!stringer"]
-        }
-    }
-}
-```
+Continuing with the above student management example, the controller will be a class that helps define queries and handle students.
 
-### **Style uri path**
+➜ **Fact** : Hyron makes a friendly combination between a router can be explored by the client with logic processing functions. Therefore, you can declare a short function to describe the functions that will be registered to become the router in the controller. This will help you be able to control them easily, and can be well supported by your IDE
 
-The good news is that you can customize the type of path that suits your interests by adding a bit to the settings in app instance
+➜ **Fact** : hyron helps you to pack in a friendly way, especially those who are familiar with Java, C family, or other object-oriented programming languages
 
-```javascript
-const Hyron = require('Hyron')
+➜ **Fact** : Hyron recommends that you use the syntax of [ES6](http://es6-features.org/#Constants), it's quite friendly, short, easy to learn. However, you can use other versions if you want
 
-var yourApp = Hyron.createInstance();
-
-yourApp.setting({
-    style : "lisp" // it will change path become : .../show-my-name
-})
-
-...
-```
-
-Hyron support for 4 type of style, include :
-
-* **camel** : like showMyName ( as default )
-* **snake** : like show\_my\_name
-* **lisp** : like show-my-name
-* **lower** : like showmyname
-
-## Declare method
-
-Method contain business logic of your app, and just it
-
-Hyron allows you to focus more on building processing logic with powerful of fontware param-parser. Now, you can turn a normal function into a router.
-
-Hyron is friendly will [ECMAScript6](http://es6-features.org/). You should used them in your project because it has a fairly short syntax and is easy to use
-
-```javascript
-showMyName(firstName, lastName){
-    return "Hello " + firstName + lastName;
-}
-```
-
-Good new :D, you do not to care about how to dissection data from request (as query or body), you also do not need to care about the type of input data. It support dynamic for url-encoded, multi-part, file-upload, raw data.
-
-Below are the rules you need to remember of param-parser plugins
-
-* If method is **GET**, **HEAD** (query type) : param-parser will extract data from query
-* If method is **POST**, **PUT**, **PATCH** (body type) : param-parser will extract data from body. It support for both of multipart and urlencoded, include upload file
-* If you pass a file into body. It will wrapped by a "**ClientFile**" object, with properties is :
-  * **name** : name of file
-  * **content** : file data, in buffer
-  * **encoding** : encoder algorithm of this file
-  * **type** : file mime type
-* If you pass **raw data** into body (with content-type is different with multipart and urlencoded), you need to add argument with name $body to receive data.
-* If **params** option is set, then param-parser plugins will parse url and pass it as variable string is defined according to the syntax : /:arg1_name/:arg2_name
-* param-parser also support for array or object input type for urlencoded and multipart. So, you can pass it in string format. Example : /search?sort=\[date,price\]&filter={local:vietnam}
-
-### **Separate class into multi-file**
-
-If your class too long (upto 200 line or more) You can separate your class into many of file. Example
-
-```text
-basic-auth
-    |---- controller
-              |---- login.js
-              |---- signup.js
-              |---- AccountManager.js
-```
-
-in this case, we separate handle function into 2 file js login and signup. and in AccountManager, we used properties handle to declare main-handler function
-
-```javascript
-static requestConfig(){
-    return {
-        login : {
-            method : "post",
-            handle : require('./login')
-        }
-        ...
-    }
-}
-```
-
-In addition, there is another way. That is you merge 2 class used 'Hyron/type/route'
-
-```javascript
-// file login.js
-class Login {
+./controller/StudentManager.js
+```js
+const StudentModel = require('../model')
+module.exports = class StudentManager {
+    
+    // a function that used by hyron to register router
     static requestConfig(){
         return {
-            login : "post"
+            addStudent : "post",
+            deleteStudent : {
+                method : "delete",
+                params : "/:sid"
+            },
+            search : {
+                method : "get",
+                params : "/:name"
+            }
+
         }
     }
-    ...
+
+    // add student by student info
+    async addStudent(info){
+        var newStudent = new StudentModel(info);
+        await newStudent.save((err)=>{
+            throw new HTTPMessage(
+                StatusCode.INTERNAL_SERVER_ERROR,
+                "can't add student for error : "+err.message
+                )
+        })
+        return true;
+    }
+
+    // delete student by student id (_id field)
+    async deleteStudent(sid){
+        await StudentModel
+        .findByIdAndDelete(sid)
+        .exec((err)=>{
+            throw new HTTPMessage(
+                StatusCode.NOT_FOUND,
+                "can't find student with id : "+sid
+                )
+        });
+        return true;
+    }
+
+    // search student by name
+    async search(name, filter, sort){
+        return await StudentModel.find({
+            $text : {$search : name},
+            ...filter
+        }).sort(sort).exec();
+    }
 }
-
-//file signup.js
-// class Signup as the same
-
-//file AccountManager
-const route = require('Hyron/type/route');
-module.exports = route.merge(
-    require('./login'),
-    require('./signup)
-)
 ```
 
-### **Service structure**
+In fact, you don't need to build everything in the same js file. If your source code is large, you can completely separate them into separate files (if your code is longer than 200 lines), separating them will make it easier to maintain later.
 
-You can configure according to any model you want, which is not required. You can apply the model below. I am currently applying it to my project. It is based on the MVI model
+You also don't need to define the ``requestConfig`` function, however, it is a good choice if your code is short
 
-```text
-basicAuth
-    |---- controller                           : that contain handler function
-    |          |---- AccountManager.js         : is Hyron AbstractRouter
-    |
-    |---- model
-    |       |---- account.js                   : contain model object, mapping, in this case is mongodb model
-    |
-    |---- plugins                              : not required, if your service used own plugins, that is should be one-time plugins
-    |---- router.js                            : export Hyron AbstractRouter, that can be used to enableServices()
-    |---- index.js                             : export instance of AbstractRouter. It can be used by another service
+## Step 4 : write interface
+
+The interface is like a loose coupling, through which services can interact with each other, like a normal library.
+
+The interface is like a loose coupling, through which services can interact with each other, like a normal library.
+
+### **1. Used to communicate with hyron** : 
+> contains the requestConfig function and possibly the accompanying processing functions, used to describe the routers that will be used to register the router.
+> It is usually contained in the router.js file
+
+### **2. Used to communicate with other services**
+> is the combination of controller functions that can be used by other services
+> It is usually contained in the index.js file
+
+First of all, let's start with type 1. 
+
+In order to register routers, the router needs to know the information about that router, you can provide this information through the [requestConfig](../api-reference/HyronService.md) method.
+
+### Example :
+
+./router.js
+```js
+module.exports = require('./controller/StudentManager');
 ```
 
-### **Base router**
+If you have declared the ``requestConfig`` before, the rest of the job is quite simple, just point the router to the controller
 
-If you want to have a router like
+In case the code is too long and you have separated the handlers into individual files, you can still declare them in this file, and used 'handle' properties to assign a main-handler Instead of the enclosed handler
 
-```text
-http://localhost/
-http://localhost/getting-started
+### Example 2 :
+
+./router.js
+```js
+module.exports = {
+    static requestConfig(){
+        return {
+            addStudent : {
+                method : "post",
+                // used handle attribute to declare handler for this router
+                handle : require('./controller/addStudent')
+                },
+            deleteStudent : {
+                method : "delete",
+                params : "/:sid",
+                handle : require('./controller/deleteStudent')
+
+            },
+            search : {
+                method : "get",
+                params : "/:name",
+                handle : require('./controller/search')
+            }
+
+        }
+    }
+}
 ```
 
-don't worry, you can do it with Hyron, it very easy. Has two way to do that
-
-* used path properties in requestConfig
-* change method name and key name to "".
-
-Next step : [build unofficial service](build-unofficial-service.md)
-
+➜ **Fact** : By default, the hyron will configure the router address based on the module_name + method_name. however, you can also customize it, using the 'path' attribute

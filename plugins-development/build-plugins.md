@@ -1,5 +1,3 @@
-# Guide
-
 Bellow is way to create a plugins
 
 ## Step 1 : Create a new plugins directory

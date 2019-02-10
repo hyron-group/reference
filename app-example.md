@@ -3,29 +3,29 @@
 This is simple hello-world app that help you have overview about Hyron framework
 
 ```javascript
-const Hyron = require('Hyron');
+const hyron = require("hyron");
 
 // init instance that listen on localhost, port 3000 by default
 var instance = Hyron.getInstance();
 
 class DemoRouter {
     // return a object that description about routers
-    static requestConfig(){
+    static requestConfig() {
         return {
             // register event get on method sayHi
             sayHi: "get"
-        }
+        };
     }
 
     // main handler that handle business logic
-    sayHi(){
+    sayHi() {
         return "hello world";
     }
 }
 
 instance.enableServices({
-    "":DemoRouter
-})
+    "": DemoRouter
+});
 
 instance.startServer();
 ```
@@ -42,7 +42,6 @@ Next step : [getting started](geting-started.md)
 
 See more :
 
-* [Develop Plugins](plugins-development/overview.md)
-* [Develop Service](service-development/overview.md)
-* [Develop Addons](addons-development/overview.md)
-
+-   [Develop Plugins](plugins-development/overview.md)
+-   [Develop Service](service-development/overview.md)
+-   [Develop Addons](addons-development/overview.md)
