@@ -1,3 +1,14 @@
+# Summary
+
+1. Write normal business logic like normally
+2. Declare it to Hyron to turn it register router
+
+# Note
+
+- Hyron helps separate parts of **Logic Processing Floor** (service) and **IO Processing Floor** ([plugins](../plugins-development/README.md)) processing, making it easy for you to develop and reuse source code.
+- 
+
+# Build in step-by-step
 ## Step 1 : Create Service Structure
 
 To make your service easy to reuse, maintain and upgrade, you should write your services under micro-service architecture. If you haven't worked with microservice yet, don't worry, hyron can help you easily to implement it. You should also refer to the microservice online course, or application programming instructions for more knowledge about it.
@@ -46,7 +57,7 @@ In the ``model`` file, where the Schema defines the data type, the model will be
 Below is a model to handle student management, used [mongoose](https://mongoosejs.com/)
 This service is responsible for processing information about a student
 
-./models/StudentsInfo
+./services/students/models/StudentsInfo
 ```js
 const {model, Schema} = require('mongoose');
 
@@ -78,13 +89,17 @@ The service will receive data from the model, and process the data in some way d
 
 Continuing with the above student management example, the controller will be a class that helps define queries and handle students.
 
+➜ **Fact** : Hyron helps you to separate the logical processing layer and the individual I/O processing layer, if you need to handle I/O related issues from the request, or to extend the functionality for the logics layer, you can refer to [Plugins](../plugins-development/README.md)
+
 ➜ **Fact** : Hyron makes a friendly combination between a router can be explored by the client with logic processing functions. Therefore, you can declare a short function to describe the functions that will be registered to become the router in the controller. This will help you be able to control them easily, and can be well supported by your IDE
 
 ➜ **Fact** : hyron helps you to pack in a friendly way, especially those who are familiar with Java, C family, or other object-oriented programming languages
 
 ➜ **Fact** : Hyron recommends that you use the syntax of [ES6](http://es6-features.org/#Constants), it's quite friendly, short, easy to learn. However, you can use other versions if you want
 
-./controller/StudentManager.js
+➜ **Fact** : The hyron can help you split the reusable config and variables, or can be customized by the user into a separate file ( appcfg ), you can see more about it [here](../appcfg-file.md).
+
+./services/students/controller/StudentManager.js
 ```js
 const StudentModel = require('../model')
 module.exports = class StudentManager {
@@ -148,23 +163,18 @@ You also don't need to define the ``requestConfig`` function, however, it is a g
 
 The interface is like a loose coupling, through which services can interact with each other, like a normal library.
 
-The interface is like a loose coupling, through which services can interact with each other, like a normal library.
+To work with the hyron framework, you need to use the two types of interfaces below
 
-### **1. Used to communicate with hyron** : 
-> contains the requestConfig function and possibly the accompanying processing functions, used to describe the routers that will be used to register the router.
+### **1. Hyron Service Interface**
+> Contains the ``requestConfig`` function and possibly the accompanying processing functions, used to describe the routers that will be used to register the router.
+> 
 > It is usually contained in the router.js file
-
-### **2. Used to communicate with other services**
-> is the combination of controller functions that can be used by other services
-> It is usually contained in the index.js file
-
-First of all, let's start with type 1. 
 
 In order to register routers, the router needs to know the information about that router, you can provide this information through the [requestConfig](../api-reference/HyronService.md) method.
 
 ### Example :
 
-./router.js
+./services/students/router.js
 ```js
 module.exports = require('./controller/StudentManager');
 ```
@@ -175,7 +185,7 @@ In case the code is too long and you have separated the handlers into individual
 
 ### Example 2 :
 
-./router.js
+./services/students/router.js
 ```js
 module.exports = {
     static requestConfig(){
@@ -202,4 +212,53 @@ module.exports = {
 }
 ```
 
-➜ **Fact** : By default, the hyron will configure the router address based on the module_name + method_name. however, you can also customize it, using the 'path' attribute
+➜ **Fact** : By default, the hyron will configure the router address based on the module_name + method_name. however, you can also customize it, using the 'path' attribute. For more attribute, please visit [RouterMeta](../api-reference/RouterMeta.md)
+
+➜ **Fact** : You can pack and publish your service to reuse for later times via [npm](https://docs.npmjs.com/cli/publish), [git](https://kbroman.org/github_tutorial/pages/init.html), or [bitsrc](https://docs.bitsrc.io/docs/quick-start.html)
+
+
+➜ **Fact** : If your service doesn't look like what you see above, you can also go through another route, using an UnofficialService, or creating Addons, Plugins to support your case.
+
+### **2. Application Program Interface**
+> Is the combination of controller functions that can be used by other services
+> 
+> It is usually contained in the index.js file
+
+To create this inteface, the simplest way is to export the functions that can be used by other services
+
+Example : We will define methods that can be used to manage students in the example above
+
+./services/students/index.js
+```js
+const StudentManager = require("./controller/StudentManager");
+
+module.exports = new StudentManager();
+```
+
+## Step 5 : Declare service
+
+To use service, you need to 'plug' it in your app.
+
+You can build the application with json file. It is extremely user-friendly and intuitive, in addition, it supports many other features. You can refer to this AppLoader feature [here](../buildIn-features/appLoader.core.md)
+
+Example :
+
+./app/server.json
+```json
+{
+    "base_url" : "http://localhost:3000/demo",
+    "services" : "./services/students/router.js"
+}
+```
+
+and to start Server, you need to declare build file with Hyron
+
+./index.js
+
+```js
+const hyron = require("hyron");
+
+hyron.build("./app/server.json");
+```
+
+➜ **Fact** : You can also declare in javascript in the usual way, see more [here](../api-reference/ModuleManager.md)

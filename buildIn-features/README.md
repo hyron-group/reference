@@ -2,6 +2,7 @@
 
 ## Core
 1.   [**AppLoader**](./appLoader.core.md) : build app with a json file
+2.   [**ResponseHandler**](./responseHandler.core.md) : handle other data types before returning the client
 
 ## Plugins
 
