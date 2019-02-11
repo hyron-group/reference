@@ -23,7 +23,7 @@ This function makes it possible to describe in a more centralized and synchroniz
 
  - Object < name, meta | method > : a object that contain descriptions about routes
     - **name** ( string ) : name of method declared bellow, that could be use to register a event. By default, Hyron will take that name and register it as a child-path for this service
-    - **meta** ( RouterMeta ) : a object that description detail about this router
+    - **meta** ( [RouterMeta](./RouterMeta.md) ) : a object that description detail about this router
     - **method** ( RouterMeta.method ) : a method or a list of method that could be used to register event for this method
 
 ---
