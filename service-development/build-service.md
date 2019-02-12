@@ -1,7 +1,7 @@
 # Summary
 
-1. Write normal business logic like normally
-2. Declare it to Hyron to turn it register router with [requestConfig](../api-reference/HyronService.md#function-requestConfig) and [appLoader](../buildIn-features/appLoader.core.md) or [enableServices](../api-reference/ModuleManager.md#function-build)
+1. Write business logic like normally
+2. Declare it to Hyron to register router with [requestConfig](../api-reference/HyronService.md#function-requestConfig) and [appLoader](../buildIn-features/appLoader.core.md) or [enableServices](../api-reference/ModuleManager.md#function-build)
 
 # Note
 
