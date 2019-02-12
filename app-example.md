@@ -6,7 +6,7 @@ This is simple hello-world app that help you have overview about Hyron framework
 const hyron = require("hyron");
 
 // init instance that listen on localhost, port 3000 by default
-var instance = Hyron.getInstance();
+var instance = hyron.getInstance();
 
 class DemoRouter {
     // return a object that description about routers
@@ -24,7 +24,7 @@ class DemoRouter {
 }
 
 instance.enableServices({
-    "": DemoRouter
+    "demo": DemoRouter
 });
 
 instance.startServer();
@@ -34,7 +34,7 @@ instance.startServer();
 
 A router registered on :
 
-> ## GET : [http://localhost:3000/sayHi](http://localhost:3000/sayHi)
+> ## GET : [http://localhost:3000/demo/sayHi](http://localhost:3000/sayHi)
 
 So, that really easy, right. You can do more with Hyron framework :D check it out in next step
 
@@ -42,6 +42,6 @@ Next step : [getting started](geting-started.md)
 
 See more :
 
--   [Develop Plugins](plugins-development/overview.md)
--   [Develop Service](service-development/overview.md)
--   [Develop Addons](addons-development/overview.md)
+-   [Develop Plugins](plugins-development/README.md)
+-   [Develop Service](service-development/README.md)
+-   [Develop Addons](addons-development/README.md)

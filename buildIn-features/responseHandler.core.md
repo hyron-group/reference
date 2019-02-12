@@ -9,7 +9,7 @@ Used to handle response by default
 
 ## 1. Cast other data type
 
-The response-handler is a special feature in the hyphen, used to handle the rest of your application, such as data types other than string and bufer (which can be returned by http.ServerResponse), error
+The response-handler is a special feature in the Hyron, used to handle the rest of your application, such as data types other than string and bufer (which can be returned by http.ServerResponse), error
 
 ![](../res/service-life-circle.short.png)
 

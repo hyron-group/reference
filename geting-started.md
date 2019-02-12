@@ -4,10 +4,10 @@
 
 -   [Basic about javascript](https://www.w3schools.com/js/)
 -   [A Hyron app example](app-example.md)
--   [Service development](service-development/overview.md)
--   [Plugins development](plugins-development/overview.md)
+-   [Service development](service-development/README.md)
+-   [Plugins development](plugins-development/README.md)
 -   [api reference](api-reference/ModuleManager.md)
--   [Addons development](addons-development/overview.md)
+-   [Addons development](addons-development/README.md)
 
 ## Create app step-by-step
 
@@ -36,7 +36,7 @@ Plugins are functions that are used to handle work-related data input and output
 
 You can found more of plugins in here : [npm registry](https://www.npmjs.com/search?q=Hyron)
 
-Or, you also develop your own plugin extremely simply. See more at here : [how to develop a plugins ?](https://github.com/Hyron-group/reference/tree/3437eeb47ffad09baf95272f73ae3e71764436ce/plugins-developent/overview.md)
+Or, you also develop your own plugin extremely simply. See more at here : [how to develop a plugins ?](https://github.com/Hyron-group/reference/tree/3437eeb47ffad09baf95272f73ae3e71764436ce/plugins-developent/README.md)
 
 If your app very simple, and don't request any plugins, please skip this step
 
@@ -95,4 +95,4 @@ Hyron helps you save significant time developing your application, by focusing o
 
 Not only that, Hyron offers many other useful features, check it out at : [API Reference](./api-reference/README.md)
 
-Next step : [How to develop own service ?](https://github.com/Hyron-group/reference/tree/3437eeb47ffad09baf95272f73ae3e71764436ce/service-developemnt/overview.md)
+Next step : [How to develop own service ?](https://github.com/Hyron-group/reference/tree/3437eeb47ffad09baf95272f73ae3e71764436ce/service-developemnt/README.md)

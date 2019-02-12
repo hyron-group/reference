@@ -2,8 +2,8 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Geting Started](geting-started.md)
 * [App Example](app-example.md)
+* [Geting Started](geting-started.md)
 * [Service Development](service-development/README.md)
   * [Build Service](service-development/build-service.md)
   * [Build Unofficial Service](service-development/build-unofficial-service.md)

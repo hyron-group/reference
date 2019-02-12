@@ -5,8 +5,8 @@
 
 # Note
 
-- Hyron helps separate parts of **Logic Processing Floor** (service) and **IO Processing Floor** ([plugins](../plugins-development/README.md)) processing, making it easy for you to develop and reuse source code.
-- 
+- Hyron helps separate parts of **Logic Processing Floor** (service) and **IO Processing Floor** ([plugins](../plugins-development/README.md)), making it easy for you to develop and reuse source code.
+- You can choose the architecture for your application, the instructions below are not required
 
 # Build in step-by-step
 ## Step 1 : Create Service Structure
@@ -147,10 +147,12 @@ module.exports = class StudentManager {
 
     // search student by name
     async search(name, filter, sort){
-        return await StudentModel.find({
+        var studentList = await StudentModel.find({
             $text : {$search : name},
             ...filter
         }).sort(sort).exec();
+
+        return studentList;
     }
 }
 ```
@@ -158,6 +160,42 @@ module.exports = class StudentManager {
 In fact, you don't need to build everything in the same js file. If your source code is large, you can completely separate them into separate files (if your code is longer than 200 lines), separating them will make it easier to maintain later.
 
 You also don't need to define the ``requestConfig`` function, however, it is a good choice if your code is short
+
+You can also pass the usual parameters used in the request to the argument of the main-handler, with the help of the [param-parser](../buildIn-features/param-parser.plugins.md) plugins.
+
+Example :
+```js
+search($cookie, name, filter, sort){
+    // example for lazy load
+    var {last_keyword, page} = $cookie;
+    ...
+}
+```
+
+And if you want more customization for the returned data type, you can use the [custom-response](../buildIn-features/custom-response.plugins.md) plugins to do that
+
+Example :
+```js
+requestConfig(){
+    return {
+        ...
+        search : {
+            method : 'get',
+            backware : ['custom_response']
+        }
+    }
+}
+search(...
+    return {
+        $cookie : {
+            page : page + 1,
+            last_keyword : name
+        },
+        type : 'application/json',
+        data : studentList
+    }
+}
+```
 
 ## Step 4 : write interface
 

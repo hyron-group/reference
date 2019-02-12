@@ -162,7 +162,7 @@ Retrieve config value for a key by name
 
 Used to register addons for this instance. A addons could have access to all the resources provided in this class via 'this' args. It used to bring more power for Hyron to handle advanced problems
 
-If you want to build your own addons, see this topic : [how to build a addons ? ](addons-development/overview.md)
+If you want to build your own addons, see this topic : [how to build a addons ? ](addons-development/README.md)
 
 ### **params**
 
