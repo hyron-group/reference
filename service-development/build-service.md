@@ -9,6 +9,7 @@
 - You can choose the architecture for your application, the instructions below are not required
 
 # Build in step-by-step
+
 ## Step 1 : Create Service Structure
 
 To make your service easy to reuse, maintain and upgrade, you should write your services under micro-service architecture. If you haven't worked with microservice yet, don't worry, hyron can help you easily to implement it. You should also refer to the microservice online course, or application programming instructions for more knowledge about it.
@@ -19,12 +20,12 @@ The following is a reference architecture to build a service according to micros
 
 ```
 services
-  |-- service_name
-        |-- controller
-        |-- model
-        |-- router.js
-        |-- index.js
-        |-- appcfg.ini
+  └── service_name
+        ├── controller
+        ├── model
+        ├── router.js
+        ├── index.js
+        └── appcfg.ini
 ```
 
 Each service is like a small application, to handle a specific business. Therefore, it should also follow a programming architecture to help you source code more clearly.

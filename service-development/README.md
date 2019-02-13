@@ -115,6 +115,66 @@ You can even do more than that. You can install plugins from 3rd party, or even 
 
 # How Hyron Service work ?
 
+Below is a general operation diagram of a hyron service
+
 ![](res/../../res/service-life-circle.short.png)
 
+As you can see, hyron splits a listenter router into two separate layers, namely the IO layer (including fontware and backware), and the logical layer (the main-handler). Instead of aggregating them as the way most other frameworks do
+
+This will help your source code not only be much shorter than the classic method, it also makes it easier for you to grow. Thanks to this packaging advantage, you can easily **share** them with other team members, in the company, or with your various projects, or even with the community.
+
+The following is a detailed activity diagram, describing how plugins operate, and how they communicate with each other and with main-handler.
+
 ![](res/../../res/router-life-circle.png)
+
+As you can see, the plugins will be run sequentially to handle each time a new request is received (via an API gateway to manage the routers).
+
+Any pre-declared plugins will run first. And the results of the previous plugins will be used as input of the following plugins
+
+A plugin includes fontware to handle input and backware to handle output, you can see more about them [here](../plugins-development/README.md)
+
+For a fontware, when it throws an exception, it will jump to the backware without going through the main-handler
+
+For a backware, when it throws an exception, it will ignore the remaining backware and jump to the response handler and return the result to the client.
+
+You can also always return the client from the plugins
+
+# How to community bettween router component ?
+
+Components in a router such as plugins, and main-handlers can communicate with each other in two ways
+
+1. **Use argument and return** : The result of a previous component will be used as the input of the following component
+2. **Through this scope** : components in the same router can share resources for each other, and are limited to one sandbox
+
+About the first way, as you can see [above](#How-Hyron-Service-work), we will go deeper into the second way through the ``this`` variable
+
+![](res/../../res/router-sandbox-mechanism.png)
+
+As you can see, ``this`` variable can be shared in the same router. They run in the same sandbox, so you can access resources in this space
+
+however, they still need to be followed in order. This means the following declared plugins can only receive parameters passed from the previously declared plugins. So we can summarize
+
+- **main-handler** can only take parameters from **fontware** through this
+- **backware** can get parameters from **main-handler** and **fontware** though this
+
+This router's scope can also be inherited from service this scope in case routers are declared in the same class
+
+Example :
+
+```js
+class MyService {
+    static requestConfig(){...}
+
+    getImage(id){...}
+
+    listImage(targetId){
+        ...
+        // reference to abort method
+        this.getImage(id);
+    }
+}
+```
+
+Since routers are run in a sandbox, it can only inherit properties from the service instance without modifying them.
+
+In addition to using methods in the class, it can also access the router's config via [$config](../api-reference/HyronService.md#var-config) and config of the router itself via [\$requestConfig](../api-reference/RouterMeta.md)

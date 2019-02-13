@@ -1,4 +1,9 @@
-Bellow is way to create a plugins
+# Summary
+1. Define logic for plugins in [fontware](../api-reference/PluginsMeta.md#var-fontware), [backware](../api-reference/PluginsMeta.md#var-backware)
+2. Declare it in [json-build-file/plugins](../buildIn-features/appLoader.core.md) or [ModuleManager.enablePlugins](../api-reference/ModuleManager.md#function-enableplugins-2-override)
+3. Declare in [requestConfig/~/plugins](../api-reference/HyronService.md#function-requestConfig) to turn on or off plugins for this router
+
+# Build in step-by-step
 
 ## Step 1 : Create a new plugins directory
 
@@ -6,18 +11,18 @@ create a new forder as bellow (or difference if you want - skip this step)
 
 ```
 plugins
-    '-- plugins-name
-            |-- src
-            |-- lib
-            |-- index.js
-            |-- appcfg.yaml
-            |-- plugins-name.fw.js
-            '-- plugins-bane.bw.js
+  └── plugins-name
+        ├── src
+        ├── lib
+        ├── index.js
+        ├── appcfg.yaml
+        ├── plugins-name_fw.js
+        └── plugins-bane_bw.js
 ```
 
 ## Step 2 : Create plugins structure
 
-in plugins-name.fw.js & plugins-name.fw.js ( it's also called middleware )
+in plugins-name_fw.js & plugins-name_fw.js ( it's also called middleware )
 
 ```js
 module.export = {
@@ -47,9 +52,9 @@ You don't need to implement all of method abort, you only need to implement the 
 
 After that, you need to write logic for middleware. What do you want to do with this
 
-Hyron supports a mechanism that allows plugins to communicate with each other, and with that router itself, to increase the flexibility of plugins.
+➜ **Fact** : Hyron supports a mechanism that allows plugins to communicate with each other, and with that router itself, to increase the flexibility of plugins.
 
-By having access to the 'this' variable, on that range is the entire router
+➜ **Fact** : By having access to the 'this' variable, on that range is the entire router
 
 With this variable, you can access some of the default variables loaded by Hyron. These special variables start with a '\$' character
 
@@ -68,8 +73,8 @@ index.js
 
 ```js
 module.exports = {
-    fontware: require("./plugin-name.fw.js"),
-    backware: require("./plugin-name.bw.js")
+    fontware: require("./plugin-name_fw.js"),
+    backware: require("./plugin-name_bw.js")
 };
 ```
 
@@ -95,10 +100,10 @@ And as user, you also avoid named you modules with name is the same with this
 
 ```yaml
 fontware:
-    plugins-name: "@hyron/package-name/plugins-name.fw.js"
+    plugins-name: "@hyron/package-name/plugins-name_fw.js"
 
 backware:
-    plugins-name: "@hyron/package-name/plugins-name.bw.js"
+    plugins-name: "@hyron/package-name/plugins-name_bw.js"
 ```
 
 ## Step 4 : publish you plugins
@@ -119,7 +124,7 @@ npm publish --access public
 
 # Note
 
--   You should name plugins handle with format : name.fw.js if it is fontware, or name.bw.js if it is backware
+-   You should name plugins handle with format : name_fw.js if it is fontware, or name_bw.js if it is backware
 -   Plugins should be identical to the declared name
 -   The name of the plugins should be unique
 -   Development plugins should also adhere to the principles of application design and development, to facilitate maintenance and expansion for later.

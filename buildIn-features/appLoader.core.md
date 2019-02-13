@@ -17,7 +17,7 @@ You can use this json file to declare instances, addons, plugins, services, sett
 
 In the future, we plan to make it more powerful with CLI tools, allowing you to easily share and deploy your application with it.
 
-### To use json build file
+### Use json build file
 
 Used method [ModuleManager.build](../api-reference/ModuleManager.md#function_build) to reference to a json build file
 

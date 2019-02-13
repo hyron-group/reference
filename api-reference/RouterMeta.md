@@ -2,13 +2,13 @@
 
 ### interface **RouterMeta**
 
--   **method**: string | Array< string >
--   **fontware**: Array < string >
--   **backware**: Array < string >
--   **plugins**: Array < string >
--   **handle**: function
--   **path**: string
--   **params**: string
+-   [**method**](#var-method): string | Array< string >
+-   [**fontware**](#var-fontware): Array < string >
+-   [**backware**](#var-backware): Array < string >
+-   [**plugins**](#var-plugins): Array < string >
+-   [**handle**](#var-handle): function
+-   [**path**](#var-path): string
+-   [**params**](#var-params): string
 
 # **Details**
 
@@ -68,4 +68,9 @@ Customize the path for this router instead of the default path. Use this attribu
 
 An attribute used by param-parser plugins allows to parse parameters from url strings following the path of this router
 
-Use it with syntax : /:param1/:param2
+Use it with syntax : /:param1/param2 ...
+
+### Rule
+- var name start with ':' character
+- params will be followed after the path
+- The variable from the param should only have a depth of less than 5

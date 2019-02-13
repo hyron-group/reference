@@ -2,15 +2,15 @@
 
 ### interface **Middleware**
 
--   **handle** ( req, res, prev, cfg ) : any | Promise< any >
--   **onCreate** ( cfg ) : any | Promise< any >
--   **checkout** ( done, cfg ) : boolean | Promise< boolean >
--   **typeFilter** : Array< any >
--   **global** : boolean
+-   [**handle**](#function-handle) ( req, res, prev, cfg ) : any | Promise< any >
+-   [**onCreate**](#function-onCreate) ( cfg ) : any | Promise< any >
+-   [**checkout**](#function-checkout) ( done, cfg ) : boolean | Promise< boolean >
+-   [**typeFilter**](#var-typeFilter) : Array< any >
+-   [**global**](#var-global) : boolean
 
 # **Details**
 
-## *interface **Middleware***
+## interface **Middleware**
 It used to declare middleware that used to run before or after each services
 
 # function handle
@@ -30,7 +30,7 @@ This function has the ability to access the 'this' variable of this route
 
 
 ### **return**
-any | Promise < any > : A result that could be used by bellow plugins, or as main-handler function if it is last fontware. It also support for async function or function return with a Promise
+- any | Promise < any > : A result that could be used by bellow plugins, or as main-handler function if it is last fontware. It also support for async function or function return with a Promise
 
 ---
 
@@ -50,7 +50,7 @@ This function has the ability to access the 'this' variable of this route
 
 ### **return**
 
-void | Promise< void > : it not required, just notify in async case that it completed
+- void | Promise< void > : it not required, just notify in async case that it completed
 
 ---
 
@@ -70,14 +70,14 @@ This function has the ability to access the 'this' variable of this route
 
 
 ### **return**
-boolean | Promise< boolean > : true if has change, or not
+- boolean | Promise< boolean > : true if has change, or not
 
 ---
 
 # var typeFilter
 > ## **typeFilter** : Array< any >
 
-It is used to filter which type of data from prev will be processed. if type of 'prev' don't contain in array. It will be skip
+It is used to filter which type of data from prev will be processed. if type of ['prev'](#params) don't contain in array. It will be skip
 
 ---
 
