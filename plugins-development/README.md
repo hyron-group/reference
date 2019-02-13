@@ -1,26 +1,24 @@
-# Concept
-
 Can be said, Hyron is a framework based on plugins. The main power of Hyron is actually largely based on external modules, such as plugins
 
 First of all, let's learn a little bit about the concept, and why using plugins is essential.
 
-## What is plugins ?
+# What is plugins ?
 
 > ### Plugins are a module that can be used to handle input and output for a router
 
-## Structure of a plugins ?
+# Structure of a plugins ?
 
 > ### A plugins based on 2 parts, fontware and backware
 
-## What is a fontware ?
+# What is a fontware ?
 
 > ### fontware is a middleware running in front of main-hander (is a function that processing business logic), used to process input for main-handler
 
-## What is a backware ?
+# What is a backware ?
 
 > ### backware is a middleware running in back of main-hander, used to process output of main-handler
 
-## So, what a plugins look like ?
+# So, what a plugins look like ?
 
 This is a diagram about a plugins
 
@@ -38,7 +36,7 @@ Each middleware contains functions defined for itself as :
 
 You can see [PluginsMeta reference](/api-reference/PluginsMeta.md) to find more about a plugins
 
-## Why we use plugins ?
+# Why we use plugins ?
 
 -   It's easy to reuse and share
 -   It helps separate the IO processing block from logic processing, makes it easy to reuse the logic block, test and fix errors, and your code becomes more concise.
@@ -47,7 +45,7 @@ You can see [PluginsMeta reference](/api-reference/PluginsMeta.md) to find more 
 
 ![](/res/router-struct.png)
 
-## How can i custom a plugins ?
+# How can i custom a plugins ?
 
 In addition to modifying the code in the same way as the traditional way, Hyron provides a solution that allows you to customize a plugins from 3rd parties through appcfg.yaml
 
@@ -61,7 +59,7 @@ You can use the following methods to access the config :
 -   args cfg at last argument of onCreate, checkout, handle
 -   Use Hyron.**getConfig** ( pluginsName, defaultValue )
 
-## How to deploy my plugins ?
+# How to deploy my plugins ?
 
 At the present time, we have not provided features to support deploying and sharing. We will try to release this feature as soon as possible to serve the community
 
@@ -71,11 +69,11 @@ You also use another service to resolve this problem like
 -   [github](https://github.com/)
 -   [bitsrc](https://bitsrc.io/)
 
-## Do Hyron supports asynchronous plugins ?
+# Do Hyron supports asynchronous plugins ?
 
 Yes, so are all other ingredients, includes both of async/await and Promise
 
-## I have many plugins, how will the plugins run ?
+# I have many plugins, how will the plugins run ?
 
 You can refer to the life of a router :
 
@@ -89,7 +87,7 @@ in the case of backware, it will jump to the reponse-handler (which is the defau
 
 This mechanism allows plugins to be flexible, even inheriting each other to solve a problem. You should also pay attention to their order
 
-## State of middleware (fontware & backware) ?
+# State of middleware ?
 
 Hyron uses state control mechanisms, which allow optimal function to run down to the smallest level, minimizing the time delay when a plugins are called.
 
@@ -103,7 +101,7 @@ After the call is complete, it will switch to **IDLE State** to wait for changes
 
 **Final State** can also be set if you call parameter done (args index 0 of checkout)
 
-## I heard that i can access this variable from the router. Is that true ?
+# I heard that i can access this variable from the router. Is that true ?
 
 Yes, plugins and main handlers share a this variable (run in sandbox) and you can use them to share information between plugins, or with main-handle. Hyron allows some default fields like
 
@@ -112,12 +110,12 @@ Yes, plugins and main handlers share a this variable (run in sandbox) and you ca
 -   **\$requestConfig** : Installation information for this router
 -   **\$config** : contain this service config
 
-## Can I run my plugins without being declared ?
+# Can I run my plugins without being declared ?
 
 Yes, you can. By becoming a member of Hyron organization, your package under @hyron scope if declared in appcfg will be able to be run automatically without requiring the user to declare it.
 
 This is a great privilege. It allows your package to be much more convenient, and can be used as a third library
 
-## Why is the package of Hyron organization preferred ?
+# Why is the package of Hyron organization preferred ?
 
 Its package will be better moderated, so it is more reliable than other regular packages. In addition, you can also register to become developer with benefits like get help, rewards and other benefits from Hyron developer community. See more at [developer policies]()

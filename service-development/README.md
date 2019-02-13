@@ -1,14 +1,12 @@
-# Concept
-
-## What is Service ?
+# What is Service ?
 
 > ### Service is a group of functions used to handle a specific business logic
 
-## What is Micro-Service ?
+# What is Micro-Service ?
 
 > ### microservice is an application programming architecture that focuses on separating application features into the smallest processing services
 
-## Why should I build on the micro-service architecture ?
+# Why should I build on the micro-service architecture ?
 
 Design your app used micro-service architecture gives you a lot of advantages compared to developing applications in monolithic architecture
 
@@ -21,11 +19,11 @@ We can mention the main advantages
 -   Easy to development
 -   Easy to apply development processes
 
-## Can i develop according to my wishes ?
+# Can i develop according to my wishes ?
 
 Yes, you can, microservice is just an option, you can choose another architecture that is more suitable for your project, which is optional, and you can do it with your
 
-## The main points of a service ?
+# The main points of a service ?
 
 -   A service should have own database model
 -   A service should be a blackbox, to communicate with the service through an interface
@@ -33,13 +31,13 @@ Yes, you can, microservice is just an option, you can choose another architectur
 -   A service can be called by both the client and server
 -   A service can be configured from the outside
 
-## What makes hyron a good choice for microservice application development ?
+# What makes hyron a good choice for microservice application development ?
 
 -   Hyron helps your service be packed more standard
 -   Hyron makes managing and configuring services easier
 -   Hyron can help you reuse the higher level modules
 
-## I heard that building a service in hyron is very simple, isn't it?
+# I heard that building a service in hyron is very simple, isn't it?
 
 Yes, with the help of plugins, you can almost build a service just need to know a little bit about javascript.
 
