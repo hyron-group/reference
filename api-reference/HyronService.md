@@ -5,9 +5,7 @@
 -   *static* [**requestConfig**](#function-requestConfig) ( ) : Object < name, [RouterMeta](./RouterMeta) | [RouterMeta.method](./RouterMeta#var-method) >
 -   [**$config**]() : object
 
-# **Details**
-
-## inteface **HyronService**
+# inteface **HyronService**
 
 Used to define a service that was controlled by Hyron. Create class that implement this, and declare it in Hyron.enableServices to use
 

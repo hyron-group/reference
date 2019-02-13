@@ -8,9 +8,8 @@
 -   [**typeFilter**](#var-typeFilter) : Array< any >
 -   [**global**](#var-global) : boolean
 
-# **Details**
 
-## interface **Middleware**
+# interface **Middleware**
 It used to declare middleware that used to run before or after each services
 
 # function handle

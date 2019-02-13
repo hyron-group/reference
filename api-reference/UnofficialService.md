@@ -4,9 +4,8 @@
 
 -   **handle** ( app, cfg ) : void
 
-# **Details**
 
-## interface **UnofficialService**
+# interface **UnofficialService**
 
 Used to run modules that are not supported by hyron yet. With the UnofficialService, you have more freedom to run what you want. You should also note that it is not strictly managed by Hyron, so plugins and some of addons may not support this space.
 

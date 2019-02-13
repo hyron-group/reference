@@ -10,10 +10,8 @@
 -   [**path**](#var-path): string
 -   [**params**](#var-params): string
 
-# **Details**
 
-
-## interface **RouterMeta**
+# interface **RouterMeta**
 
 Is a metadata object contain information about routes
 

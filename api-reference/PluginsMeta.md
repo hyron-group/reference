@@ -5,9 +5,8 @@
 - [**fontware**](#var-fontware) : [Middleware](./Middleware.md)
 - [**backware**](#var-backware) : [Middleware](./Middleware.md)
 
-# **Details**
 
-## interface **PluginsMeta**
+# interface **PluginsMeta**
 
 Contain parts of a plugins. It helps separate the layer and handle input and output separately from the logical processing layer, making it easy to reuse them for many different situations.
 

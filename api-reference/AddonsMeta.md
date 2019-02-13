@@ -4,9 +4,8 @@
 
 - [**handle**](#function-handle) ( cfg ) : void
 
-# **Details**
 
-## *interface **AddonsMeta***
+# *interface **AddonsMeta***
 
 Contains sections that define an addons. Addons help you to expand the Hyron's platform, even making it more efficient, your way.
 
