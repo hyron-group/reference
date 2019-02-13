@@ -6,10 +6,10 @@ Hyron is a [Powerful](benchmark.md) NodeJS framework that helps **build a backen
 npm install hyron
 ```
 
-![CircleCI](https://img.shields.io/circleci/project/github/hyron-group/hyron/master.svg?style=flat)
+[![CircleCI](https://circleci.com/gh/hyron-group/hyron.svg?style=shield)](https://circleci.com/gh/hyron-group/hyron)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/488552ae62744dd7bf6bb34028adcc36)](https://www.codacy.com/app/thangdjw/hyron?utm_source=github.com&utm_medium=referral&utm_content=hyron-group/hyron&utm_campaign=Badge_Grade)
 ![downloads](https://img.shields.io/npm/dm/hyron.svg?style=flat)
-![version](https://img.shields.io/npm/v/hyron.svg?style=flat)
+[![version](https://img.shields.io/npm/v/hyron.svg?style=flat)](https://www.npmjs.com/package/hyron)
 [![chat](https://img.shields.io/gitter/room/hyron-group/community.svg?style=flat)](https://gitter.im/Hyron-group/community)
 [![license](https://img.shields.io/npm/l/hyron.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 [![](http://img.shields.io/liberapay/patrons/thangdjw.svg?logo=liberapay)](https://liberapay.com/thangdjw/donate)
