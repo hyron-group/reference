@@ -35,5 +35,5 @@
 * [File appcfg.yaml](appcfg-file.md)
 * [Benchmark](benchmark.md)
 * [Contribution](contribution.md)
-* [Developer policy](build-trustly-module.md)
+* [Developer policy](developer-policy.md)
 * [Release Note](release-note.md)
