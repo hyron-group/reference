@@ -3,9 +3,9 @@
 ### interface **Middleware**
 
 -   [**handle**](#function-handle) ( req, res, prev, cfg ) : any | Promise< any >
--   [**onCreate**](#function-onCreate) ( cfg ) : any | Promise< any >
+-   [**onCreate**](#function-oncreate) ( cfg ) : any | Promise< any >
 -   [**checkout**](#function-checkout) ( done, cfg ) : boolean | Promise< boolean >
--   [**typeFilter**](#var-typeFilter) : Array< any >
+-   [**typeFilter**](#var-typefilter) : Array< any >
 -   [**global**](#var-global) : boolean
 
 

@@ -1,7 +1,7 @@
 # Summary
 1. Define logic for plugins in [fontware](../api-reference/PluginsMeta.md#var-fontware), [backware](../api-reference/PluginsMeta.md#var-backware)
 2. Declare it in [json-build-file/plugins](../buildIn-features/appLoader.core.md) or [ModuleManager.enablePlugins](../api-reference/ModuleManager.md#function-enableplugins-2-override)
-3. Declare in [requestConfig/~/plugins](../api-reference/HyronService.md#function-requestConfig) to turn on or off plugins for this router
+3. Declare in [requestConfig/~/plugins](../api-reference/HyronService.md#function-requestconfig) to turn on or off plugins for this router
 
 # Build in step-by-step
 

@@ -2,7 +2,7 @@
 
 ### interface [**HyronService**](#interface-HyronService)
 
--   *static* [**requestConfig**](#function-requestConfig) ( ) : Object < name, [RouterMeta](./RouterMeta) | [RouterMeta.method](./RouterMeta#var-method) >
+-   *static* [**requestConfig**](#function-requestconfig) ( ) : Object < name, [RouterMeta](./RouterMeta) | [RouterMeta.method](./RouterMeta#var-method) >
 -   [**$config**]() : object
 
 # inteface **HyronService**

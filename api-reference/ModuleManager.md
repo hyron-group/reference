@@ -3,16 +3,16 @@
 ### class **ModuleManager** (Hyron)
 
 -   [**build**](#function-build) ( path ) : void
--   _static_ [**getInstance**](#function-getInstance-4-override)( ... ) : [ModuleManager](#class-ModuleManager)
+-   _static_ [**getInstance**](#function-getinstance-4-override)( ... ) : [ModuleManager](#class-modulemanager)
 -   [**setting**](#function-setting) ( config ) : void
--   _static_ [**getConfig**](#function-getConfig) ( name ) : any
--   _static_ [**getInstanceContainer**](#function-getInstanceContainer) ( ) : Array<[ModuleManager](#class-ModuleManager)>
--   [**enableAddons**](#function-enableAddons-2-override) ( ... ) : void
--   [**enablePlugins**](#function-enablePlugins-2-override) ( ... ) : void
--   [**enableServices**](#function-enableServices-2-override) ( ... ) : void
--   [**initServer**](#function-initServer) ( server ) : void
--   _static_ [**setServer**](#function-setServer) ( host, port, server ) : void
--   [**startServer**](#function-startServer) ( callback ) : void
+-   _static_ [**getConfig**](#function-getconfig) ( name ) : any
+-   _static_ [**getInstanceContainer**](#function-getinstancecontainer) ( ) : Array<[ModuleManager](#class-modulemanager)>
+-   [**enableAddons**](#function-enableaddons-2-override) ( ... ) : void
+-   [**enablePlugins**](#function-enableplugins-2-override) ( ... ) : void
+-   [**enableServices**](#function-enableservices-2-override) ( ... ) : void
+-   [**initServer**](#function-initserver) ( server ) : void
+-   _static_ [**setServer**](#function-setserver) ( host, port, server ) : void
+-   [**startServer**](#function-startserver) ( callback ) : void
 -   **host** : string
 -   **port** : number
 -   **prefix** : string
