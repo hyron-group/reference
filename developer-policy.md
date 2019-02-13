@@ -10,7 +10,7 @@ The launch of Hyron organization ensures that pre-malware users' rights can be e
 
 As a developer, you can also join our organization by sending a registration email to Hyron.dev@gmail.com
 
-## Benefit
+# Benefit
 
 -   Be involved in the programming community in Hyron organization
 -   Better support in the development of the ecosystem
@@ -18,7 +18,7 @@ As a developer, you can also join our organization by sending a registration ema
 -   have the opportunity to receive rewards through donate activities
 -   Packages belonging to Hyron organization are based on the ownership, creativity of the individual who developed the package
 
-## Responsibility
+# Responsibility
 
 -   Make sure your package is as stable as possible
 -   It is forbidden to assign malicious code to your package and to other members
@@ -26,13 +26,13 @@ As a developer, you can also join our organization by sending a registration ema
 -   Report to the addmin if detecting a violation.
 -   Prohibits acts of insulting others in the community
 
-## handling violations
+# handling violations
 
 -   Violators will be permanently excluded from the organization
 -   Violators and malicious code packets will be warned to the community to prevent risks
 -   Malicious packets will be remedied as soon as possible from the time of discovery
 
-## Candidate criteria
+# Candidate criteria
 
 To join Hyron organization, you must meet the following criteria
 
@@ -40,7 +40,18 @@ To join Hyron organization, you must meet the following criteria
 -   Enthusiasm, openness, willingness to help and community development
 -   Wishing to grow Hyron become stronger
 
-## Note
+# Rewards
+
+if you are a contributor to Hyron's open source community, including the core, and other parts of the Hyron ecosystem. You deserve the rewards of gifts from us
+
+These rewards include :
+
+- The **financial reward fund is 20% from the business** that Hyron earned for the top 20 most contributors on a quarterly basis
+- **Published by name** (if permitted) on **Hyron's media channels**
+- **Nominated** for Hyron's **development organization**
+- **placed a representative image** of an individual or organization with important contributions on **Hyron's website** and the media as a **brand representative**
+
+# Note
 
 -   You may be excluded from the community if you have not been active for a long time. Please contact us if you are working again
 -   The community members are based on the criteria of comfort, fun is leading, consider them as their own friends :)))
