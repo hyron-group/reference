@@ -3,7 +3,7 @@
 # Summary
 
 1. Write processing logic for [addons](../api-reference/AddonsMeta.md)
-2. Declare addons to use in [json-build-file/~/addons](../buildIn-feature/appLoader.core.md) or [ModuleManager.enableAddons](../api-reference/ModuleManager.md#function-enableaddons-2-override) or [ModuleManager.enableGlobalAddons](../api-reference/ModuleManager.md#function-enableglobaladdons-2-override)
+2. Declare addons to use in [json-build-file/~/addons](../buildIn-features/appLoader.core.md) or [ModuleManager.enableAddons](../api-reference/ModuleManager.md#function-enableaddons-2-override) or [ModuleManager.enableGlobalAddons](../api-reference/ModuleManager.md#function-enableglobaladdons-2-override)
 
 # Build in step-by-step
 
