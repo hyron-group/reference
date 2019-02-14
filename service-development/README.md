@@ -39,13 +39,13 @@ Yes, you can, microservice is just an option, you can choose another architectur
 -   A service can be called by both the client and server
 -   A service can be configured from the outside
 
-# What makes hyron a good choice for microservice application development ?
+# What makes Hyron is a good choice for Microservice application development ?
 
 -   Hyron helps your service be packed more standard
 -   Hyron makes managing and configuring services easier
 -   Hyron can help you reuse the higher level modules
 
-# I heard that building a service in hyron is very simple, isn't it?
+# Building services in Hyron is very simple ?
 
 Yes, with the help of plugins, you can almost build a service just need to know a little bit about javascript.
 
@@ -107,7 +107,7 @@ demoApp.startServer();
 // you also used json file to build & run app instead code abort
 ```
 
-### **Result**
+**Result**
 
 a router register on
 
@@ -184,3 +184,15 @@ class MyService {
 Since routers are run in a sandbox, it can only inherit properties from the service instance without modifying them.
 
 In addition to using methods in the class, it can also access the router's config via [$config](../api-reference/HyronService.md#var-config) and config of the router itself via [\$requestConfig](../api-reference/RouterMeta.md)
+
+# Routing
+
+By default, hyron will automatically register the router based on the
+
+```
+{base_url}/{prefix}/{service_name}/{method_name}/{params}
+```
+
+It will help you focus more on building logic. and help to be more synchronized with services from 3rd parties
+
+however, you can still customize your link with [RouterMeta.path](../api-reference/RouterMeta.md#var-path)
