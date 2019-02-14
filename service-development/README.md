@@ -185,7 +185,7 @@ Since routers are run in a sandbox, it can only inherit properties from the serv
 
 In addition to using methods in the class, it can also access the router's config via [$config](../api-reference/HyronService.md#var-config) and config of the router itself via [\$requestConfig](../api-reference/RouterMeta.md)
 
-# Routing
+# How to routing ?
 
 By default, hyron will automatically register the router based on the
 
