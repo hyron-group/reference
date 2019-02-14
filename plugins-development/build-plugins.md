@@ -122,6 +122,83 @@ npm publish --access public
 
 **bitsrc** : check it out at [bitsrc document](https://docs.bitsrc.io/docs/quick-start.html)
 
+# Using Plugins
+
+plugins can be plugged into your application very easily, we can use them in the following way
+
+## Step 1 : Declare it in json-build-file/~/plugins
+
+**Note** : If the plugins you want to install are from the hyron organization, it may already support auto import, you can skip this step.
+
+You can declare plugins according to the form below used [appLoader](../buildIn-features/appLoader.md)
+
+```json
+// your instance
+{
+    "base_url": ...,
+    "plugins" : {
+        // point to plugins from root
+        "plugins-name" : "plugins-path",
+        // name of installed plugins package name
+        "plugins-name" : "plugins-package-name",
+        // url of plugins from git or tar file
+        "plugins-name" : "plugins-url",
+
+    }
+}
+
+```
+
+In addition, you can also use [ModuleManager](../api-reference/ModuleManager.md) to declare it (**if you write in javascript** instead of json build file)
+
+```js
+const hyron = require('hyron');
+
+var myApp = hyron.getInstance();
+
+myApp.enablePlugins({
+    "plugins-name" : "plugins-path",
+});
+
+...
+```
+
+## Step 2 : turn on or off it in requestConfig/~/plugins
+
+You can control the status of plugins right on your service, by declaring their names in plugins properties in requestConfig.
+
+```js
+requestConfig(){
+    return {
+        method_name : {
+            method : "get",
+            plugins : [
+                // turn on a plugins by name
+                "plugins-name",
+                // turn off global plugins by name
+                "!global-plugins-name",
+            ],
+            
+            // You can specify to enable or disable only the fontware or backware of a plugins used fontware & backware properties
+            fontware : [
+                "plugins-name",
+            ],
+            backware : [
+                "plugins-name",
+            ]
+        }
+    }
+}
+```
+
+As you can see, you can specify to enable, disable plugins because its name is declared above
+
+You can turn off a global plugins by adding '!' in front of that plugins name
+
+You can specify the exact fontware or backware of a plugins to be run
+
+You can set all routers with the [$all attribute](../api-reference/HyronService.md#function-requestConfig)
+
 # Note
 
 -   You should name plugins handle with format : name_fw.js if it is fontware, or name_bw.js if it is backware

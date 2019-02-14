@@ -15,7 +15,7 @@ Used to define a service that was controlled by Hyron. Create class that impleme
 
 Used to declared information about method that could be used to register event listener
 
-This function makes it possible to describe in a more centralized and synchronized manner, and can be implemented by many different languages. It also have special attribute for config all router is $all with properties inside like the same
+This function makes it possible to describe in a more centralized and synchronized manner, and can be implemented by many different languages. It also have special attribute for config all router is ``$all`` with properties inside like the same
 
 ### **return**
 

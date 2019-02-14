@@ -7,7 +7,7 @@
 
 # Build in step-by-step
 
-## 1. Write Processing Logic
+## Step 1. Write Processing Logic
 
 Addons is a very simple and powerful feature. It allows you to customize and extend Hyron framework. By allowing access to resources that are managed from the ModuleManager class ( base of Hyron ) via this scope
 
@@ -44,7 +44,8 @@ There is classes you need to keep in mind when writing Addons
   - [RouterFactory](https://github.com/hyron-group/hyron/blob/master/core/ServicesManager/RouterFactory.js) : is the service core, used to manage routers
   - [MiddlewareManager](https://github.com/hyron-group/hyron/blob/master/core/pluginsManager/middlewareManager.js) : used to manage and store plugins
 
-## 2. Declare addons to use
+
+# Using Addons
 
 You can control state of addons, make it as global and run on every instances, or by normal and run in assign instance
 
