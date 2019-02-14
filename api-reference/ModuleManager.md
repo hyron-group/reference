@@ -8,6 +8,7 @@
 -   _static_ [**getConfig**](#function-getconfig) ( name ) : any
 -   _static_ [**getInstanceContainer**](#function-getinstancecontainer) ( ) : Array<[ModuleManager](#class-modulemanager)>
 -   [**enableAddons**](#function-enableaddons-2-override) ( ... ) : void
+-   [**enableGlobalAddons**](#function-enableglobaladdons-2-override) ( ... ) : void
 -   [**enablePlugins**](#function-enableplugins-2-override) ( ... ) : void
 -   [**enableServices**](#function-enableservices-2-override) ( ... ) : void
 -   [**initServer**](#function-initserver) ( server ) : void
@@ -174,6 +175,34 @@ If you want to build your own addons, see this topic : [how to build a addons ? 
 > ## **enableAddons** ( addonsList ) : void
 
 Used to register addons for this instance by addons handler function.
+
+### **params**
+
+-   **addonsList** ( Array< name, [AddonsMeta](./AddonsMeta.md#function-handle) > ) : list of addons called on this instance
+    -   **name** (string) : name of addons. It used to import configs
+    -   **handler** ( [AddonsMeta](./AddonsMeta.md#function-handle) ) : handler for addons
+
+---
+
+# function enableGlobalAddons (+2 override)
+
+> ## **enableGlobalAddons** ( addonsPaths ) : void
+
+Used to register global addons that have been called on each instance when it created
+
+If you want to build your own addons, see this topic : [how to build a addons ? ](addons-development/README.md)
+
+### **params**
+
+-   **addonsPaths** ( Array < name, path > ) : list of linked addons referenced by path from root
+    -   **name** ( string ) : name of addons. It used to load configs
+    -   **path** ( string ) : link to addons handler. It should be start at root dir
+
+---
+
+> ## **enableGlobalAddons** ( addonsList ) : void
+
+Used to register global addons by addons handler function.
 
 ### **params**
 

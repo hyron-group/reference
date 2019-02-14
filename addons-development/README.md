@@ -25,9 +25,6 @@ Here are the points you should keep in mind
 - **Normal State** only **runs in that instance scope**
 - **Global State** can **run on all instances**
 - The state of addons can be controlled by the user
-- addons can inherit the resources that hyron manages through this scope, you can use it to modify the source code of the
-- The classes you need to keep in mind when writing Addons
-  - [ModuleManager](https://github.com/hyron-group/hyron/blob/master/core/ModulesManager.js) : used to manage modules (instance, services, addons, plugins) and run the server
-  - [AddonsManager](https://github.com/hyron-group/hyron/blob/master/core/addonsManager.js) : used to manage and store addons
-  - [RouterFactory](https://github.com/hyron-group/hyron/blob/master/core/ServicesManager/RouterFactory.js) : is the service core, used to manage routers
-  - [MiddlewareManager](https://github.com/hyron-group/hyron/blob/master/core/pluginsManager/middlewareManager.js) : used to manage and store plugins
+- Addons can inherit the resources that hyron manages through this scope, you can use it to modify the source code of the
+- Addons will run when instance created
+- Addons can be used to run commands or information settings before the server is run
