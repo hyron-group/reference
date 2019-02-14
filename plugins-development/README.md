@@ -6,6 +6,15 @@ First of all, let's learn a little bit about the concept, and why using plugins 
 
 > ### Plugins are a module that can be used to handle input and output for a router
 
+# Why we use plugins ?
+
+1.  It's easy to **reuse** and **share** : Hyron helps break the **IO processing** block from **logic processing**, makes it easy to reuse the logic block, test and fix errors, and your code becomes more concise.
+2.   Help you **focus more** on **logic processing** : Plugins can help you automate many parts, and add useful features. It can be easily installed, so you can take advantage of help from the community
+
+
+![](/res/router-struct.png)
+
+
 # Structure of a plugins ?
 
 > ### A plugins based on 2 parts, fontware and backware
@@ -35,15 +44,6 @@ Each middleware contains functions defined for itself as :
 -   **global** : decide whether the middleware is automatically called for each router or not
 
 You can see [PluginsMeta reference](/api-reference/PluginsMeta.md) to find more about a plugins
-
-# Why we use plugins ?
-
--   It's easy to reuse and share
--   It helps separate the IO processing block from logic processing, makes it easy to reuse the logic block, test and fix errors, and your code becomes more concise.
--   Can take advantage of help from the community through their push-up plugins
--   It makes it easy to monitor and manage source code
-
-![](/res/router-struct.png)
 
 # How can i custom a plugins ?
 

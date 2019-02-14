@@ -78,7 +78,10 @@ In addition to passing data from the query, body, params, you can also pass the 
 -   **\$trailers** : as [req.trailers](https://nodejs.org/api/http.html#http_message_trailers)
 -   **\$events** : as req.on
 -   **\$cookie** : as object parser from req.headers.cookie
--   **\$body** : as raw body type for method POST, PUT, PATCH
+-   **\$query** : parse query from url into a object
+-   **\$urlencoded** : parse body data as url-encoded data type into a object
+-   **\$multipart** : parse body data as multi-part data type into a object
+-   **\$raw** : parse body data as raw data type
 
 To used special variables ( start with '\$' character ) mentioned above, you need to include it in main-handler method arguments
 

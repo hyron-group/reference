@@ -65,13 +65,14 @@ Below is some attributes you should to remember
 }
 ```
 
-to register global addons
+### To register global addons
 
-```js
+```json
+// array of instances
 [
     {
         // a object only contain addons properties
-        addons: {
+        "addons": {
             // global addons map
         }
     },
@@ -81,6 +82,9 @@ to register global addons
     }
 ];
 ```
+
+As you can see, to declare the global addons, you wrap it in **an object that has only one attribute as addons**
+
 
 ## 2. Support for multi instance
 
@@ -114,6 +118,7 @@ Example :
 build/app.json
 
 ```json
+// array of instances by linked to another build file from root
 [
     "./build/api-instance.json",
     "./build/docs-instance.json",

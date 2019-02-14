@@ -2,6 +2,14 @@
 
 > ### Service is a group of functions used to handle a specific business logic
 
+# Why we use HyronService ?
+
+1. Help you **easily reuse** : Hyron can help you **reuse the higher-level** source code. You can write your services, and plug it into other projects, share it with the community or used by another services
+2. It is **easy to grow** : Hyron helps you simplify the development process, you can build your application with just a little knowledge of javascript. You can write the processing logic as a normal function, and **`boom`**, it can turn into routers with just a few lines
+3. It will be **easier to manage** : It will be scary if you have hundreds of routers. Hyron helps solve this problem by **reducing the level of dependency between components**, and **managing the focus**. You can easily upgrade, and maintain your system easier when your source code becomes brighter
+
+![](res/../../res/reuseable-services.png)
+
 # What is Micro-Service ?
 
 > ### microservice is an application programming architecture that focuses on separating application features into the smallest processing services
