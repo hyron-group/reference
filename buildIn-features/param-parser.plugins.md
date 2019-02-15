@@ -82,11 +82,12 @@ In addition to passing data from the query, body, params, you can also pass the 
 -   **\$urlencoded** : parse body data as url-encoded data type into a object
 -   **\$multipart** : parse body data as multi-part data type into a object
 -   **\$raw** : parse body data as raw data type
+- this.**argsList** : parser args name from main-handler
 
 To used special variables ( start with '\$' character ) mentioned above, you need to include it in main-handler method arguments
 
 ```js
-demo($cookie, b){
+demo ($cookie, b) {
     ...
 }
 ```
