@@ -5,7 +5,7 @@
 -   [**build**](#function-build) ( path ) : void
 -   _static_ [**getInstance**](#function-getinstance-4-override)( ... ) : [ModuleManager](#class-modulemanager)
 -   [**setting**](#function-setting) ( config ) : void
--   _static_ [**getConfig**](#function-getconfig) ( name ) : any
+-   _static_ [**getConfig**](#function-getconfig) ( name, defaultValue ) : any
 -   _static_ [**getInstanceContainer**](#function-getinstancecontainer) ( ) : Array<[ModuleManager](#class-modulemanager)>
 -   [**enableAddons**](#function-enableaddons-2-override) ( ... ) : void
 -   [**enableGlobalAddons**](#function-enableglobaladdons-2-override) ( ... ) : void
