@@ -166,7 +166,7 @@ If you want to build your own addons, see this topic : [how to build a addons ? 
 
 ### **params**
 
--   **addonsPaths** ( Array < name, path > ) : list of linked addons referenced by path from root
+-   **addonsPaths** ( Object < name, path > ) : list of linked addons referenced by path from root
     -   **name** ( string ) : name of addons. It used to load configs
     -   **path** ( string ) : link to addons handler. It should be start at root dir
 
@@ -178,7 +178,7 @@ Used to register addons for this instance by addons handler function.
 
 ### **params**
 
--   **addonsList** ( Array< name, [AddonsMeta](./AddonsMeta.md#function-handle) > ) : list of addons called on this instance
+-   **addonsList** ( Object < name, [AddonsMeta](./AddonsMeta.md#function-handle) > ) : list of addons called on this instance
     -   **name** (string) : name of addons. It used to import configs
     -   **handler** ( [AddonsMeta](./AddonsMeta.md#function-handle) ) : handler for addons
 
@@ -194,7 +194,7 @@ If you want to build your own addons, see this topic : [how to build a addons ? 
 
 ### **params**
 
--   **addonsPaths** ( Array < name, path > ) : list of linked addons referenced by path from root
+-   **addonsPaths** ( Object < name, path > ) : list of linked addons referenced by path from root
     -   **name** ( string ) : name of addons. It used to load configs
     -   **path** ( string ) : link to addons handler. It should be start at root dir
 
@@ -206,7 +206,7 @@ Used to register global addons by addons handler function.
 
 ### **params**
 
--   **addonsList** ( Array< name, [AddonsMeta](./AddonsMeta.md#function-handle) > ) : list of addons called on this instance
+-   **addonsList** ( Object < name, [AddonsMeta](./AddonsMeta.md#function-handle) > ) : list of addons called on this instance
     -   **name** (string) : name of addons. It used to import configs
     -   **handler** ( [AddonsMeta](./AddonsMeta.md#function-handle) ) : handler for addons
 
@@ -224,7 +224,7 @@ In addition to using plugins provided by third parties, you can also create plug
 
 ### **params**
 
--   **pluginsPaths** ( Object< name, path > ) : object declare plugins
+-   **pluginsPaths** ( Object < name, path > ) : object declare plugins
     -   **name** ( string ) : name of this plugins. It used to load config
     -   **path** ( string ) : link to plugins metadata. It should be start at root dir
 
@@ -236,7 +236,7 @@ Register plugins by directly by PluginsMeta. PluginsMeta is a object contain fun
 
 ### **params**
 
--   **pluginsList** ( Object< name, [PluginsMeta](./PluginsMeta.md) > ) : object declare plugins
+-   **pluginsList** ( Object < name, [PluginsMeta](./PluginsMeta.md) > ) : object declare plugins
     -   **name** ( string ) : name of this plugins. It used to load config
     -   **PluginsMeta** ( object ) : link to plugins metadata. It should be start at root dir. To find more about plugins structure, please visit : [PluginsMeta](./PluginsMeta)
 
@@ -250,7 +250,7 @@ Used to register routers for this instance. Service is a Object contain set of f
 
 #### **params**
 
--   **modulePaths** ( Object< name, path > ) : The set of functions is encapsulated to handle specific functions. Which will become the router
+-   **modulePaths** ( Object < name, path > ) : The set of functions is encapsulated to handle specific functions. Which will become the router
     -   **name** ( string ) : name o module
     -   **path** ( string ) : link to service metadata. It should be start at root dir
 
@@ -262,7 +262,7 @@ Used to register routers for this instance directly by Hyron service
 
 ### **params**
 
--   **module** ( Object< name, serviceMeta > ) : The set of functions is encapsulated to handle specific functions. Which will become the router
+-   **module** ( Object < name, serviceMeta > ) : The set of functions is encapsulated to handle specific functions. Which will become the router
     -   **name** ( string ) : name o module
     -   **serviceMeta** ( [HyronService](./HyronService.md) | [UnofficialService](./UnofficialService.md) ) : a packet of functions and it config
 
