@@ -52,7 +52,7 @@ Hyron is built based on 2 main pillars :
 
 # Strategic Vision
 
--   **Top \#1 Framework** for server side application development
+-   **Become top \#3 Framework** for server side application development for NodeJS
 -   **Fast**, **Convenient**, **Efficient**, **Flexible**, better serving large enterprise applications
 -   A **Rich Ecosystem** revolves around the framework to better serve the user
 

@@ -112,7 +112,7 @@ demoApp.startServer();
 a router register on
 
 ```http
-GET http://localhost:3001/books/listBook?category=[cateId]
+GET http://localhost:3001/books/list-book?category=[cateId]
 ```
 
 As you can see, it is very simple, you just need to write the logic handling code and declare it, that you can create a router

@@ -34,7 +34,7 @@ instance.startServer();
 
 A router registered on :
 
-> ## GET : [http://localhost:3000/demo/sayHi](http://localhost:3000/sayHi)
+> ## GET : [http://localhost:3000/demo/say-hi](http://localhost:3000/say-hi)
 
 So, that really easy, right. You can do more with Hyron framework :D check it out in next step
 

@@ -7,13 +7,13 @@
 * [Service Development](service-development/README.md)
   * [Build & Using Service](service-development/build-service.md)
   * [Build Unofficial Service](service-development/build-unofficial-service.md)
-  * [Example](service-development/example.md)
+  <!-- * [Example](service-development/example.md) -->
 * [Plugins Development](plugins-development/README.md)
   * [Build & Using Plugins](plugins-development/build-plugins.md)
-  * [Example](plugins-development/example.md)
+  <!-- * [Example](plugins-development/example.md) -->
 * [Addons Development](addons-development/README.md)
   * [Build & Using Addons](addons-development/build-addons.md)
-  * [Example](addons-development/example.md)
+  <!-- * [Example](addons-development/example.md) -->
 * [Api Reference](api-reference/README.md)
   * [ModuleManager (base)](api-reference/ModuleManager.md)
   * [HyronService](api-reference/HyronService.md)

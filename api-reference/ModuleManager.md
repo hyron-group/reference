@@ -130,7 +130,7 @@ All default key :
 
 -   **environment** ( string ) : dev or product. if it is dev, program should collect problem, else it should to optimized for performance
 -   **timeout** ( number ) : expert timeout for router connection. default is 60s
--   **style** ( string ) : style of uri path. Hyron support for 4 style, include : _camel_ ( likeThis ), _snake_ ( like\_this ), _lisp_ ( like-this ), _lower_ ( likethis ).
+-   **style** ( string ) : style of uri path. Hyron support for 4 style, include : _camel_ ( likeThis ), _snake_ ( like\_this ), _lisp_ ( like-this ), _lower_ ( likethis ). default is lisp.
 -   **secret** : a private key that used to for encode a sensitive content
 
 ### **params**

@@ -274,7 +274,7 @@ const StudentManager = require("./controller/StudentManager");
 module.exports = new StudentManager();
 ```
 
-## Step 5 : Declare service
+# Using Service
 
 To use service, you need to 'plug' it in your app.
 
@@ -301,11 +301,3 @@ hyron.build("./app/server.json");
 ```
 
 ➜ **Fact** : You can also declare in javascript in the usual way, see more [here](../api-reference/ModuleManager.md)
-
-# Using Service
-
-To use service, you could dedlare it in hyron-build-file/~/services like bellow
-
-```json
-
-```

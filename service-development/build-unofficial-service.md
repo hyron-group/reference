@@ -1,18 +1,18 @@
-# build-unofficial-service
-
 If your service is not the same as the normal services that Hyron supports, use the http protocol
 
-For example, you need to work with sockets for realtime applications, manipulate them through other protocols, or use third-party source code. Or simply create a cron task that allows for scheduled events.
+For example, you need to work with Sockets for realtime applications, manipulate them through other protocols, or use third-party source code. Or simply create a cron task that allows for scheduled events.
 
 You can still work with them with Hyron. By default, Hyron supports a way that allows you to do that.
 
 By wrapping the methods in a function
 
-```javascript
-function (app, config){
+```js
+function handle(app, config){
     // app : is node 'http' instance
     // config : is config of this instance, and this service
 }
+
+module.exports = handle;
 ```
 
 You can also develop your own addons, which will allow you to extend the functionality of Hyron. With the syntax extremely easy, you will not take long to develop it
