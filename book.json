@@ -1,26 +1,13 @@
 {
-  "plugins": ["adsense", "rss"],
-  "pluginsConfig": {
-    "adsense": {
-      "client": "ca-pub-6469343665568386",
-      "slot": "XXXXXXXXXX",
-      "format": "auto",
-      "element": ".page-inner section",
-      "position": "top"
+    "plugins": ["adsense"],
+    "pluginsConfig": {
+        "ads": [
+            {
+            "client": "ca-pub-6469343665568386",
+            "format": "auto",
+            "location": ".page-inner section",
+            "style": "width: 100px;"
+            }
+        ]
     }
-  },
-
-  "rss": {
-    "title": "Build backend faster and easier",
-    "description": "This is the best book ever.",
-    "author": "Thang Phung",
-    "site_url": "https://docs.hyron.org",
-    "managingEditor": "hyron.dev@gmail.com (Hyron Developer)",
-    "webMaster": "thangphung.work@gmail.com (Thang Phung)",
-    "categories": [
-      "backend",
-      "framework",
-      "document"
-    ]
-  }
 }
