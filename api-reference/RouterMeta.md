@@ -2,13 +2,17 @@
 
 ### interface **RouterMeta**
 
--   [**method**](#var-method): string | Array< string >
--   [**fontware**](#var-fontware): Array < string >
--   [**backware**](#var-backware): Array < string >
--   [**plugins**](#var-plugins): Array < string >
--   [**handle**](#var-handle): function
--   [**path**](#var-path): string
--   [**params**](#var-params): string
+- [interface **RouterMeta**](#interface-routermeta-1)
+- [var method](#var-method)
+- [var fontware](#var-fontware)
+- [var backware](#var-backware)
+- [var plugins](#var-plugins)
+- [var handle](#var-handle)
+    - [**params**](#params)
+    - [**return**](#return)
+- [var path](#var-path)
+- [var params](#var-params)
+    - [Rule](#rule)
 
 
 # interface **RouterMeta**
@@ -19,7 +23,7 @@ Is a metadata object contain information about routes
 
 > ## **method** : string | Array< string >
 
-Specifies the methods that will be used to register the listener for this method. Include ( not case sensitive ) : GET, HEAD, POST, PUT, PATCH, ALL
+Specifies the methods that will be used to register the listener for this method. Include ( not case sensitive ) : GET, HEAD, POST, PUT, PATCH, ALL, PRIVATE
 
 # var fontware
 
