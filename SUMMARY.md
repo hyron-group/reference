@@ -1,36 +1,4 @@
 
 # Table of contents
 
-* [Introduction](README.md)
-* [App Example](app-example.md)
-* [Geting Started](geting-started.md)
-* [Service Development](service-development/README.md)
-  * [Build & Using Service](service-development/build-service.md)
-  * [Build Unofficial Service](service-development/build-unofficial-service.md)
-  <!-- * [Example](service-development/example.md) -->
-* [Plugins Development](plugins-development/README.md)
-  * [Build & Using Plugins](plugins-development/build-plugins.md)
-  <!-- * [Example](plugins-development/example.md) -->
-* [Addons Development](addons-development/README.md)
-  * [Build & Using Addons](addons-development/build-addons.md)
-  <!-- * [Example](addons-development/example.md) -->
-* [Api Reference](api-reference/README.md)
-  * [ModuleManager (base)](api-reference/ModuleManager.md)
-  * [HyronService](api-reference/HyronService.md)
-  * [RouterMeta](api-reference/RouterMeta.md)
-  * [UnofficialService](api-reference/UnofficialService.md)
-  * [PluginsMeta](api-reference/PluginsMeta.md)
-  * [Middleware](api-reference/Middleware.md)
-  * [AddonsMeta](api-reference/AddonsMeta.md)
-* [Build-In Feature](buildIn-features/README.md)
-  * [AppLoader](buildIn-features/appLoader.core.md)
-  * [ResponseHandler](buildIn-features/responseHandler.core.md)
-  * [plugins/param-parser](buildIn-features/param-parser.plugins.md)
-  * [plugins/custom-response](buildIn-features/custom-response.plugins.md)
-  * [lib/HTTPMessenge](buildIn-features/HTTPMessage.lib.md)
-  * [lib/path](buildIn-features/path.lib.md)
-* [File appcfg.yaml](appcfg-file.md)
-* [Benchmark](benchmark.md)
-* [Contribution](contribution.md)
-* [Developer policy](developer-policy.md)
-* [Release Note](release-note.md)
+documents are being rebuilt
