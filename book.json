@@ -1,6 +1,9 @@
 {
-    "plugins": ["adsense"],
+    "plugins": ["adsense", "language-picker"],
     "pluginsConfig": {
+        "language-picker": {
+            "grid-columns": 3
+        },
         "ads": [
             {
             "client": "ca-pub-6469343665568386",
