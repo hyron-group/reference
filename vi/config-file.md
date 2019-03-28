@@ -61,7 +61,7 @@ module.exports = function(app, cfg){
 ### **Structure**
 ```
 plugin-name
-  ├── res/
+  ├── src/
   ├── lib/
   ├── index.js
   ├── hyron-plugin.js
@@ -87,7 +87,7 @@ function handler(req, res, prev, cfg){
 ### **Structure**
 ```
 addon-name
-  ├── res/
+  ├── src/
   ├── lib/
   ├── index.js
   ├── hyron-addon.js
