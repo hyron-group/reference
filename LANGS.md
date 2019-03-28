@@ -1,4 +1,4 @@
 # Languages
 
-* [English](en/)
-* [Vietnamese](vi/)
+* [English](/en)
+* [Vietnamese](/vi)
