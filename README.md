@@ -14,5 +14,5 @@ Follow our [fanpage](https://www.facebook.com/hyron.group/) to update the latest
 
 ## Raw document
 Language
-- [English](./language/en/README.md) 
-- [Vietnamese](language/vi/README.md)
+- [English](en/) 
+- [Vietnamese](vi/)
