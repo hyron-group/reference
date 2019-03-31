@@ -80,4 +80,35 @@ server
 ```
 
 ## 3. Tự động cài gói còn thiếu
-JSON build file sẽ tự động phát hiện và cài đặt những gói còn thiếu, sử dụng yarn package engine
+JSON build file sẽ tự động phát hiện và cài đặt những gói còn thiếu, sử dụng [yarn engine](https://yarnpkg.com/en/docs/cli/add).
+
+Hyron hỗ trợ cài đặt song song (plugins, addons, services) giúp tăng tốc độ cài đặt
+
+Nếu các gói đã được cài đặt thành công, Hyron sẽ bỏ qua nó trong lần chạy sau
+
+Chú ý : hãy đặt tên module giống với package-name để hỗ trợ cho hầu hết các trường hợp
+
+**server/app.json**
+```json
+{
+    "base_url": "http://localhost:3000",
+    "plugins": {
+        // install from npm registry
+        "from-npm": "npm-package-name",
+        
+        // install from github
+        "from-git": "https://github.com/user/package.git",
+        
+        // install from local file
+        "from-local" : "file:/path/to/local/folder",
+        
+        // install from local package
+        "from-pack" : "file:/path/to/local/tarball.tgz",
+
+        // install from remote url
+        "from-remote" : "https://my-project.org/package.tgz",
+
+        ...
+    }
+}
+```
