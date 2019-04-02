@@ -30,3 +30,4 @@
     * [custom_response](api-reference/plugins/custom-response.md)
   * [Addons](api-reference/addons/README.md)
     * [tcp_supporter](api-reference/addons/tcp-supporter.md)
+  * [Services](api-reference/services/README.md)
