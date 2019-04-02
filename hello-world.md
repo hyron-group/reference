@@ -58,7 +58,7 @@ module.exports = class {
 ### Step 4 : Run application
 
 ```text
-hyeon start app.json
+hyron start app.json
 ```
 
 {% code-tabs %}
