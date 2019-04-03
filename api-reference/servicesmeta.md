@@ -1,13 +1,19 @@
-## **Table of contents**
+# ServicesMeta
+
+### **Table of contents**
+
+#### interface **ServiceMeta**
+
+* **$all** : RouterMeta \| RouterMeta.method
+* \[ **method\_name**: string \] : RouterMeta \| RouterMeta.method
 
 ### interface **ServiceMeta**
-- **$all** : RouterMeta | RouterMeta.method
-- [ **method_name**: string ] : RouterMeta | RouterMeta.method
 
-## interface **ServiceMeta**
+## var $all
 
-# var $all
-> ## **$all** : RouterMeta | RouterMeta.method
+> ### **$all** : RouterMeta \| RouterMeta.method
 
-# list <method_name>
-> ## [ **method_name**: string ] : RouterMeta | RouterMeta.method
+## list 
+
+> ### \[ **method\_name**: string \] : RouterMeta \| RouterMeta.method
+

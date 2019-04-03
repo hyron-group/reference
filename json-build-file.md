@@ -1,7 +1,7 @@
 ---
 description: >-
   A JSON file containing information about the modules and settings in the
-  application
+  application. Used to run the application
 ---
 
 # JSON Build File
@@ -43,6 +43,25 @@ A json build file contains information about an instance
 | addons | object | Contains list of addons enabled |
 | plugins | object | Contains list of plugins enabled |
 | services | object | Contains list of services enabled |
+
+#### Run application
+
+You can use these files to run the application with the cli tools or with the hyron package
+
+{% code-tabs %}
+{% code-tabs-item title="hyron-cli" %}
+```bash
+hyron start [path]
+```
+{% endcode-tabs-item %}
+
+{% code-tabs-item title=undefined %}
+```javascript
+const hyron = require("hyron");
+hyron.build("/server/app.json"); // path to json build file
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 ## Features
 
