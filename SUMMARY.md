@@ -4,6 +4,7 @@
 * [Installing](installing.md)
 * [Hello world](hello-world.md)
 * [JSON Build File](json-build-file.md)
+* [Create Application](create-application.md)
 * [Create Services](create-services.md)
 * [Create Plugins](create-plugins.md)
 * [Create Addons](create-addons.md)

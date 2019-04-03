@@ -20,7 +20,7 @@ npm i -g hyron-cli
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Step 2 : Add build file
+### Step 2 : Add JSON build file
 
 {% code-tabs %}
 {% code-tabs-item title="./app.json" %}
