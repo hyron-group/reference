@@ -49,16 +49,16 @@ A json build file contains information about an instance
 You can use these files to run the application with the cli tools or with the hyron package
 
 {% code-tabs %}
-{% code-tabs-item title="hyron-cli" %}
+{% code-tabs-item title="Using hyron-cli" %}
 ```bash
 hyron start [path]
 ```
 {% endcode-tabs-item %}
 
-{% code-tabs-item title=undefined %}
+{% code-tabs-item title="Using hyron" %}
 ```javascript
 const hyron = require("hyron");
-hyron.build("/server/app.json"); // path to json build file
+hyron.build("./server/app.json"); // path to json build file
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}

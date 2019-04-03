@@ -8,13 +8,13 @@ description: 'warning : CLI is comming soon !'
 
 {% code-tabs %}
 {% code-tabs-item title="YARN" %}
-```text
+```bash
 yarn global add hyron-cli
 ```
 {% endcode-tabs-item %}
 
 {% code-tabs-item title="NPM" %}
-```
+```bash
 npm i -g hyron-cli
 ```
 {% endcode-tabs-item %}
@@ -57,9 +57,21 @@ module.exports = class {
 
 ### Step 4 : Run application
 
-```text
+{% code-tabs %}
+{% code-tabs-item title="Using hyron-cli" %}
+```bash
 hyron start app.json
 ```
+{% endcode-tabs-item %}
+
+{% code-tabs-item title="Using hyron" %}
+```javascript
+const hyron = require('hyron');
+
+hyron.build("./app.json");
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 {% code-tabs %}
 {% code-tabs-item title="Result" %}
