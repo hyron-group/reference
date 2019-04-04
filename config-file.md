@@ -163,9 +163,9 @@ $private_key: 123456
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### 2. Deep reference
+### 2. Flexible access
 
-To access a deep field in a parent field. For example
+You can access the config anywhere in your project while running, use `getConfig(..)`
 
 {% code-tabs %}
 {% code-tabs-item title="./addons/crud/appcfg.yaml" %}
@@ -184,7 +184,10 @@ schema:
 const {getConfig} = require("hyron");
 
 module.exports = function(cfg){
+    var schemaList = getConfig("schema", {});
     var accountModel = getConfig("schema.accounts", {});
+    var emailType = getConfig("schema.accounts.email", {});
+    ...
 }
 ```
 {% endcode-tabs-item %}

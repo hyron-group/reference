@@ -10,6 +10,8 @@
 * [Create Addons](create-addons.md)
 * [Config File](config-file.md)
 * [Contribute](contribute.md)
+* [Q&A](q-and-a.md)
+* [Tips](tips.md)
 * [API Reference](api-reference/README.md)
   * [ModuleManager](api-reference/modulemanager.md)
   * [HyronService](api-reference/hyronservice.md)
