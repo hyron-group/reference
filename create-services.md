@@ -10,8 +10,6 @@ description: >-
 Hyron encourages you to build [Microservice Architecture](https://microservices.io/) applications that bring great benefits to your application
 {% endhint %}
 
-![Hyron can turn a controller into a router automatically with just a few lines](.gitbook/assets/overview-controller.png)
-
 ## Why ?
 
 * Easy to expand
@@ -44,6 +42,8 @@ service-name
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+![Hyron can turn a controller into a router automatically with just a few lines](.gitbook/assets/overview-controller.png)
 
 
 
