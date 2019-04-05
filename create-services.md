@@ -133,7 +133,7 @@ The hyron uses `this` variable to allow communication between modules and with t
 | $executer | function | A function handler, which can be used for plugins to use in analysis |
 | $eventName | string | The name of the event used to register the router |
 | $requestConfig | string \| object | settings for this router, are declared in `requestConfig` |
-| $config | object | contains settings for this module, declared in `appcfg` file |
+| $config | object | contains settings for this module, declared in `appcfg.yaml` file |
 
 ### Declare to Hyron
 
