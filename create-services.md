@@ -112,6 +112,10 @@ module.export = class UserManager {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+{% hint style="info" %}
+Tips : If simple, you only need to declare the method directly instead of a description with an object. Example : `createUser : "post"`
+{% endhint %}
+
 The default [**param\_parser plugins**](ecosystem/plugins/param_parser.md) will help automate the process of passing variables from your request to your controller, saving you time and allowing you to package services more easily to be reused by other services.
 
 Here are some of the attributes you should keep in mind of requestConfig
@@ -126,7 +130,7 @@ Here are some of the attributes you should keep in mind of requestConfig
 | params | string | customize dynamic path, which can be used as input for method. Example : `/user/:name/age/:age` |
 | handle | function | Specifying the function will be used to listen on this router. This method has a higher priority than mapping |
 
-The hyron uses `this` variable to allow communication between modules and with the executer \(processing function\). Here are the properties you should note
+The hyron uses `this` variable to allow **communication between modules** and with the executer \(processing function\). Here are the properties you should note
 
 | Properties | Type | Description |
 | :--- | :--- | :--- |
@@ -135,7 +139,7 @@ The hyron uses `this` variable to allow communication between modules and with t
 | $requestConfig | string \| object | settings for this router, are declared in `requestConfig` |
 | $config | object | contains settings for this module, declared in `appcfg.yaml` file |
 
-### Declare to Hyron
+### 4. Declare to Hyron
 
 You should separate the interface from the hyron to a separate file, called router.js, containing the description of the router \(if complicated\).
 
@@ -167,4 +171,8 @@ To use, you need to declare them in the JSON build file
     }
 }
 ```
+
+
+
+
 
