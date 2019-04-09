@@ -51,7 +51,40 @@ Hyron app based on 3 module units
 Tips : Hyron developed many features that allow you to reuse it to the maximum. Design your modules the most flexible way to use them for your later projects
 {% endhint %}
 
-### 3. Run your app
+### 3. Create instance
+
+An **instance is a case of the application**. Hyron allows you to separate applications into separate instances, making it easier for you to manage
+
+instances should be declared in a [json build file](json-build-file.md) using json syntax
+
+instances can overlap each other, the hyron will pool them at runtime. It is used to group instances according to the corresponding addons or as required by the project
+
+{% code-tabs %}
+{% code-tabs-item title="server/app.js" %}
+```scheme
+{
+    "base_url": "http://localhost:3000",
+    "addons": {
+        "db-setup" : "addons/database-setup",
+        "multi-language": "@hyron/multi-pl",
+        "java-driver" : "addons/java-driver",
+        "python-driver" : "addons/python-driver"
+    },
+    "plugins": {
+        "auth" : "plugins/simple-auth",
+        "stringer": "@hyron/stringer",
+        "validator": "@hyron/validator"
+    },
+    "services": {
+        "account": "services/account/router.js",
+        "user": "services/user/router.js",
+    }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+### 4. Run your app
 
 You can use hyron-cli to run the application
 
