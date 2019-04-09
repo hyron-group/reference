@@ -29,7 +29,7 @@ app-name
   ├── public/         - contains resources that are publicly accessible
   ├── server/         - contains descriptions of instances that can be used by Hyron to run the application
   ├── services/       - contains the services of your application
-  ├── string/         - contains the string values in the application that can be used by @hyron/stringer plugins
+  ├── strings/        - contains the string values in the application that can be used by @hyron/stringer plugins
   ├── test/           - contains test suites for the application
   ├── .gitignore      - contains the setting of git to ignore when synchronizing source code
   ├── appcfg.yaml     - contains application-level application configs

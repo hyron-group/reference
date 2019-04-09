@@ -114,6 +114,11 @@ module.exports = {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+* **`prev`** \(Array&lt;any&gt; \) of fontware will be used as executer input or fontware of previous plugins 
+* **`prev`** \(any\) of backware is executer's output or backware of previous plugins
+
+![Simple flow of plugins](.gitbook/assets/plugins-simple-flow.png)
+
 #### Some functions to note
 
 | Properties | Type | Descriptions |
