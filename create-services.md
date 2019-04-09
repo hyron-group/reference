@@ -89,6 +89,22 @@ module.export = UserModel;
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+#### Note
+
+* The **processing functions** used to register a router are also called `executer`
+* The **executer input and output** can be customized or processed before being transferred to the client using plugins
+* **executer belongs to the logical layer**, should only contain processing logic for a business
+* **executer** can share `this` variable with [plugins](create-plugins.md)
+
+Here are some of the default properties of `this`
+
+| Properties | Type | Description |
+| :--- | :--- | :--- |
+| $executer | function | A function handler, which can be used for plugins to use in analysis |
+| $eventName | string | The name of the event used to register the router |
+| $requestConfig | string \| object | settings for this router, are declared in `requestConfig` |
+| $config | object | contains settings for this module, declared in `appcfg.yaml` file |
+
 ### 3. Router definition
 
 Let Hyron know that this is a service that can be supported by the http protocol, you need to return an interface specifically that the `requestConfig` contains descriptive information about that router. Example
@@ -118,7 +134,7 @@ Tips : If simple, you only need to declare the method directly instead of a desc
 
 The default [**param\_parser plugins**](ecosystem/plugins/param_parser.md) will help automate the process of passing variables from your request to your controller, saving you time and allowing you to package services more easily to be reused by other services.
 
-Here are some of the attributes you should keep in mind of requestConfig
+Here are some of the attributes you should keep in mind of `requestConfig`
 
 | Attribute | Type | Description |
 | :--- | :--- | :--- |
@@ -129,15 +145,6 @@ Here are some of the attributes you should keep in mind of requestConfig
 | path | string | Customizing the path for this router. default is `/prefix/module-name/method-name` |
 | params | string | customize dynamic path, which can be used as input for method. Example : `/user/:name/age/:age` |
 | handle | function | Specifying the function will be used to listen on this router. This method has a higher priority than mapping |
-
-The hyron uses `this` variable to allow **communication between modules** and with the executer \(processing function\). Here are the properties you should note
-
-| Properties | Type | Description |
-| :--- | :--- | :--- |
-| $executer | function | A function handler, which can be used for plugins to use in analysis |
-| $eventName | string | The name of the event used to register the router |
-| $requestConfig | string \| object | settings for this router, are declared in `requestConfig` |
-| $config | object | contains settings for this module, declared in `appcfg.yaml` file |
 
 ### 4. Declare to Hyron
 

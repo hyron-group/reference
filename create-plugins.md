@@ -114,8 +114,11 @@ module.exports = {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-* **`prev`** \(Array&lt;any&gt; \) of fontware will be used as executer input or fontware of previous plugins 
-* **`prev`** \(any\) of backware is executer's output or backware of previous plugins
+#### Note
+
+* **`prev`** \(Array&lt;any&gt; \) of **fontware** will be used as executer input or fontware of previous plugins 
+* **`prev`** \(any\) of **backware** is executer's output or backware of previous plugins
+* Plugins can **communicate with each other**, and with executer via the `this`variable
 
 ![Simple flow of plugins](.gitbook/assets/plugins-simple-flow.png)
 
