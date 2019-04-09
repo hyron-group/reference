@@ -96,6 +96,8 @@ module.export = UserModel;
 * **executer belongs to the logical layer**, should only contain processing logic for a business
 * **executer** can share `this` variable with [plugins](create-plugins.md)
 
+![sharing mechanism this variable allows communication between modules](.gitbook/assets/this-scope.png)
+
 Here are some of the default properties of `this`
 
 | Properties | Type | Description |
