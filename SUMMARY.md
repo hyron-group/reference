@@ -28,6 +28,7 @@
     * [AppLoader](ecosystem/library/apploader.md)
     * [HTTPMessage](ecosystem/library/httpmessage.md)
     * [ResponseHandler](ecosystem/library/responsehandler.md)
+    * [path](ecosystem/library/path.md)
   * [Plugins](ecosystem/plugins/README.md)
     * [param\_parser](ecosystem/plugins/param_parser.md)
     * [custom\_response](ecosystem/plugins/custom_response.md)
