@@ -19,7 +19,7 @@ description: >-
 * Support external reference
 * Support value lock
 
-## Classify
+## Usage
 
 The config can be divided into two categories by level: `Module Level` and `Application Level`
 

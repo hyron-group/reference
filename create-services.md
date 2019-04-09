@@ -109,6 +109,8 @@ Here are some of the default properties of `this`
 
 ### 3. Router definition
 
+#### Normal Services \(support for http or by 3rth addons\)
+
 Let Hyron know that this is a service that can be supported by the http protocol, you need to return an interface specifically that the `requestConfig` contains descriptive information about that router. Example
 
 {% code-tabs %}
@@ -147,6 +149,25 @@ Here are some of the attributes you should keep in mind of `requestConfig`
 | path | string | Customizing the path for this router. default is `/prefix/module-name/method-name` |
 | params | string | customize dynamic path, which can be used as input for method. Example : `/user/:name/age/:age` |
 | handle | function | Specifying the function will be used to listen on this router. This method has a higher priority than mapping |
+
+#### Unofficial Services \(not support yet\)
+
+Hyron supports a path that allows support for unofficial supported services or by addons from 3rd parties
+
+{% code-tabs %}
+{% code-tabs-item title="./services/socket-demo/index.js" %}
+```javascript
+var socket = require('socket.io');
+
+module.exports = function (app, cfg) {
+    var io = socket(app);
+    io.on('connection', function(socket){
+        console.log('an user connected');
+    });
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 ### 4. Declare to Hyron
 
