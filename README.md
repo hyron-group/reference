@@ -14,7 +14,7 @@ We are upgrading the document to make it more accessible to everyone. We are loo
 
 Hyron focus to 5 main `values`. that's what makes Hyron different
 
-![Values of Hyron Framework](.gitbook/assets/hyron-strength%20%281%29.png)
+![](.gitbook/assets/hyron-strength%20%281%29.png)
 
 1. **High Reusability** : Hyron allows to pack modules easily, allowing you to better reuse, or you can share and use packages from the community.
 2. **Easy to Expand** : Hyron aims to serve to develop complex applications, used for businesses, requiring high development and expansion capabilities. Make work easier and easier
