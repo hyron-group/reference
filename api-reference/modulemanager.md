@@ -2,44 +2,26 @@
 
 ### class **ModuleManager** (Hyron)
 
-- [class **ModuleManager**](#class-modulemanager)
-- [function build](#function-build)
-    - [**params**](#params)
-- [function getInstance (+4 override)](#function-getinstance-4-override)
-    - [**return**](#return)
-    - [**params**](#params-1)
-    - [**return**](#return-1)
-    - [**params**](#params-2)
-    - [**return**](#return-2)
-    - [**params**](#params-3)
-    - [**return**](#return-3)
-    - [**params**](#params-4)
-    - [**return**](#return-4)
-- [function getInstanceContainer](#function-getinstancecontainer)
-    - [**return**](#return-5)
-- [function setting](#function-setting)
-    - [**params**](#params-5)
-- [function getConfig](#function-getconfig)
-    - [**params**](#params-6)
-    - [**return**](#return-6)
-- [function enableAddons (+2 override)](#function-enableaddons-2-override)
-    - [**params**](#params-7)
-    - [**params**](#params-8)
-- [function enableGlobalAddons (+2 override)](#function-enableglobaladdons-2-override)
-    - [**params**](#params-9)
-    - [**params**](#params-10)
-- [function enablePlugins (+2 override)](#function-enableplugins-2-override)
-    - [**params**](#params-11)
-    - [**params**](#params-12)
-- [function enableServices (+2 override)](#function-enableservices-2-override)
-      - [**params**](#params-13)
-    - [**params**](#params-14)
-- [function initServer](#function-initserver)
-    - [**params**](#params-15)
-- [function setServer](#function-setserver)
-    - [**params**](#params-16)
-- [function startServer](#function-startserver)
-      - [**params :**](#params)
+-   [**build**](#function-build) ( path ) : void
+-   _static_ [**getInstance**](#function-getinstance-4-override)( ... ) : [ModuleManager](#class-modulemanager)
+-   [**setting**](#function-setting) ( config ) : void
+-   _static_ [**getConfig**](#function-getconfig) ( name, defaultValue ) : any
+-   _static_ [**getInstanceContainer**](#function-getinstancecontainer) ( ) : Array<[ModuleManager](#class-modulemanager)>
+-   [**enableAddons**](#function-enableaddons-2-override) ( ... ) : void
+-   [**enableGlobalAddons**](#function-enableglobaladdons-2-override) ( ... ) : void
+-   [**enablePlugins**](#function-enableplugins-2-override) ( ... ) : void
+-   [**enableServices**](#function-enableservices-2-override) ( ... ) : void
+-   [**initServer**](#function-initserver) ( server ) : void
+-   _static_ [**setServer**](#function-setserver) ( host, port, server ) : void
+-   [**startServer**](#function-startserver) ( callback ) : void
+-   **host** : string
+-   **port** : number
+-   **prefix** : string
+-   **protocol** : string
+-   **app** : Server
+-   **addons** : AddonsManager
+-   **plugins** : PluginsManager
+-   **services** : ServicesManager
 
 
 # class **ModuleManager**
