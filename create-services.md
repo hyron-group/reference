@@ -96,7 +96,7 @@ module.export = UserModel;
 * **executer belongs to the logical layer**, should only contain processing logic for a business
 * **executer** can share `this` variable with [plugins](create-plugins.md)
 
-![sharing mechanism this variable allows communication between modules](.gitbook/assets/this-scope.png)
+![sharing mechanism &apos;this&apos; variable allows communication between modules](.gitbook/assets/this-scope.png)
 
 Here are some of the default properties of `this`
 
@@ -111,7 +111,7 @@ Here are some of the default properties of `this`
 
 #### Normal Services \(support for http or by 3rth addons\)
 
-Let Hyron know that this is a service that can be supported by the http protocol, you need to return an interface specifically that the `requestConfig` contains descriptive information about that router. Example
+Let Hyron know that this is a service that can be supported by the http protocol, you need to **return an interface** specifically that the `requestConfig` contains descriptive information about that router. Example
 
 {% code-tabs %}
 {% code-tabs-item title="./model/UserManager.js" %}

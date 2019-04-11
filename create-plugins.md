@@ -6,7 +6,7 @@ description: >-
 
 # Create Plugins
 
-![Hyron separates Logic and IO separately for better reuse and management](.gitbook/assets/plugins-flow.png)
+![Hyron separates Logic and IO separately for better reuse and management](.gitbook/assets/plugins-flow%20%282%29.png)
 
 ## Why ?
 
@@ -43,7 +43,7 @@ plugin-name
 
 ### 2. Create Middleware
 
-A full plugins is made up of a middleware that it runs in front \(**`fontware`**\) of and a middleware that runs behind \(**`backware`**\) executer \(function to handle business logic\). Example `auth-plugins`
+A full plugins is made up of a middleware that it **runs in front** \(`fontware`\) of and a middleware that **runs behind** \(`backware`\) executer \(function to handle business logic\). Example `auth-plugins`
 
 {% code-tabs %}
 {% code-tabs-item title="./src/fontware.js" %}
@@ -116,8 +116,8 @@ module.exports = {
 
 #### Note
 
-* **`prev`** \(Array&lt;any&gt; \) of **fontware** will be used as executer input or fontware of previous plugins 
-* **`prev`** \(any\) of **backware** is executer's output or backware of previous plugins
+* **`prev`** \(Array&lt;any&gt; \) of **fontware** will be used as **executer input** or fontware of **previous plugins** 
+* **`prev`** \(any\) of **backware** is **executer output** or backware of **previous plugins**
 * Plugins can **communicate with each other**, and with executer via the `this`variable
 
 ![Simple flow of plugins](.gitbook/assets/plugins-simple-flow.png)
@@ -126,7 +126,7 @@ module.exports = {
 
 | Properties | Type | Descriptions |
 | :--- | :--- | :--- |
-| handle \(req, res, prev, cfg\) | function | function that can be called before or after executer |
+| handle\(req,res,prev,cfg\) | function | function that can be called before or after executer |
 | checkout \(cfg\) | function | used to recall onCreate if returns true |
 | onCreate \(cfg\) | function | call for the first time when a router is called |
 | typeFilter | Array&lt;any&gt; | use to filter the data type of prev. Commonly used by backware |

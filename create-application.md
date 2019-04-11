@@ -53,11 +53,11 @@ Tips : Hyron developed many features that allow you to reuse it to the maximum. 
 
 ### 3. Create instance
 
-An **instance is a case of the application**. Hyron allows you to separate applications into separate instances, making it easier for you to manage
+An **instance is a case of the application**. Hyron allows you to separate applications into separate instances, making it **easy to manage**
 
-instances should be declared in a [json build file](json-build-file.md) using json syntax
+Instances should be declared in a [json build file](json-build-file.md) using json syntax
 
-instances can overlap each other, the hyron will pool them at runtime. It is used to group instances according to the corresponding addons or as required by the project
+**Instances can overlap each other**, the hyron will pool them at runtime. It is used to group instances according to the corresponding addons or as required by the project
 
 {% code-tabs %}
 {% code-tabs-item title="server/app.js" %}
