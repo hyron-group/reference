@@ -1,303 +1,444 @@
-## **Table of contents**
+# ModuleManager
 
-### class **ModuleManager** (Hyron)
+{% hint style="warning" %}
+Note: this class is no longer used, instead you should use the hyron-cli package to work with hyron more easily, and better support later
+{% endhint %}
 
--   [**build**](#function-build) ( path ) : void
--   _static_ [**getInstance**](#function-getinstance-4-override)( ... ) : [ModuleManager](#class-modulemanager)
--   [**setting**](#function-setting) ( config ) : void
--   _static_ [**getConfig**](#function-getconfig) ( name, defaultValue ) : any
--   _static_ [**getInstanceContainer**](#function-getinstancecontainer) ( ) : Array<[ModuleManager](#class-modulemanager)>
--   [**enableAddons**](#function-enableaddons-2-override) ( ... ) : void
--   [**enableGlobalAddons**](#function-enableglobaladdons-2-override) ( ... ) : void
--   [**enablePlugins**](#function-enableplugins-2-override) ( ... ) : void
--   [**enableServices**](#function-enableservices-2-override) ( ... ) : void
--   [**initServer**](#function-initserver) ( server ) : void
--   _static_ [**setServer**](#function-setserver) ( host, port, server ) : void
--   [**startServer**](#function-startserver) ( callback ) : void
--   **host** : string
--   **port** : number
--   **prefix** : string
--   **protocol** : string
--   **app** : Server
--   **addons** : AddonsManager
--   **plugins** : PluginsManager
--   **services** : ServicesManager
+class **ModuleManager**
 
+* [**build**](modulemanager.md#function-build) \( path \) : void
+* _static_ [**getInstance**](modulemanager.md#function-getinstance-4-override)\( ... \) : [ModuleManager](modulemanager.md#class-modulemanager)
+* [**setting**](modulemanager.md#function-setting) \( config \) : void
+* _static_ [**getConfig**](modulemanager.md#function-getconfig) \( name, defaultValue \) : any
+* _static_ [**getInstanceContainer**](modulemanager.md#function-getinstancecontainer) \( \) : Array&lt;[ModuleManager](modulemanager.md#class-modulemanager)&gt;
+* [**enableAddons**](modulemanager.md#function-enableaddons-2-override) \( ... \) : void
+* [**enableGlobalAddons**](modulemanager.md#function-enableglobaladdons-2-override) \( ... \) : void
+* [**enablePlugins**](modulemanager.md#function-enableplugins-2-override) \( ... \) : void
+* [**enableServices**](modulemanager.md#function-enableservices-2-override) \( ... \) : void
+* [**initServer**](modulemanager.md#function-initserver) \( server \) : void
+* _static_ [**setServer**](modulemanager.md#function-setserver) \( host, port, server \) : void
+* [**startServer**](modulemanager.md#function-startserver) \( callback \) : void
+* **host** : string
+* **port** : number
+* **prefix** : string
+* **protocol** : string
+* **app** : Server
+* **addons** : AddonsManager
+* **plugins** : PluginsManager
+* **services** : ServicesManager
 
-# class **ModuleManager**
+## Details
+
+### class **ModuleManager**
 
 Used to register & management elements in project, like instance, service, plugins, addons. It is base of Hyron Framework
 
-# function build
+### 
 
-> ## static **build** ( path ) : void
+### function build
 
-Used to build a Hyron app by that not through other javascript declaration. It supported by [AppLoader](../buildIn-features/appLoader.core.md)
+Used to run the application with a json build file. It supported by AppLoader
 
-### **params**
-- **path** ( string ) : referenced to [JSON build file](../buildIn-features/appLoader.core.md#Use-json-build-file) from root
+#### ★ params
 
-# function getInstance (+4 override)
+```javascript
+static build(path) : void
+```
 
-> ## _static_ **getInstance** () : [ModuleManager](#class-ModuleManager)
+| name | type | description |
+| :--- | :---: | :--- |
+| path | string | referenced to [JSON build file](../json-build-file.md) from root |
 
-Used to create a new instance, that can be used to create difference server. default server will listen on http://localhost:3000
+### 
 
-### **return**
+### function getInstance
 
--   [ModuleManager](#class-ModuleManager) : Current instance, that could be used to do something else
+Used to create a new instance, that can be used to create difference server. default server will listen on [http://localhost:3000](http://localhost:3000)
 
----
+#### ★ P**arams**
 
-> ## _static_ **getInstance** ( baseURL : string ) : [ModuleManager](#class-ModuleManager)
+```javascript
+static gtInstance() : ModuleManager
+```
 
-Create a new instance from specified port and current machine host
+\(empty\)
 
-### **params**
+| name | type | description |
+| :--- | :--- | :--- |
 
--   **baseURL** (string) : specified url. example : https://localhost:1234
 
-### **return**
+```typescript
+static getInstance(baseUrl) : ModuleManager
+```
 
--   [ModuleManager](#class-ModuleManager) : Current instance, that could be used to do something else
+| name | type | description |
+| :--- | :--- | :--- |
+| baseUrl | string | a url specified where the server will run on |
 
----
+```typescript
+static getInstance(port, host?, prefix?, protocol?): ModuleManager
+```
 
-> ## _static_ **getInstance** ( port : number ) : [ModuleManager](#class-ModuleManager)
+| name | type | description |
+| :--- | :--- | :--- |
+| post | number | a free port. if port is `0`, server will listen on random available port. default is `3000` |
+| host | string | host name or IP address of current machine. Default is `localhost` |
+| prefix | string | a path to separate your routers, used to group routers into an instance. Default is empty |
+| protocol | string | a protocol for this instance. default is http |
 
-[ModuleManager](#class-ModuleManager) : Create a new instance from specified port and current machine host
+```javascript
+static getInstance (serverConfig) : ModuleManager
+```
 
-### **params**
+| name | type | description |
+| :--- | :--- | :--- |
+| serverConfig | object | object contain server config. include : `protocol`, `host`, `port`, `prefix` |
 
--   **port** (number) : a free port. if port is 0, server will listen on random available port
+#### ★ **Return**
 
-### **return**
+| type | description |
+| :--- | :--- |
+| [ModuleManager](modulemanager.md#class-ModuleManager) | Current instance, that could be used to do something else |
 
--   Current instance, that could be used to do something else
 
----
 
-> ## _static_ **getInstance**( port, host, prefix, protocol ): [ModuleManager](#class-ModuleManager)
-
-[ModuleManager](#class-ModuleManager) : Create a new instance with specified params
-
-### **params**
-
--   **port** ( number ) : a free port. if port is 0, server will listen on random available port. default is '3000'
--   **host** ( string - option ) : host name or ip address of current machine. Default is 'localhost'
--   **prefix** ( string - option ) : a path to separate your routers, used to group routers into an instance. Default is empty
--   **protocol** ( string - option ) : a protocol for this instance. default is 'http'
-
-### **return**
-
--   [ModuleManager](#class-ModuleManager) : Current instance, that could be used to do something else
-
----
-
-> ## _static_ **getInstance** (serverConfig) : [ModuleManager](#class-ModuleManager)
-
-Create a new instance from a description object
-
-### **params**
-
--   **serverConfig** : object contain server config. include : protocol, host, port, prefix
-
-### **return**
-
--   [ModuleManager](#class-ModuleManager) : Current instance, that could be used to do something else
-
----
-
-# function getInstanceContainer
-
-> ## _static_ **getInstanceContainer** ( ) : Array<[ModuleManager](#class-ModuleManager)>
+### function getInstanceContainer
 
 Used to get all app instance created. This feature usually used by addons and expanded module to handle a central problems
 
-### **return**
+#### ★ Params
 
--   Array < [ModuleManager](#class-ModuleManager) > : A list of instances represent by baseUrl and instances
+```javascript
+static getInstanceContainer() : Array<ModuleManager>
+```
 
----
+\(empty\)
 
-# function setting
+#### ★ R**eturn**
 
-> ### **setting** ( config ) : void
+| type | description |
+| :--- | :--- |
+| Array&lt;[ModuleManager](modulemanager.md#class-ModuleManager)&gt; | a list of instances represent by baseUrl and instances |
 
-Used by modules from app, to make app more scalable & easy to management. setting will be overwrite onto setting value loaded by [appcfg.yaml](../appcfg-file.md). Except lock field.
 
-All default key :
 
--   **environment** ( string ) : dev or product. if it is dev, program should collect problem, else it should to optimized for performance
--   **timeout** ( number ) : expert timeout for router connection. default is 60s
--   **style** ( string ) : style of uri path. Hyron support for 4 style, include : _camel_ ( likeThis ), _snake_ ( like\_this ), _lisp_ ( like-this ), _lower_ ( likethis ). default is lisp.
--   **secret** : a private key that used to for encode a sensitive content
+## function setting
 
-### **params**
+Used by modules from app, to make app more scalable & easy to management. setting will be overwrite onto setting value loaded by [appcfg.yaml](https://github.com/hyron-group/reference/tree/12153991129d1d848d668cf895f35a0448237f02/appcfg-file.md). Except lock field.
 
--   **config** ( object ) : a description object contain config for this instance modules
+#### **Params**
 
----
+```typescript
+setting(config) : void
+```
 
-# function getConfig
+| name | type | description |
+| :--- | :--- | :--- |
+| config | object | a description object contain config for this instance modules |
+| config.environment | string | dev or product. if it is dev, program should collect problem, else it should to optimized for performance |
+| config.timeout | number | expert timeout for router connection. default is 60s |
+| config.style | string | style of uri path. Hyron support for 4 style, include : `camel`, `snake`, `lisp`, `lower`. default is lisp |
+| config.secret | string | a private key that used to for encode a sensitive content |
 
-> ## _static_ **getConfig** ( name, defaultValue ) : any
+
+
+### function getConfig
 
 Retrieve config value for a key by name
 
-### **params**
+#### **Params**
 
--   **name** ( string ) : config value or null if config not found. It allow support to browse child values, separated by '.' character
--   **defaultValue** ( any ) : value if do not found config by abort key
+```javascript
+static getConfig(name, defaultValue?) : any
+```
 
-### **return**
+| name | type | description |
+| :--- | :--- | :--- |
+| name | string | config value or null if config not found. It allow support to browse child values by. example  : `mailer.auth.email` |
+| defaultValue | any | value if do not found config by abort key |
 
--   any : config data
+#### **Return**
 
----
+| type | description |
+| :--- | :--- |
+| any | config data. described in appcfg file |
 
-# function enableAddons (+2 override)
 
-> ## **enableAddons** ( addonsPaths ) : void
 
-Used to register addons for this instance. A addons could have access to all the resources provided in this class via ``this`` args. It used to bring more power for Hyron to handle advanced problems
+### function enableAddons
 
-If you want to build your own addons, see this topic : [how to build a addons ? ](addons-development/README.md)
+Used to register addons for this instance. A addons could have access to all the resources provided in this class via `this` args. It used to bring more power for Hyron to handle advanced problems. se to expand hyron or run cron jobs
 
-### **params**
+#### **Params**
 
--   **addonsPaths** ( Object < name, path > ) : list of linked addons referenced by path from root
-    -   **name** ( string ) : name of addons. It used to load configs
-    -   **path** ( string ) : link to addons handler. It should be start at root dir
+```javascript
+enableAddons ( paths ) : void
+```
 
----
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">nam</th>
+      <th style="text-align:left">type</th>
+      <th style="text-align:left">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">paths</td>
+      <td style="text-align:left">object&lt;name,path&gt;</td>
+      <td style="text-align:left">
+        <p>list of linked addons referenced by path from root</p>
+        <ul>
+          <li><b>name</b> (string) : name of addons</li>
+          <li><b>path</b> (string) : link to addons hander from root</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>```javascript
+enableAddons(packs) : void
+```
 
-> ## **enableAddons** ( addonsList ) : void
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">name</th>
+      <th style="text-align:left">type</th>
+      <th style="text-align:left">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">handles</td>
+      <td style="text-align:left">object&lt;name,pack&gt;</td>
+      <td style="text-align:left">
+        <p></p>
+        <p>list of linked addons referenced by path from root</p>
+        <ul>
+          <li><b>name</b> (string) : name of addons</li>
+          <li><b>pack</b> (ServicesMeta | UnofficialService) : handle package that used
+            by hyron to register router</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-Used to register addons for this instance by addons handler function.
-
-### **params**
-
--   **addonsList** ( Object < name, [AddonsMeta](./AddonsMeta.md#function-handle) > ) : list of addons called on this instance
-    -   **name** (string) : name of addons. It used to import configs
-    -   **handler** ( [AddonsMeta](./AddonsMeta.md#function-handle) ) : handler for addons
-
----
-
-# function enableGlobalAddons (+2 override)
-
-> ## **enableGlobalAddons** ( addonsPaths ) : void
+### function enableGlobalAddons
 
 Used to register global addons that have been called on each instance when it created
 
-If you want to build your own addons, see this topic : [how to build a addons ? ](addons-development/README.md)
+#### **Params**
 
-### **params**
+```javascript
+enableGlobalAddons(paths) : void
+```
 
--   **addonsPaths** ( Object < name, path > ) : list of linked addons referenced by path from root
-    -   **name** ( string ) : name of addons. It used to load configs
-    -   **path** ( string ) : link to addons handler. It should be start at root dir
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">name</th>
+      <th style="text-align:left">type</th>
+      <th style="text-align:left">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">paths</td>
+      <td style="text-align:left">object&lt;name,path&gt;</td>
+      <td style="text-align:left">
+        <p>list of linked addons referenced by path from root</p>
+        <ul>
+          <li><b>name</b> (string) : name of addons</li>
+          <li><b>path</b> (string) : link to addons hander from root</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>```javascript
+enableGlobalAddons(packs) : void
+```
 
----
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">name</th>
+      <th style="text-align:left">type</th>
+      <th style="text-align:left">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">handles</td>
+      <td style="text-align:left">object&lt;name,pack&gt;</td>
+      <td style="text-align:left">
+        <p></p>
+        <p>list of linked addons referenced by path from root</p>
+        <ul>
+          <li><b>name</b> (string) : name of addons</li>
+          <li><b>pack</b> (AddonsMeta) : handle package that used by hyron to register
+            addon</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-> ## **enableGlobalAddons** ( addonsList ) : void
-
-Used to register global addons by addons handler function.
-
-### **params**
-
--   **addonsList** ( Object < name, [AddonsMeta](./AddonsMeta.md#function-handle) > ) : list of addons called on this instance
-    -   **name** (string) : name of addons. It used to import configs
-    -   **handler** ( [AddonsMeta](./AddonsMeta.md#function-handle) ) : handler for addons
-
----
-
-# function enablePlugins (+2 override)
-
-> ## **enablePlugins** ( pluginsPaths ) : void
+### function enablePlugins
 
 This method used to register plugins with name provided. After plugins declared, it can be used inside your app by name.
 
-You should declare the names of the plugins that match the name provided by the manufacturer, unless the name is identical, or you want a more memorable name :))
+You should declare the names of the plugins that match the name provided by the manufacturer, unless the name is identical, or you want a more memorable name :\)\)
 
-In addition to using plugins provided by third parties, you can also create plugins for yourself. See more in [How to create a plugins ?](./plugins-developent/README.md) topic
+#### **Params**
 
-### **params**
+```javascript
+enablePlugins(paths) : void
+```
 
--   **pluginsPaths** ( Object < name, path > ) : object declare plugins
-    -   **name** ( string ) : name of this plugins. It used to load config
-    -   **path** ( string ) : link to plugins metadata. It should be start at root dir
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">name</th>
+      <th style="text-align:left">type</th>
+      <th style="text-align:left">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">paths</td>
+      <td style="text-align:left">object&lt;name,path&gt;</td>
+      <td style="text-align:left">
+        <p>list of linked plugins referenced by path from root</p>
+        <ul>
+          <li><b>name</b> (string) : name of addons</li>
+          <li><b>path</b> (string) : link to addons hander from root</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>```javascript
+enablePlugins(packs) : void
+```
 
----
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">name</th>
+      <th style="text-align:left">type</th>
+      <th style="text-align:left">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">handles</td>
+      <td style="text-align:left">object&lt;name,pack&gt;</td>
+      <td style="text-align:left">
+        <p></p>
+        <p>list of linked plugins referenced by path from root</p>
+        <ul>
+          <li><b>name</b> (string) : name of addons</li>
+          <li><b>pack</b> (PluginsMeta) : handle package that used by hyron to register
+            plugin function enableServices (+2 override)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-> ## **enablePlugins** ( pluginsList ) : void
+### function enableService
 
-Register plugins by directly by PluginsMeta. PluginsMeta is a object contain functions that will be called before (fontware) or after (backware) main-handler.
+Used to register routers for this instance. Service is a Object contain set of function that serve for a specific business purpose. To distinguish whether a package is a Hyron service or not based on the requestConfig method
 
-### **params**
+#### Params
 
--   **pluginsList** ( Object < name, [PluginsMeta](./PluginsMeta.md) > ) : object declare plugins
-    -   **name** ( string ) : name of this plugins. It used to load config
-    -   **PluginsMeta** ( object ) : link to plugins metadata. It should be start at root dir. To find more about plugins structure, please visit : [PluginsMeta](./PluginsMeta)
+```javascript
+enableServices(paths) : void
+```
 
----
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">name</th>
+      <th style="text-align:left">type</th>
+      <th style="text-align:left">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">paths</td>
+      <td style="text-align:left">object&lt;name,path&gt;</td>
+      <td style="text-align:left">
+        <p>list of linked services referenced by path from root</p>
+        <ul>
+          <li><b>name</b> (string) : name of addons</li>
+          <li><b>path</b> (string) : link to services package from root</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>```javascript
+enableServices(packs) : void
+```
 
-# function enableServices (+2 override)
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">name</th>
+      <th style="text-align:left">type</th>
+      <th style="text-align:left">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">handles</td>
+      <td style="text-align:left">object&lt;name,pack&gt;</td>
+      <td style="text-align:left">
+        <p>list of linked services by package</p>
+        <ul>
+          <li><b>name</b> (string) : name of addons</li>
+          <li><b>pack</b> (HyronService | UnofficialService) : handle package that used
+            by hyron to register router</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-> ## **enableServices** ( servicePaths ) : void
+### function initServer
 
-Used to register routers for this instance. Service is a Object contain set of function that serve for a specific business purpose. To distinguish whether a package is a Hyron service or not based on the requestConfig method. To know how to develop a service. Please visit topic : [how to build a service ?](./service-development/README.md)
+```javascript
+initServer(server) : void
+```
 
-#### **params**
-
--   **modulePaths** ( Object < name, path > ) : The set of functions is encapsulated to handle specific functions. Which will become the router
-    -   **name** ( string ) : name o module
-    -   **path** ( string ) : link to service metadata. It should be start at root dir
-
----
-
-> ## **enableServices** ( serviceList ) : void
-
-Used to register routers for this instance directly by Hyron service
-
-### **params**
-
--   **module** ( Object < name, serviceMeta > ) : The set of functions is encapsulated to handle specific functions. Which will become the router
-    -   **name** ( string ) : name o module
-    -   **serviceMeta** ( [HyronService](./HyronService.md) | [UnofficialService](./UnofficialService.md) ) : a packet of functions and it config
-
----
-
-# function initServer
-
-> ## **initServer** ( server ) : void
+> ### **initServer** \( server \) : void
 
 Used to custom server of this instance, and set it default listeners. By default, it called for the first time instance created with node http server.
 
-### **params**
+#### **params**
 
--   **server** ( [Server](https://nodejs.org/api/http.html) ) : server to handle client request and response. default is http.Server
+* **server** \( [Server](https://nodejs.org/api/http.html) \) : server to handle client request and response. default is http.Server
 
----
+## function setServer
 
-# function setServer
-
-> ## _static_ **setServer** ( host, port, server ) : void
+> ### _static_ **setServer** \( host, port, server \) : void
 
 This function could be used by addons to edit server for many instances
 
-### **params**
+#### **params**
 
--   **host** ( string ) : host name of specified instance
--   **port** ( number ) : port number of specified instance
--   **server** ( [Server](https://nodejs.org/api/http.html) ) : server to handle client request and response. default is http.Server
+* **host** \( string \) : host name of specified instance
+* **port** \( number \) : port number of specified instance
+* **server** \( [Server](https://nodejs.org/api/http.html) \) : server to handle client request and response. default is http.Server
 
-# function startServer
+## function startServer
 
-> ## startServer ( callback ) : void
+> ### startServer \( callback \) : void
 
 Start this instance for listen client request
 
-#### **params :**
+**params :**
 
--   **callback** ( [function](https://nodejs.org/api/net.html#net_event_listening) ) : event when server started
+* **callback** \( [function](https://nodejs.org/api/net.html#net_event_listening) \) : event when server started
+
