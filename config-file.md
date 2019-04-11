@@ -61,7 +61,7 @@ getUsers(){
 
 {% code-tabs-item title="Unofficial service" %}
 ```javascript
-function(app, cfg){
+function handler(app, cfg){
     var {page_size, filter} = this.$config;
     ...
 }
