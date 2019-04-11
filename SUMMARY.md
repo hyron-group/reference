@@ -15,7 +15,7 @@
 * [API Reference](api-reference/README.md)
   * [ModuleManager](api-reference/modulemanager.md)
   * [HyronService](api-reference/hyronservice.md)
-  * [ServicesMeta](api-reference/servicesmeta.md)
+  * [ServiceMeta](api-reference/servicesmeta.md)
   * [RouterMeta](api-reference/routermeta.md)
   * [UnofficialService](api-reference/unofficialservice.md)
   * [PluginsMeta](api-reference/pluginsmeta.md)

@@ -1,32 +1,94 @@
+---
+description: Used to pack routers that can be used by hyron to register routers
+---
+
 # HyronService
 
 #### interface [**HyronService**](hyronservice.md#interface-HyronService)
 
-* _static_ [**requestConfig**](hyronservice.md#function-requestconfig) \( \) : Object &lt; name, [RouterMeta](https://github.com/hyron-group/reference/tree/40d0182386de8089e26b1cc05c3e887c4b505d69/api-reference/RouterMeta/README.md) \| [RouterMeta.method](https://github.com/hyron-group/reference/tree/40d0182386de8089e26b1cc05c3e887c4b505d69/api-reference/RouterMeta/README.md#var-method) &gt;
+* _static_ [**requestConfig**](hyronservice.md#function-requestconfig) \( \) : [ServiceMeta](servicesmeta.md)
 * [**$config**](hyronservice.md) : object
+* \*\*\*\*[**$requestConfig**](hyronservice.md#var-usdrequestconfig) : [RouterMeta](routermeta.md)
+* [**$executer**](hyronservice.md#var-usdexecuter) : Function
+* \*\*\*\*[**$eventName**](hyronservice.md#var-usdeventname) : string
 
-## inteface **HyronService**
+## Details
 
-Used to define a service that was controlled by Hyron. Create class that implement this, and declare it in Hyron.enableServices to use
+### inteface **HyronService**
 
-## function requestConfig
+Used to define a service that was controlled by Hyron. Create class that implement this, and declare it in hyron.enableServices to use
 
-> ### _static_ **requestConfig** \( \) :  Object &lt; name, [RouterMeta](https://github.com/hyron-group/reference/tree/40d0182386de8089e26b1cc05c3e887c4b505d69/api-reference/RouterMeta/README.md) \| method &gt;
+
+
+### function requestConfig
 
 Used to declared information about method that could be used to register event listener
 
-This function makes it possible to describe in a more centralized and synchronized manner, and can be implemented by many different languages. It also have special attribute for config all router is `$all` with properties inside like the same
+#### ★ Params
 
-#### **return**
+```javascript
+static requestConfig() : ServicesMeta
+```
 
-* Object &lt; name, [RouterMeta](https://github.com/hyron-group/reference/tree/40d0182386de8089e26b1cc05c3e887c4b505d69/api-reference/RouterMeta.md) \| [RouterMeta.method](https://github.com/hyron-group/reference/tree/40d0182386de8089e26b1cc05c3e887c4b505d69/api-reference/RouterMeta/README.md#var-method) &gt; : a object that contain descriptions about routes
-  * **name** \( string \) : name of method declared bellow, that could be use to register a event. By default, Hyron will take that name and register it as a child-path for this service
-  * **meta** \( [RouterMeta](https://github.com/hyron-group/reference/tree/40d0182386de8089e26b1cc05c3e887c4b505d69/api-reference/RouterMeta.md) \) : a object that description detail about this router
-  * **method** \( [RouterMeta.method](https://github.com/hyron-group/reference/tree/40d0182386de8089e26b1cc05c3e887c4b505d69/api-reference/RouterMeta/README.md#var-method) \) : a method or a list of method that could be used to register event for this method
+\(empty\)
 
-## var $config
+#### ★ **Return**
 
-> ### this.**$config** : object
+| type | description |
+| :--- | :--- |
+| [ServicesMeta](servicesmeta.md) | a object that contain descriptions about routes |
+
+
+
+### var $config
+
+```javascript
+this.$config : object
+```
 
 return config of this service. It could be use inside every plugins & main-handler declared in this service
+
+
+
+### var $requestConfig
+
+```javascript
+this.$requestConfig : RouterMeta
+```
+
+get to `requestConfig` **for this router**, or undefined if this executer has not been declared
+
+| type | description |
+| :--- | :--- |
+| [RouterMeta](routermeta.md) | Descriptive information about this router, is declared in requestConfig |
+
+
+
+### var $executer
+
+get to `executer` **for this router**, or undefined if this executer has not been declared
+
+#### Return
+
+```javascript
+this.$executer : Function
+```
+
+| type | description |
+| :--- | :--- |
+| Function | The method will be used to register the router |
+
+
+
+### var $eventName
+
+```javascript
+this.$eventName : string
+```
+
+get to event name **for this router**, or undefined if this executer has not been declared
+
+| type | description |
+| :--- | :--- |
+| string | The event name is used to register this router. It corresponds to `eventName` displayed on the console |
 

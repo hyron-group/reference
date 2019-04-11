@@ -63,10 +63,6 @@ static gtInstance() : ModuleManager
 
 \(empty\)
 
-| name | type | description |
-| :--- | :--- | :--- |
-
-
 ```typescript
 static getInstance(baseUrl) : ModuleManager
 ```
@@ -122,11 +118,11 @@ static getInstanceContainer() : Array<ModuleManager>
 
 
 
-## function setting
+### function setting
 
 Used by modules from app, to make app more scalable & easy to management. setting will be overwrite onto setting value loaded by [appcfg.yaml](https://github.com/hyron-group/reference/tree/12153991129d1d848d668cf895f35a0448237f02/appcfg-file.md). Except lock field.
 
-#### **Params**
+#### ★ **Params**
 
 ```typescript
 setting(config) : void
@@ -146,7 +142,7 @@ setting(config) : void
 
 Retrieve config value for a key by name
 
-#### **Params**
+#### ★ **Params**
 
 ```javascript
 static getConfig(name, defaultValue?) : any
@@ -157,7 +153,7 @@ static getConfig(name, defaultValue?) : any
 | name | string | config value or null if config not found. It allow support to browse child values by. example  : `mailer.auth.email` |
 | defaultValue | any | value if do not found config by abort key |
 
-#### **Return**
+#### ★ **Return**
 
 | type | description |
 | :--- | :--- |
@@ -169,7 +165,7 @@ static getConfig(name, defaultValue?) : any
 
 Used to register addons for this instance. A addons could have access to all the resources provided in this class via `this` args. It used to bring more power for Hyron to handle advanced problems. se to expand hyron or run cron jobs
 
-#### **Params**
+#### ★ **Params**
 
 ```javascript
 enableAddons ( paths ) : void
@@ -210,11 +206,11 @@ enableAddons(packs) : void
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">handles</td>
+      <td style="text-align:left">packs</td>
       <td style="text-align:left">object&lt;name,pack&gt;</td>
       <td style="text-align:left">
         <p></p>
-        <p>list of linked addons referenced by path from root</p>
+        <p>List of packaged a&#x111;ons</p>
         <ul>
           <li><b>name</b> (string) : name of addons</li>
           <li><b>pack</b> (ServicesMeta | UnofficialService) : handle package that used
@@ -229,7 +225,7 @@ enableAddons(packs) : void
 
 Used to register global addons that have been called on each instance when it created
 
-#### **Params**
+#### ★ **Params**
 
 ```javascript
 enableGlobalAddons(paths) : void
@@ -270,11 +266,11 @@ enableGlobalAddons(packs) : void
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">handles</td>
+      <td style="text-align:left">packs</td>
       <td style="text-align:left">object&lt;name,pack&gt;</td>
       <td style="text-align:left">
         <p></p>
-        <p>list of linked addons referenced by path from root</p>
+        <p>List of packaged plugins</p>
         <ul>
           <li><b>name</b> (string) : name of addons</li>
           <li><b>pack</b> (AddonsMeta) : handle package that used by hyron to register
@@ -287,11 +283,11 @@ enableGlobalAddons(packs) : void
 
 ### function enablePlugins
 
-This method used to register plugins with name provided. After plugins declared, it can be used inside your app by name.
+This method used to register plugins with name provided. After plugins declared, it can be used inside your app by name
 
-You should declare the names of the plugins that match the name provided by the manufacturer, unless the name is identical, or you want a more memorable name :\)\)
+The name of the plugins needs to be consistent and easy to remember, so that it can be used easily
 
-#### **Params**
+#### ★ **Params**
 
 ```javascript
 enablePlugins(paths) : void
@@ -332,15 +328,14 @@ enablePlugins(packs) : void
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">handles</td>
+      <td style="text-align:left">packs</td>
       <td style="text-align:left">object&lt;name,pack&gt;</td>
       <td style="text-align:left">
-        <p></p>
-        <p>list of linked plugins referenced by path from root</p>
+        <p>list of packaged plugins</p>
         <ul>
           <li><b>name</b> (string) : name of addons</li>
           <li><b>pack</b> (PluginsMeta) : handle package that used by hyron to register
-            plugin function enableServices (+2 override)</li>
+            plugin</li>
         </ul>
       </td>
     </tr>
@@ -349,9 +344,9 @@ enablePlugins(packs) : void
 
 ### function enableService
 
-Used to register routers for this instance. Service is a Object contain set of function that serve for a specific business purpose. To distinguish whether a package is a Hyron service or not based on the requestConfig method
+Used to register routers for this instance. Service is a Object contain set of function that serve for a specific business purpose. To distinguish whether a package is a Hyron service or not based on the `requestConfig` method
 
-#### Params
+#### ★ Params
 
 ```javascript
 enableServices(paths) : void
@@ -395,7 +390,7 @@ enableServices(packs) : void
       <td style="text-align:left">handles</td>
       <td style="text-align:left">object&lt;name,pack&gt;</td>
       <td style="text-align:left">
-        <p>list of linked services by package</p>
+        <p>list of packaged services</p>
         <ul>
           <li><b>name</b> (string) : name of addons</li>
           <li><b>pack</b> (HyronService | UnofficialService) : handle package that used
@@ -408,37 +403,51 @@ enableServices(packs) : void
 
 ### function initServer
 
+Used to custom server of this instance, and set it default listeners. By default, it called for the first time instance created with node http server.
+
+#### ★ **Params**
+
 ```javascript
 initServer(server) : void
 ```
 
-> ### **initServer** \( server \) : void
+| name | type | description |
+| :--- | :--- | :--- |
+| server | Server | server to handle client request and response. default is http.Server |
 
-Used to custom server of this instance, and set it default listeners. By default, it called for the first time instance created with node http server.
+\*\*\*\*
 
-#### **params**
-
-* **server** \( [Server](https://nodejs.org/api/http.html) \) : server to handle client request and response. default is http.Server
-
-## function setServer
-
-> ### _static_ **setServer** \( host, port, server \) : void
+### function setServer
 
 This function could be used by addons to edit server for many instances
 
-#### **params**
+#### ★ **Params**
 
-* **host** \( string \) : host name of specified instance
-* **port** \( number \) : port number of specified instance
-* **server** \( [Server](https://nodejs.org/api/http.html) \) : server to handle client request and response. default is http.Server
+```javascript
+static setServer(host, port, server) : void
+```
 
-## function startServer
+| name | type | description |
+| :--- | :--- | :--- |
+| host | string | host name of specified instance |
+| port | number | port number of specified instance |
+| server | [Server](https://nodejs.org/api/http.html#http_class_http_server) | server to handle client request and response. default is http.Server |
 
-> ### startServer \( callback \) : void
+
+
+### function startServer
 
 Start this instance for listen client request
 
-**params :**
+★ **Params**
 
-* **callback** \( [function](https://nodejs.org/api/net.html#net_event_listening) \) : event when server started
+```javascript
+static startServer(callback) : void
+```
+
+| name | type | description |
+| :--- | :--- | :--- |
+| callback | function | event that will be called when server started |
+
+
 

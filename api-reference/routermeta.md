@@ -2,23 +2,23 @@
 
 #### interface **RouterMeta**
 
-* [interface **RouterMeta**](routermeta.md#interface-routermeta-1)
-* [var method](routermeta.md#var-method)
-* [var fontware](routermeta.md#var-fontware)
-* [var backware](routermeta.md#var-backware)
-* [var plugins](routermeta.md#var-plugins)
-* [var handle](routermeta.md#var-handle)
-  * [**params**](routermeta.md#params)
-  * [**return**](routermeta.md#return)
-* [var path](routermeta.md#var-path)
-* [var params](routermeta.md#var-params)
-  * [Rule](routermeta.md#rule)
+* [method](routermeta.md#var-method) : string \| array&lt;string&gt;
+* [fontware](routermeta.md#var-fontware) : Array&lt;string \| Function&gt;
+* [backware](routermeta.md#var-backware) : Array&lt;string \| Function&gt;
+* [plugins](routermeta.md#var-plugins) : Array&lt;string&gt;
+* handle : Function
+* [path](routermeta.md#var-path) : string
+* [params](routermeta.md#var-params) : string
 
-## interface **RouterMeta**
+## Details
+
+### **interface RouterMeta**
 
 Is a metadata object contain information about routes
 
-## var method
+### 
+
+### var method
 
 > ### **method** : string \| Array&lt; string &gt;
 
