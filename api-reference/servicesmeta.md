@@ -19,7 +19,7 @@ Describe information for a mapping method. This information will be used by hyro
 
 Apply descriptions for all routers. It has a low priority, so you can override it at each router
 
-#### Return
+#### ★ Return
 
 ```typescript
 $all : RouterMeta | RouterMeta.method
@@ -36,7 +36,7 @@ $all : RouterMeta | RouterMeta.method
 
 List their mapping methods and descriptions, used by hyron to register the router
 
-#### Result
+#### ★ Result
 
 ```typescript
 [ method_name: string ] : RouterMeta | RouterMeta.method
