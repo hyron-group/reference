@@ -1,9 +1,5 @@
 # Hello world
 
-{% hint style="danger" %}
-CLI is comming soon !
-{% endhint %}
-
 ### Step 1 : Install Hyron CLI
 
 {% code-tabs %}

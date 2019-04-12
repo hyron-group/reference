@@ -52,6 +52,7 @@ With StatusCode - a class mapping http code with a readable name, you can easy t
 | 101 | SWITCHING\_PROTOCOL | Server agreed to switch protocol by client |
 | 102 | PROCESSING | Server has received and is processing the request, but no response is available yet |
 | 103 | EARLY\_HINTS | Return some response headers before final HTTP message |
+|  |  |  |
 | 200 | OK | Standard response for successful HTTP requests |
 | 201 | CREATED | Resulting in the creation of a new resource |
 | 202 | ACCEPTED | Request has been accepted for processing, but the processing has not been completed |
@@ -62,6 +63,7 @@ With StatusCode - a class mapping http code with a readable name, you can easy t
 | 207 | MULTI\_STATUS | Body contain a number of separate response codes |
 | 208 | ALREADY\_REPORTED | The members of a DAV binding have already been enumerated in a preceding part |
 | 226 | IM\_USED | Response is a representation of the result of one or more instance-manipulations applied to the current instance |
+|  |  |  |
 | 300 | MULTIPLE\_CHOICES | Indicates that is client could choice multi options for the resource |
 | 301 | MOVED\_PERMANENTLY | This and all future requests should be directed to the given URI |
 | 302 | FOUND | Tells the client to look at \(browse to\) another URL |
@@ -71,6 +73,7 @@ With StatusCode - a class mapping http code with a readable name, you can easy t
 | 306 | SWITCH\_PROXY | Subsequent requests should use the specified proxy |
 | 307 | TEMPORARY\_REDIRECT | The request should be repeated with another URI for temporary |
 | 308 | PERMANENT\_REDIRECT | The request and all future requests should be repeated using another URI |
+|  |  |  |
 | 400 | BAD\_REQUEST | The server cannot or will not process the request due to an apparent client error |
 | 401 | UN\_AUTHORIZED | Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided |
 | 402 | PAYMENT\_REQUIRED | The original intention was that this code might be used as part of some form of digital cash or micropayment scheme |
@@ -99,6 +102,7 @@ With StatusCode - a class mapping http code with a readable name, you can easy t
 | 429 | TOO\_MANY\_REQUESTS | The user has sent too many requests in a given amount of time |
 | 431 | REQUEST\_HEADER\_FIELDS \_TOO\_LARGE | The server is unwilling to process the request because either an individual header field, or all the header fields collectively, are too large |
 | 451 | UN\_AVAILABLE\_FOR \_LEGAL\_REASONS | A server operator has received a legal demand to deny access to a resource or to a set of resources that includes the requested resource |
+|  |  |  |
 | 500 | INTERNAL\_SERVER\_ERROR | A generic error message, given when an unexpected condition was encountered and no more specific message is suitable |
 | 501 | NOT\_IMPLEMENTED | The server either does not recognize the request method, or it lacks the ability to fulfil the request |
 | 502 | BAD\_GATEWAY | The server was acting as a gateway or proxy and received an invalid response from the upstream server |

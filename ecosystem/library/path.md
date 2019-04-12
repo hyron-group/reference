@@ -2,8 +2,8 @@
 
 Used to reference to a url
 
-```text
-require('Hyron/lib/path')
+```typescript
+const hpath = require('Hyron/lib/path')
 ```
 
 ### Features
@@ -69,7 +69,7 @@ var doSomethingAction = getHandleOfURL("/reference");
 doSomethingAction('hello world');
 ```
 
-## API Reference
+## Reference
 
 #### interface path
 
@@ -77,44 +77,66 @@ doSomethingAction('hello world');
 * **findURL** \( query \) : string
 * **getHandleOfURL** \( path, baseUrl \) : function
 
-## function build
 
-> ### **build** \( baseURL, url, executer \) : void
+
+### function build
 
 Used to register a url scope, that can be use for another action
 
-#### **params**
+#### **Params**
 
-* **baseURL** \( string \) : base-url of your target website
-* **eventName** \( string \) : path of target site
-* **executer** \( function \) : a function to handle when retrieve this
+```javascript
+build(baseURL, url, executer) : void
+```
+
+| name | type | description |
+| :--- | :--- | :--- |
+| baseURL | string | base-url of your target website |
+| eventName | string | path of target site |
+| executer | function | a function to handle when retrieve this |
+
+\*\*\*\*
 
 ## function findURL
 
-> ### **findURL** \( condition \) : string
-
 Used to retrieve a complete url by a part of url path or handle function
 
-#### **params**
+#### **Params**
 
-* **condition** \( string \| function \) : condition for search. response will be cache for faster in the next call. You should to used function to search for better IDE support
+```javascript
+findURL(condition) : string
+```
 
-#### **return**
+| name | type | description |
+| :--- | :--- | :--- |
+| condition | string \| function | condition for search. response will be cache for faster in the next call |
 
-* string : string url if exist or null if not
+#### **Return**
 
-## function getHandleOfURL
+| type | description |
+| :--- | :--- |
+| string | string url if exist or null if not |
 
-> ### **getHandleOfURL** \( path, baseURL \) : function
+## 
+
+### function getHandleOfURL
 
 Used to get handler of a url by url path
 
-#### **params**
+#### **Params**
 
-* **path** \( string \) : url or target site
-* **baseURL** \( string \| null \) : base url of target website. If it null, it will refereence to first baseURL in scope
+```javascript
+getHandleOfURL(path, baseURL?) : function
+```
 
-#### **return**
+| name | type | description |
+| :--- | :--- | :--- |
+| path | string | url or target site |
+| baseURL | string | base url of target website. If it null, it will refereence to first baseURL in scope |
 
-* function : a handler function correspond with base url have set before
+#### **Return**
+
+| type | description |
+| :--- | :--- |
+| function | a handler function correspond with base url have set before |
 
