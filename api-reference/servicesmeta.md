@@ -15,20 +15,13 @@ description: 'Used to describe information for a executer, used to register rout
 
 Describe information for a mapping method. This information will be used by hyron to register the router and execute business logic along with plugins
 
-### properties $all
-
-Apply descriptions for all routers. It has a low priority, so you can override it at each router
-
-#### ★ Return
+### var $all
 
 ```typescript
 $all : RouterMeta | RouterMeta.method
 ```
 
-| type | description |
-| :--- | :--- |
-| RouterMeta | Contains descriptive information for this router |
-| RouterMeta.method | The method will be used to register the router |
+Apply descriptions for all routers. It has a low priority, so you can override it at each router
 
 ### 
 

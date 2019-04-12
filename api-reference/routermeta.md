@@ -1,12 +1,16 @@
+---
+description: Used to describe the information for a router
+---
+
 # RouterMeta
 
 #### interface **RouterMeta**
 
 * [method](routermeta.md#var-method) : string \| array&lt;string&gt;
-* [fontware](routermeta.md#var-fontware) : Array&lt;string \| Middleware.handle&gt;
-* [backware](routermeta.md#var-backware) : Array&lt;string \| Middleware.handle&gt;
+* [fontware](routermeta.md#var-fontware) : Array&lt;string \| [Middleware.handle](middleware.md#function-handle)&gt;
+* [backware](routermeta.md#var-backware) : Array&lt;string \| [Middleware.handle](middleware.md#function-handle)&gt;
 * [plugins](routermeta.md#var-plugins) : Array&lt;string&gt;
-* handle : Function
+* [handle](routermeta.md#function-handle) : Function
 * [path](routermeta.md#var-path) : string
 * [params](routermeta.md#var-params) : string
 
@@ -20,94 +24,51 @@ Is a metadata object contain information about routes
 
 ### var method
 
-Specifies the methods that will be used to register the listener for this method. Include \( not case sensitive \) :
+```typescript
+method : string | Array<string>
+```
+
+Specifies the method or list of methods that will be used to register the listener for this method. Include \( not case sensitive \) :
 
 * Query type : `get`, `head`
 * Body type : `post`, `put`, `patch`
 * Special type : `all`, `private`
 
-#### ★ Return
-
-```typescript
-method : string | Array<string>
-```
-
-| type | description |
-| :--- | :--- |
-| string | The method is used to register the router |
-| Array&lt;string&gt; | The array of basic methods will be registered on it |
-
 
 
 ### var fontware
-
-Turn on registered fontware of a plugins by name, or turn off fontware of global plugins by marking with the character '!' in front of that name
-
-#### ★ Return
 
 ```typescript
 fontware : Array<string|Middleware.handle>
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">type</th>
-      <th style="text-align:left">description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Array&lt;string | Middleware.handle&gt;</td>
-      <td style="text-align:left">
-        <p>The list of fontware plugins is enabled for this router.</p>
-        <p>You also can register a new fontware with it</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+The list of plugins will be run on this router by name, or turn off global plugins by marking with the character '!' in front of that name
+
+You can also register a simple plugins with it You can also register a simple plugins with it if you pass a function into it
+
+
 
 ### var backware
-
-Turn on registered backware of a plugins by name, or turn off backware of global plugins by marking with the character '!' in front of that name
-
-#### ★ Return
 
 ```typescript
 backware : Array<string|Middleware.handle>
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">t</th>
-      <th style="text-align:left">description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Array&lt;string | Middleware.handle&gt;</td>
-      <td style="text-align:left">
-        <p>The list of backware plugins is enabled for this router.</p>
-        <p>You also can register a new backware with it</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+The list of b plugins will be run on this router by name, or turn off global plugins backware by marking with the character '!' in front of that name
+
+You can also register a simple plugins with it You can also register a simple plugins with it if you pass a function into it
+
+
 
 ### var plugins
-
-Turn on registered plugins by name, or turn off global plugins by marking with the character '!' in front of that name
-
-#### ★ Return
 
 ```typescript
 plugins : Array<string|Middleware.handle>
 ```
 
-| type | description |
-| :--- | :--- |
-| Array&lt;string \| Middleware.handle&gt; | The list of plugins is enabled for this router. |
+The list of plugins will be run on this router by name, or turn off global plugins by marking with the character '!' in front of that name
+
+You can also register a simple plugins with it You can also register a simple plugins with it if you pass a function into it
 
 
 
@@ -131,27 +92,25 @@ handle : Function
 | type | description |
 | :--- | :--- |
 | any | result of logic block that could be used as input of backware plugins |
-| Promise&lt;any&gt; | It also supports for async function |
+| Promise&lt;any&gt; | Async function  with result could be used as input of backware plugins |
 
-* any \| Promise &lt; any &gt; : result of logic block that could be used as input of backware plugins
 
-## var path
 
-> ### **path** : string
+### var path
+
+```typescript
+path : string
+```
 
 Customize the path for this router instead of the default path. Use this attribute only when absolutely necessary, to ensure consistency and ease of editing later
 
-## var params
 
-> ### **params** : string
 
-An attribute used by param-parser plugins allows to parse parameters from url strings following the path of this router
+### var params
 
-Use it with syntax : /:param1/param2 ...
+```typescript
+params : string
+```
 
-#### Rule
-
-* var name start with ':' character
-* params will be followed after the path
-* The variable from the param should only have a depth of less than 5
+An attribute used by param-parser plugins allows to parse parameters from url strings following the path of this router \(start with ':' character\). Example `/:param1/param2` 
 

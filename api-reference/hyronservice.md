@@ -42,63 +42,39 @@ static requestConfig() : ServicesMeta
 
 ### var $config
 
-return config of this service. It could be use inside every plugins & main-handler declared in this service
-
-#### ★ Return
-
 ```javascript
 this.$config : object
 ```
 
-| t | description |
-| :--- | :--- |
-| object | An object contains settings for this service |
+return config of this service. It could be use inside every plugins & main-handler declared in this service
 
 
 
 ### var $requestConfig
 
-get to `requestConfig` **for this router**, or undefined if this executer has not been declared
-
-#### ★ Return
-
 ```javascript
 this.$requestConfig : RouterMeta
 ```
 
-| type | description |
-| :--- | :--- |
-| [RouterMeta](routermeta.md) | Descriptive information about this router, is declared in requestConfig |
+get to `requestConfig` **for this router**, or undefined if this executer has not been declared
 
 
 
 ### var $executer
 
-get to `executer` **for this router**, or undefined if this executer has not been declared
-
-#### ★ Return
-
 ```javascript
 this.$executer : Function
 ```
 
-| type | description |
-| :--- | :--- |
-| Function | The method will be used to register the router |
+get to `executer` **for this router**, or undefined if this executer has not been declared
 
 
 
 ### var $eventName
 
-get to event name **for this router**, or undefined if this executer has not been declared
-
-#### ★ Return
-
 ```javascript
 this.$eventName : string
 ```
 
-| type | description |
-| :--- | :--- |
-| string | The event name is used to register this router. It corresponds to `eventName` displayed on the console |
+get to event name **for this router**, or undefined if this executer has not been declared
 
