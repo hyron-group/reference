@@ -1,3 +1,7 @@
+---
+description: 'Represents the hyron, containing the basic methods for running the application'
+---
+
 # ModuleManager
 
 {% hint style="warning" %}

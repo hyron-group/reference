@@ -12,7 +12,7 @@ function [handler](unofficialservice.md#function-handler)\(app, cfg\) : void
 
 The function is used to register a router in other cases that the hyron or addons from third parties do not yet support
 
-#### Params
+#### ★ Params
 
 ```typescript
 function handler(app, cfg) : void

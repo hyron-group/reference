@@ -1,10 +1,12 @@
-# ResponseHandler
+---
+description: Used to handle response by default
+---
 
-Used to handle response by default
+# ResponseHandler
 
 ### Features
 
-* Cast other data type \(not a string or buffer\) into string for response
+* Cast other data type into string for response
 * Response with error track
 
 ## Details

@@ -76,7 +76,7 @@ You can also register a simple plugins with it You can also register a simple pl
 
 Specifies the main-handler for this router. If this function is not set, Hyron will select the function inside this class that have the name the same name declared for this RouterMeta. This attribute has a higher priority
 
-#### **Params**
+#### ★ **Params**
 
 ```typescript
 handle : Function
@@ -87,7 +87,7 @@ handle : Function
 | argument | Array&lt;any&gt; | The variables are input as a result of fontware plugins |
 | this | object | variable this with scope in this router. Description in HyronService |
 
-#### **Return**
+#### ★ **Return**
 
 | type | description |
 | :--- | :--- |

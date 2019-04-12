@@ -24,7 +24,7 @@ You can edit them by object inject through '**this**' variable, and make it stro
 
 A function contains custom logic for Hyron
 
-#### **Params**
+#### ★ **Params**
 
 ```javascript
 function handle(cfg) : void

@@ -28,7 +28,7 @@ This is a heart of a plugins. It will be called when a request has make. Used to
 
 This function has the ability to access the 'this' variable of this route
 
-#### **Params**
+#### ★ **Params**
 
 ```typescript
 handle( req, res, prev, cfg ) : any|Promise<any>
@@ -42,7 +42,7 @@ handle( req, res, prev, cfg ) : any|Promise<any>
 | cfg | any | config of this plugins |
 | **this** | object | variable this with scope in this router |
 
-#### **Return**
+#### ★ **Return**
 
 | type | description |
 | :--- | :--- |
@@ -56,7 +56,7 @@ This function called for the fist time request of this instance has make. Used t
 
 This function has the ability to access the 'this' variable of this route
 
-#### **Params**
+#### ★ **Params**
 
 ```typescript
 onCreate(cfg) : void | Promise<void>
@@ -67,7 +67,7 @@ onCreate(cfg) : void | Promise<void>
 | cfg | object | config of this plugins |
 | **this** | object | variable this with scope in this router |
 
-#### **Return**
+#### ★ **Return**
 
 | type | description |
 | :--- | :--- |
@@ -81,7 +81,7 @@ Used to check if some value has changed. If a change has make, onCreate will be 
 
 This function has the ability to access the 'this' variable of this route
 
-#### **Params**
+#### ★ **Params**
 
 ```typescript
 checkout(done, cfg) : boolean | Promise<boolean>
@@ -93,7 +93,7 @@ checkout(done, cfg) : boolean | Promise<boolean>
 | cfg | object | config of this plugins |
 | **this** | this | variable this with scope in this router |
 
-#### **Return**
+#### ★ **Return**
 
 | type | description |
 | :--- | :--- |

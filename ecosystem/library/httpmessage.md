@@ -1,17 +1,21 @@
-# HTTPMessage
+---
+description: >-
+  HTTPMessage is an inherited Error class, which allows to break the processing
+  thread with a throwable
+---
 
-HTTPMessage is an inherited Error class, which allows to break the processing thread with a throwable
+# HTTPMessage
 
 ### Features
 
-* Allow break processing thread with a 'throw' / reject
+* Allow break processing thread with a `throw` / `reject`
 * Loaded as a global var, so you can call anywhere
 * Human readable status code from 1XX - 5XX
 * Support custom status message
 
 ## Details
 
-### 1. Break processing with 'thow'
+### 1. Break processing with thow
 
 This is a interested feature of Hyron buildin lib, that allow you break the flow of hyron processing using a throw, or a Promise reject. Such as throw a normal Error
 
@@ -42,7 +46,7 @@ class User {
 
 With StatusCode - a class mapping http code with a readable name, you can easy to choise a code fit you case. Bellow is a code mapping for http
 
-| code | represent name | description |
+| code | name | description |
 | :---: | :--- | :--- |
 | 100 | CONTINUE | Server has received the request headers and client should proceed to send the request body |
 | 101 | SWITCHING\_PROTOCOL | Server agreed to switch protocol by client |
@@ -111,18 +115,28 @@ With StatusCode - a class mapping http code with a readable name, you can easy t
 
 This is HTTPMessage API. As you see, you can custom messange with args at index 1 \(message\)
 
-**class HTTPMessage**
 
-> ### constructor **HTTPMessage** \( code, message \) : Error
+
+## Reference
+
+### **class HTTPMessage**
 
 Used to create a Error that implement HTTP protocol status
 
-#### **params**
+#### **Params**
 
-* **code** \( number \) : is [http.statusCode](https://nodejs.org/api/http.html#http_response_statuscode)
-* **messange** \( string \| undefined \) : is [http.statusMessage](https://nodejs.org/api/http.html#http_response_statusmessage)
+```typescript
+constructor HTTPMessage(code, message?) : Error
+```
 
-#### **return**
+| name | type | description |
+| :--- | :--- | :--- |
+| code | number | s [http.statusCode](https://nodejs.org/api/http.html#http_response_statuscode), used to notify the client of the status returned by the server |
+| message | string | is [http.statusMessage](https://nodejs.org/api/http.html#http_response_statusmessage), used to notify the client of the message returned by the server |
 
-* Error : A object description about a http status
+#### **Return**
+
+| type | description |
+| :--- | :--- |
+| Error | A object description about a http status |
 
