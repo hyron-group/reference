@@ -7,7 +7,7 @@ description: used to retrieve the full path for a router by executer or part of 
 Used to reference to a url
 
 ```typescript
-const hpath = require('Hyron/lib/path')
+const hpath = require('hyron/lib/path')
 ```
 
 ### Features
