@@ -1,5 +1,5 @@
 ---
-description: used to retrieve the full path for a router by executer or part of it
+description: used to retrieve the full path for a router by executer or a part of it
 ---
 
 # path
