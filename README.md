@@ -1,6 +1,6 @@
 ---
 description: >-
-  Hyron is a powerful code framework used to build backend applications faster
+  Hyron is a powerful NodeJS framework used to build backend applications faster
   and easier
 ---
 
