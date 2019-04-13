@@ -1,3 +1,7 @@
+---
+description: used to retrieve the full path for a router by executer or part of it
+---
+
 # path
 
 Used to reference to a url

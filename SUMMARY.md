@@ -31,6 +31,8 @@
     * [ResponseHandler](ecosystem/plugins/responsehandler.md)
     * [param\_parser](ecosystem/plugins/param_parser.md)
     * [custom\_response](ecosystem/plugins/custom_response.md)
+    * [@hyron/stringer](ecosystem/plugins/hyron-stringer.md)
+    * [@hyron/validator](ecosystem/plugins/hyron-validator.md)
   * [Addons](ecosystem/addons.md)
   * [Services](ecosystem/services.md)
 

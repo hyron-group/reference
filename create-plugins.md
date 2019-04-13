@@ -119,6 +119,10 @@ module.exports = {
 * **`prev`** \(Array&lt;any&gt; \) of **fontware** will be used as **executer input** or fontware of **previous plugins** 
 * **`prev`** \(any\) of **backware** is **executer output** or backware of **previous plugins**
 * Plugins can **communicate with each other**, and with executer via the `this`variable
+* You can use **Error to break** from the main **workflow**
+* The **error thrown** from a **fontware** will be pushed to the **first backware**
+* The **error thrown** from **executer** which will be returned through the user by **responseHandler**
+* The **error thrown** from the **backware** will be returned through the user by **responseHandler**
 
 ![Simple flow of plugins](.gitbook/assets/plugins-simple-flow.png)
 
