@@ -13,8 +13,8 @@ description: >-
 1. Easy to **Manage**
 2. **Easy to Use**
 3. Easy to **Reuse**
-4. Easy to **Upgrade** and **maintain**
-5. **Focus** **more** on processing **logic**
+4. Easy to **Upgrade** and **Maintain**
+5. **Focus** **more** on processing **Logic**
 
 ## Usage
 
