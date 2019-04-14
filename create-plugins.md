@@ -43,28 +43,72 @@ plugin-name
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### 2. Create Middleware
 
-A full plugins is made up of a middleware that it **runs in front** \(**`fontware`**\) of and a middleware that **runs behind** \(**`backware`**\) executer \(function to handle business logic\)
+### 2. Create plugins interface
+
+A full plugins is made up by
+- **`fontware`** : is middleware that it **runs in front** of executer
+- **`backware`** : is middleware that **runs behind** executer
 
 ![structure of a plugins](.gitbook/assets/plugins-struct%20%281%29.png)
 
-#### 2.1. Note
 
-* **`prev`** \(Array&lt;any&gt; \) of **fontware** will be used as **executer input** or fontware of **previous plugins** 
-* **`prev`** \(any\) of **backware** is **executer output** or backware of **previous plugins**
-* Plugins can **communicate with each other**, and with executer via the `this`variable
+A plugins may be missing `fontware` or `backware`
 
-#### 2.2 Workflow
+{% code-tabs %}
+{% code-tabs-item title="./index.js" %}
+```javascript
+// it was created by default
+module.exports = {
+    fontware : require('./src/fontware'),
+    backware : require('./src/backware')
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+{% hint style="info" %}
+The package of the Hyron organization can be loaded automatically without declaring for use, and can be used as a normal library. Let join us
+{% endhint %}
+
+
+### 3. Create Middleware
+
+A middleware is operated by two main methods: **handle** and **onCreate**
+
+{% code-tabs-item title="Example" %}
+```javascript
+module.exports = {
+    handle(req, res, prev, cfg){
+        console.log(req.headers)
+        return prev;
+    },
+    global : true
+}
+```
+
+Here are some properties that will be used in **fontware**, **backware**. see more [PluginsMeta](api-reference/pluginsmeta.md), [Middleware](api-reference/middleware.md)
+
+| Properties | Type | Descriptions |
+| :--- | :--- | :--- |
+| **handle**\(req,res,prev,cfg\) | function | function that can be called before or after executer |
+| checkout \(cfg\) | function | used to recall onCreate if returns true |
+| onCreate \(cfg\) | function | call for the first time when a router is called |
+| typeFilter | Array&lt;any&gt; | use to filter the data type of prev. Commonly used by backware |
+| global | boolean | Automatically run on all routers if true |
+
+
+#### 3.2 Workflow
 
 ![Simple flow of plugins](.gitbook/assets/plugins-simple-flow.png)
 
-* You can use **Error to break** from the main **workflow**
-* The **error thrown** from a **fontware** will be pushed to the **first backware**
-* The **error thrown** from **executer** which will be returned through the user by **responseHandler**
-* The **error thrown** from the **backware** will be returned through the user by **responseHandler**
 
-Example : `simple=-auth` plugins is used to validate user access when requesting
+* With **fontware**: the `prev` (Array) parameter is the sum of the results from the previous `fontware`, used as executer input
+* With **backware**: the `prev` (any) parameter is a combination of results from previous `backware` starting from executer, used to handle the output before returning the client
+* Plugins can **communicate with each other**, and with executer via the `this` variable
+* You can use **Error to break** from the main **workflow**. with a default class is HTTPMessage
+
+Example : `simple-auth` plugins is used to validate user access when requesting
 
 {% code-tabs %}
 {% code-tabs-item title="./src/fontware.js" %}
@@ -134,40 +178,6 @@ module.exports = {
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
-
-#### 2.3. Structure of fontware / backware
-
-Here are some properties that will be used in **fontware**, **backware**. see more [PluginsMeta](api-reference/pluginsmeta.md), [Middleware](api-reference/middleware.md)
-
-| Properties | Type | Descriptions |
-| :--- | :--- | :--- |
-| handle\(req,res,prev,cfg\) | function | function that can be called before or after executer |
-| checkout \(cfg\) | function | used to recall onCreate if returns true |
-| onCreate \(cfg\) | function | call for the first time when a router is called |
-| typeFilter | Array&lt;any&gt; | use to filter the data type of prev. Commonly used by backware |
-| global | boolean | Automatically run on all routers if true |
-
-### 3. Create plugins interface
-
-In order for me to read a plugins, you need to declare the middleware of the plugins, including `fontware` and `backware`
-
-A plugins may be missing `fontware` or `backware`
-
-{% code-tabs %}
-{% code-tabs-item title="./index.js" %}
-```javascript
-// it was created by default
-module.exports = {
-    fontware : require('./src/fontware'),
-    backware : require('./src/backware')
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-{% hint style="info" %}
-The package of the Hyron organization can be loaded automatically without declaring for use, and can be used as a normal library. Let join us
-{% endhint %}
 
 ### 4. Using plugins
 
