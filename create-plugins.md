@@ -1,6 +1,6 @@
 ---
 description: >-
-  plugins are middleware with the ability to plug in, run at the I / O layer, to
+  plugins are middleware with the ability to plug in, run at the I/O layer, to
   handle the incoming and outgoing data flow of the application
 ---
 
@@ -10,9 +10,11 @@ description: >-
 
 ## Why ?
 
-* Easy to manage
-* Easy to use
-* Easy to reuse
+1. Easy to **Manage**
+2. **Easy to Use**
+3. Easy to **Reuse**
+4. Easy to **Upgrade** and **maintain**
+5. **Focus** **more** on processing **logic**
 
 ## Usage
 
@@ -43,7 +45,26 @@ plugin-name
 
 ### 2. Create Middleware
 
-A full plugins is made up of a middleware that it **runs in front** \(`fontware`\) of and a middleware that **runs behind** \(`backware`\) executer \(function to handle business logic\). Example `auth-plugins`
+A full plugins is made up of a middleware that it **runs in front** \(**`fontware`**\) of and a middleware that **runs behind** \(**`backware`**\) executer \(function to handle business logic\)
+
+![structure of a plugins](.gitbook/assets/plugins-struct%20%281%29.png)
+
+#### 2.1. Note
+
+* **`prev`** \(Array&lt;any&gt; \) of **fontware** will be used as **executer input** or fontware of **previous plugins** 
+* **`prev`** \(any\) of **backware** is **executer output** or backware of **previous plugins**
+* Plugins can **communicate with each other**, and with executer via the `this`variable
+
+#### 2.2 Workflow
+
+![Simple flow of plugins](.gitbook/assets/plugins-simple-flow.png)
+
+* You can use **Error to break** from the main **workflow**
+* The **error thrown** from a **fontware** will be pushed to the **first backware**
+* The **error thrown** from **executer** which will be returned through the user by **responseHandler**
+* The **error thrown** from the **backware** will be returned through the user by **responseHandler**
+
+Example : `simple=-auth` plugins is used to validate user access when requesting
 
 {% code-tabs %}
 {% code-tabs-item title="./src/fontware.js" %}
@@ -114,19 +135,9 @@ module.exports = {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### Note
+#### 2.3. Structure of fontware / backware
 
-* **`prev`** \(Array&lt;any&gt; \) of **fontware** will be used as **executer input** or fontware of **previous plugins** 
-* **`prev`** \(any\) of **backware** is **executer output** or backware of **previous plugins**
-* Plugins can **communicate with each other**, and with executer via the `this`variable
-* You can use **Error to break** from the main **workflow**
-* The **error thrown** from a **fontware** will be pushed to the **first backware**
-* The **error thrown** from **executer** which will be returned through the user by **responseHandler**
-* The **error thrown** from the **backware** will be returned through the user by **responseHandler**
-
-![Simple flow of plugins](.gitbook/assets/plugins-simple-flow.png)
-
-#### Some functions to note
+Here are some properties that will be used in **fontware**, **backware**. see more [PluginsMeta](api-reference/pluginsmeta.md), [Middleware](api-reference/middleware.md)
 
 | Properties | Type | Descriptions |
 | :--- | :--- | :--- |
