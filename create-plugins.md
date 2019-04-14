@@ -43,17 +43,20 @@ plugin-name
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-
 ### 2. Create plugins interface
 
-A full plugins is made up by
-- **`fontware`** : is middleware that it **runs in front** of executer
-- **`backware`** : is middleware that **runs behind** executer
+**Plugins** are part of the **I/O layer** made up by
+
+* **fontware** : is middleware that it **runs in front** of [executer](create-services.md#2-define-controller)
+* **backware** : is middleware that **runs behind** of [executer](create-services.md#2-define-controller)
 
 ![structure of a plugins](.gitbook/assets/plugins-struct%20%281%29.png)
 
+{% hint style="info" %}
+A plugins may be missing **`fontware`** or **`backware`**
+{% endhint %}
 
-A plugins may be missing `fontware` or `backware`
+To pack a plugins, you only need to export the middleware
 
 {% code-tabs %}
 {% code-tabs-item title="./index.js" %}
@@ -67,16 +70,10 @@ module.exports = {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-{% hint style="info" %}
-The package of the Hyron organization can be loaded automatically without declaring for use, and can be used as a normal library. Let join us
-{% endhint %}
-
-
 ### 3. Create Middleware
 
 A middleware is operated by two main methods: **handle** and **onCreate**
 
-{% code-tabs-item title="Example" %}
 ```javascript
 module.exports = {
     handle(req, res, prev, cfg){
@@ -91,22 +88,20 @@ Here are some properties that will be used in **fontware**, **backware**. see mo
 
 | Properties | Type | Descriptions |
 | :--- | :--- | :--- |
-| **handle**\(req,res,prev,cfg\) | function | function that can be called before or after executer |
+| handle\(req,res,prev,cfg\) | function | function that can be called before or after executer |
 | checkout \(cfg\) | function | used to recall onCreate if returns true |
 | onCreate \(cfg\) | function | call for the first time when a router is called |
 | typeFilter | Array&lt;any&gt; | use to filter the data type of prev. Commonly used by backware |
 | global | boolean | Automatically run on all routers if true |
 
-
 #### 3.2 Workflow
 
 ![Simple flow of plugins](.gitbook/assets/plugins-simple-flow.png)
 
-
-* With **fontware**: the `prev` (Array) parameter is the sum of the results from the previous `fontware`, used as executer input
-* With **backware**: the `prev` (any) parameter is a combination of results from previous `backware` starting from executer, used to handle the output before returning the client
-* Plugins can **communicate with each other**, and with executer via the `this` variable
-* You can use **Error to break** from the main **workflow**. with a default class is HTTPMessage
+* With **`fontware`**: the `prev` \(Array&lt;any&gt;\) parameter is the sum of the **results from the previous fontware**, **used as executer input**
+* With **`backware`**: the `prev` \(any\) parameter is a combination of r**esults from previous backware** starting **from executer**, **used to handle the output** before returning the client
+* Plugins can **communicate with each other**, and with executer via the [`this`](api-reference/hyronservice.md) variable
+* You can use **Error to break** from the main **workflow**. with a default class is [HTTPMessage](ecosystem/library/httpmessage.md)
 
 Example : `simple-auth` plugins is used to validate user access when requesting
 
@@ -123,7 +118,7 @@ function handle(req, res, prev, cfg) {
         var cookies = req.headers.cookie;
         var {access_token} = cookie.parse(cookies);
         var payload = jwt.verify(access_token, SECRET_KEY);
-        
+
         var argIndex = this.$argsList.indexOf('uid'); // provided by param_parser plugin
         if(argIndex !== -1){
             prev[argIndex] = payload.uid;
@@ -253,7 +248,7 @@ module.exports = class {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-
-
-
+{% hint style="info" %}
+The package of the Hyron organization can be loaded automatically without declaring for use. Let join us
+{% endhint %}
 
