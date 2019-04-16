@@ -111,7 +111,7 @@ Here are some of the default properties of `this`
 
 #### Normal Services \(support for http or by 3rth addons\)
 
-Let Hyron know that this is a service that can be supported by the http protocol, you need to **return an interface** specifically that the `requestConfig` contains descriptive information about that router. Example
+Let Hyron know that this is a service that can be supported by the http protocol, you need to **return an interface** specifically that the [`requestConfig`](api-reference/hyronservice.md#function-requestconfig) contains descriptive information about that router. Example
 
 {% code-tabs %}
 {% code-tabs-item title="./model/UserManager.js" %}
@@ -138,7 +138,7 @@ Tips : If simple, you only need to declare the method directly instead of a desc
 
 The default [**param\_parser plugins**](ecosystem/plugins/param_parser.md) will help automate the process of passing variables from your request to your controller, saving you time and allowing you to package services more easily to be reused by other services.
 
-Here are some of the attributes you should keep in mind of `requestConfig`
+Here are some of the attributes you should keep in mind of [`requestConfig`](api-reference/hyronservice.md#function-requestconfig)\`\`
 
 | Attribute | Type | Description |
 | :--- | :--- | :--- |
