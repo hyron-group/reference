@@ -35,6 +35,12 @@ Hyron focus to 5 main `values`. that's what makes Hyron different
 Hyron is still in the first stage. We hope that we can create products that help programmers work more easily. We need help from you to do that. Checkout [how to contribute](contribute.md) topic
 {% endhint %}
 
+## Benefit
+
+* **Save** **time**, **development** **costs**
+* Easy to **scale**, **maintain**, **debug**
+* Easy and **convenient** to **work**
+
 ## Vision
 
 ![Unity is Strength](.gitbook/assets/cc-graphic.png)
