@@ -169,7 +169,7 @@ module.exports = function (app, cfg) {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### 4. Declare to Hyron
+### 4. Declare & Routing
 
 You should separate the interface from the hyron to a separate file, called router.js, containing the description of the router \(if complicated\).
 
@@ -202,7 +202,14 @@ To use, you need to declare them in the JSON build file
 }
 ```
 
+By default, the hyron will automatically register the url based on the declared information
 
+![](.gitbook/assets/url-struct.png)
+
+* To **customize a path**, use the [path](api-reference/routermeta.md#var-path) attribute to [declare a router](create-services.md#3-router-definition)
+* You can also design **rest-style** routers with a combination of [params](api-reference/routermeta.md#var-params)
+* You can **change the style** of the url with [style config](api-reference/modulemanager.md#function-setting)
+* The above action is **not recommended** because it can affect the ability to share and reuse
 
 
 
