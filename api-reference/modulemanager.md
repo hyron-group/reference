@@ -5,7 +5,7 @@ description: 'Represents the hyron, containing the basic methods for running the
 # ModuleManager
 
 {% hint style="warning" %}
-Note: this class is no longer used, instead you should use the hyron-cli package to work with hyron more easily, and better support later
+Note: this class is no longer used, instead you should use the @hyron/cli package to work with hyron more easily, and better support later
 {% endhint %}
 
 class **ModuleManager**

@@ -11,7 +11,7 @@ description: >-
 ### 1. Initialization application
 
 {% code-tabs %}
-{% code-tabs-item title="Using hyron-cli" %}
+{% code-tabs-item title="Using @hyron/cli" %}
 ```bash
 hyron init app
 ```
@@ -86,7 +86,7 @@ Instances should be declared in a [json build file](json-build-file.md) using js
 
 ### 4. Run your app
 
-You can use hyron-cli to run the application
+You can use @hyron/cli to run the application
 
 ```text
 hyron start

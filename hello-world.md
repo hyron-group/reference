@@ -5,13 +5,13 @@
 {% code-tabs %}
 {% code-tabs-item title="YARN" %}
 ```bash
-yarn global add hyron-cli
+yarn global add @hyron/cli
 ```
 {% endcode-tabs-item %}
 
 {% code-tabs-item title="NPM" %}
 ```bash
-npm i -g hyron-cli
+npm i -g @hyron/cli
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -54,7 +54,7 @@ module.exports = class {
 ### Step 4 : Run application
 
 {% code-tabs %}
-{% code-tabs-item title="Using hyron-cli" %}
+{% code-tabs-item title="Using @hyron/cli" %}
 ```bash
 hyron start app.json
 ```

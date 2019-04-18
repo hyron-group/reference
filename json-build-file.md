@@ -49,7 +49,7 @@ A json build file contains information about an instance
 You can use these files to run the application with the cli tools or with the hyron package
 
 {% code-tabs %}
-{% code-tabs-item title="Using hyron-cli" %}
+{% code-tabs-item title="Using @hyron/cli" %}
 ```bash
 hyron start [path]
 ```

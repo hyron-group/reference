@@ -19,7 +19,7 @@ This feature is in the process of developing and improving, to increase the flex
 ### **1.** Initialization addons
 
 {% code-tabs %}
-{% code-tabs-item title="Using hyron-cli" %}
+{% code-tabs-item title="Using @hyron/cli" %}
 ```bash
 hyron init addons
 ```

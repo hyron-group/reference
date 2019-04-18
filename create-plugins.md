@@ -21,7 +21,7 @@ description: >-
 ### 1. Initialization plugins
 
 {% code-tabs %}
-{% code-tabs-item title="Using hyron-cli" %}
+{% code-tabs-item title="Using @hyron/cli" %}
 ```text
 hyron init plugins
 ```

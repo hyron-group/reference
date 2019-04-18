@@ -21,7 +21,7 @@ Hyron encourages you to build [Microservice Architecture](https://microservices.
 ### 1. Initialization service
 
 {% code-tabs %}
-{% code-tabs-item title="Using hyron-cli" %}
+{% code-tabs-item title="Using @hyron/cli" %}
 ```bash
 hyron init services
 ```
