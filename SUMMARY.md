@@ -12,6 +12,7 @@
 * [Contribute](contribute.md)
 * [Q&A](q-and-a.md)
 * [Tips](tips.md)
+* [Ideas](ideas.md)
 * [API Reference](api-reference/README.md)
   * [ModuleManager](api-reference/modulemanager.md)
   * [ServiceMeta](api-reference/servicesmeta.md)

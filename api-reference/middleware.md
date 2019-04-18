@@ -12,15 +12,11 @@ description: Used to package processing functions for a frontware or backware
 * [**typeFilter**](middleware.md#var-typefilter) : Array&lt; any &gt;
 * [**global**](middleware.md#var-global) : boolean
 
-
-
 ## Details
 
 ### interface **Middleware**
 
 It used to declare middleware that used to run before or after each services
-
-
 
 ### function handle
 
@@ -46,9 +42,7 @@ handle( req, res, prev, cfg ) : any|Promise<any>
 
 | type | description |
 | :--- | :--- |
-| any \| Promise&lt;any&gt;  | A result that could be used by bellow plugins, or as main-handler function if it is last frontware. It also support for async function or function return with a Promise |
-
-
+| any \| Promise&lt;any&gt; | A result that could be used by bellow plugins, or as main-handler function if it is last frontware. It also support for async function or function return with a Promise |
 
 ### function onCreate
 
@@ -71,9 +65,7 @@ onCreate(cfg) : void | Promise<void>
 
 | type | description |
 | :--- | :--- |
-| void \| Promise&lt;void&gt;  | it not required, just notify in async case that it completed |
-
-
+| void \| Promise&lt;void&gt; | it not required, just notify in async case that it completed |
 
 ### function checkout
 
@@ -99,8 +91,6 @@ checkout(done, cfg) : boolean | Promise<boolean>
 | :--- | :--- |
 | boolean \| Promise&lt;boolean&gt; | true if has change, or not |
 
-
-
 ### var typeFilter
 
 ```typescript
@@ -108,8 +98,6 @@ typeFilter : Array<any>
 ```
 
 It is used to filter which type of data from prev will be processed. if type of [`prev`](middleware.md#params) don't contain in array. It will be skip
-
-
 
 ### var global
 

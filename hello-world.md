@@ -1,6 +1,6 @@
 # Hello world
 
-### Step 1 : Install Hyron CLI
+## Step 1 : Install Hyron CLI
 
 {% code-tabs %}
 {% code-tabs-item title="YARN" %}
@@ -16,7 +16,7 @@ npm i -g @hyron/cli
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Step 2 : Add JSON build file
+## Step 2 : Add JSON build file
 
 {% code-tabs %}
 {% code-tabs-item title="./app.json" %}
@@ -31,7 +31,7 @@ npm i -g @hyron/cli
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Step 3 : Add controller file
+## Step 3 : Add controller file
 
 {% code-tabs %}
 {% code-tabs-item title="./demo.js" %}
@@ -42,7 +42,7 @@ module.exports = class {
             sayHello : "get"
         }
     }
-    
+
     sayHello(name){
         return "hello world !"+name;
     }
@@ -51,7 +51,7 @@ module.exports = class {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Step 4 : Run application
+## Step 4 : Run application
 
 {% code-tabs %}
 {% code-tabs-item title="Using @hyron/cli" %}

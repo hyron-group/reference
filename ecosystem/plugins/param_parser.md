@@ -6,8 +6,6 @@ description: >-
 
 # param\_parser
 
-
-
 ### Why ?
 
 * **Save time** by automating
@@ -42,8 +40,6 @@ export class api {
 }
 ```
 
-
-
 ## Features
 
 ### 1. Auto pass payload data
@@ -65,7 +61,7 @@ export class api {
         // do something useful
         return `hello ${a}, i'm ${b}`;
     }
-}    
+}
 ```
 
 To use param-parser you need to follow the following rules

@@ -66,11 +66,10 @@ module.export = class UserManager {
                 )
             }
         });
-        
+
         return newUser;
     }
 }
-
 ```
 {% endcode-tabs-item %}
 
@@ -210,6 +209,4 @@ By default, the hyron will automatically register the url based on the declared 
 * You can also design **rest-style** routers with a combination of [params](api-reference/routermeta.md#var-params)
 * You can **change the style** of the url with [style config](api-reference/modulemanager.md#function-setting)
 * The above action is **not recommended** because it can affect the ability to share and reuse
-
-
 

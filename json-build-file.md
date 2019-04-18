@@ -125,13 +125,13 @@ JSON build file will automatically detect and install missing packages using the
     "plugins": {
         // install from npm registry
         "from-npm": "npm-package-name",
-        
+
         // install from github
         "from-git": "https://github.com/user/package.git",
-        
+
         // install from local file
         "from-local" : "file:/path/to/local/folder",
-        
+
         // install from local package
         "from-pack" : "file:/path/to/local/tarball.tgz",
 
