@@ -6,10 +6,6 @@ description: >-
 
 # Installing
 
-{% hint style="danger" %}
-CLI is comming soon !
-{% endhint %}
-
 ## Request
 
 * Understanding [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
