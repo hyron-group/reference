@@ -7,7 +7,7 @@ description: Used to describe the information for a router
 #### interface **RouterMeta**
 
 * [method](routermeta.md#var-method) : string \| array&lt;string&gt;
-* [fontware](routermeta.md#var-fontware) : Array&lt;string \| [Middleware.handle](middleware.md#function-handle)&gt;
+* [frontware](routermeta.md#var-frontware) : Array&lt;string \| [Middleware.handle](middleware.md#function-handle)&gt;
 * [backware](routermeta.md#var-backware) : Array&lt;string \| [Middleware.handle](middleware.md#function-handle)&gt;
 * [plugins](routermeta.md#var-plugins) : Array&lt;string&gt;
 * [handle](routermeta.md#function-handle) : Function
@@ -36,10 +36,10 @@ Specifies the method or list of methods that will be used to register the listen
 
 
 
-### var fontware
+### var frontware
 
 ```typescript
-fontware : Array<string|Middleware.handle>
+frontware : Array<string|Middleware.handle>
 ```
 
 The list of plugins will be run on this router by name, or turn off global plugins by marking with the character '!' in front of that name
@@ -84,7 +84,7 @@ handle : Function
 
 | name | type | description |
 | :--- | :--- | :--- |
-| argument | Array&lt;any&gt; | The variables are input as a result of fontware plugins |
+| argument | Array&lt;any&gt; | The variables are input as a result of frontware plugins |
 | this | object | variable this with scope in this router. Description in HyronService |
 
 #### ★ **Return**

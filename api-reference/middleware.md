@@ -1,5 +1,5 @@
 ---
-description: Used to package processing functions for a fontware or backware
+description: Used to package processing functions for a frontware or backware
 ---
 
 # Middleware
@@ -46,7 +46,7 @@ handle( req, res, prev, cfg ) : any|Promise<any>
 
 | type | description |
 | :--- | :--- |
-| any \| Promise&lt;any&gt;  | A result that could be used by bellow plugins, or as main-handler function if it is last fontware. It also support for async function or function return with a Promise |
+| any \| Promise&lt;any&gt;  | A result that could be used by bellow plugins, or as main-handler function if it is last frontware. It also support for async function or function return with a Promise |
 
 
 
@@ -119,5 +119,5 @@ global : boolean
 
 Used to turn on global mode. Meanwhile, this middleware will be called automatically on each router.
 
-In addition, it can also be turned off in requestConfig -&gt; fontware / backware / plugins by adding a '!' character before this plugins name
+In addition, it can also be turned off in requestConfig -&gt; frontware / backware / plugins by adding a '!' character before this plugins name
 

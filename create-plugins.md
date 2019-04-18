@@ -47,13 +47,13 @@ plugin-name
 
 **Plugins** are part of the **I/O layer** made up by
 
-* **fontware** : is middleware that it **runs in front** of [executer](create-services.md#2-define-controller)
+* **frontware** : is middleware that it **runs in front** of [executer](create-services.md#2-define-controller)
 * **backware** : is middleware that **runs behind** of [executer](create-services.md#2-define-controller)
 
 ![structure of a plugins](.gitbook/assets/plugins-struct%20%281%29.png)
 
 {% hint style="info" %}
-A plugins may be missing **`fontware`** or **`backware`**
+A plugins may be missing **`frontware`** or **`backware`**
 {% endhint %}
 
 To pack a plugins, you only need to export the middleware
@@ -63,7 +63,7 @@ To pack a plugins, you only need to export the middleware
 ```javascript
 // it was created by default
 module.exports = {
-    fontware : require('./src/fontware'),
+    frontware : require('./src/frontware'),
     backware : require('./src/backware')
 }
 ```
@@ -84,7 +84,7 @@ module.exports = {
 }
 ```
 
-Here are some properties that will be used in **fontware**, **backware**. see more [PluginsMeta](api-reference/pluginsmeta.md), [Middleware](api-reference/middleware.md)
+Here are some properties that will be used in **frontware**, **backware**. see more [PluginsMeta](api-reference/pluginsmeta.md), [Middleware](api-reference/middleware.md)
 
 | Properties | Type | Descriptions |
 | :--- | :--- | :--- |
@@ -98,7 +98,7 @@ Here are some properties that will be used in **fontware**, **backware**. see mo
 
 ![Simple flow of plugins](.gitbook/assets/plugins-simple-flow.png)
 
-* With **`fontware`**: the `prev` \(Array&lt;any&gt;\) parameter is the sum of the **results from the previous fontware**, **used as executer input**
+* With **`frontware`**: the `prev` \(Array&lt;any&gt;\) parameter is the sum of the **results from the previous frontware**, **used as executer input**
 * With **`backware`**: the `prev` \(any\) parameter is a combination of r**esults from previous backware** starting **from executer**, **used to handle the output** before returning the client
 * Plugins can **communicate with each other**, and with executer via the [`this`](api-reference/hyronservice.md) variable
 * You can use **Error to break** from the main **workflow**. with a default class is [HTTPMessage](ecosystem/library/httpmessage.md)
@@ -106,7 +106,7 @@ Here are some properties that will be used in **fontware**, **backware**. see mo
 Example : `simple-auth` plugins is used to validate user access when requesting
 
 {% code-tabs %}
-{% code-tabs-item title="./src/fontware.js" %}
+{% code-tabs-item title="./src/frontware.js" %}
 ```javascript
 // authenticate plugin using jwt
 const jwt = require("jsonwebtoken");
@@ -206,7 +206,7 @@ module.exports = class {
             download: {
                 method: 'get',
                 params: '/:id',
-                fontware: ['!simple-auth'] // to disable authenticate
+                frontware: ['!simple-auth'] // to disable authenticate
             }
         }
     }

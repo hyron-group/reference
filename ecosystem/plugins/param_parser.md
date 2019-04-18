@@ -1,6 +1,6 @@
 ---
 description: >-
-  Param-parser is a default fontware plugins supported by Hyron. That help pass
+  Param-parser is a default frontware plugins supported by Hyron. That help pass
   params from request into handler function that automatically
 ---
 
@@ -17,7 +17,7 @@ description: >-
 
 ## Usage
 
-param-parser is a hyron **global fontware** plugins. You **do not need to declare** it. Just use it with the features it supports
+param-parser is a hyron **global frontware** plugins. You **do not need to declare** it. Just use it with the features it supports
 
 1. Auto **pass params** from request
 2. **Pass arg list** to this scope

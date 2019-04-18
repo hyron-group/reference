@@ -8,7 +8,7 @@ description: >-
 
 #### interface **PluginsMeta**
 
-* [var fontware](pluginsmeta.md#var-fontware)
+* [var frontware](pluginsmeta.md#var-frontware)
 * [var backware](pluginsmeta.md#var-backware)
 
 
@@ -21,10 +21,10 @@ Contain parts of a plugins. It helps separate the layer and handle input and out
 
 
 
-### var fontware
+### var frontware
 
 ```javascript
-fontware : Middleware
+frontware : Middleware
 ```
 
 This part will be **called before executer** for each time request has make. That could be used to handle input data such as prepare params for executer, handing connect, rate limited, decode, authenticate or something else

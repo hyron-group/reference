@@ -143,7 +143,7 @@ Here are some of the attributes you should keep in mind of [`requestConfig`](api
 | Attribute | Type | Description |
 | :--- | :--- | :--- |
 | method | string \| Array&lt;string&gt; | contains methods that can be used to register routers, including `get`, `head`, `delete`, `post`, `put`, `patch`, `all`, `private` . Default is `get` |
-| fontware | Array&lt;string\|Function&gt; | Specifies which fontware plugins will be run or not for this method |
+| frontware | Array&lt;string\|Function&gt; | Specifies which frontware plugins will be run or not for this method |
 | backware | Array&lt;string\|Function&gt; | Specifies which backware plugins will be run or not for this method |
 | plugins | Array&lt;string&gt; | Specifies which plugins will be run or not for this method. It should be used in most cases |
 | path | string | Customizing the path for this router. default is `/prefix/module-name/method-name` |
