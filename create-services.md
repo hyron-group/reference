@@ -45,18 +45,22 @@ service-name
 
 ### 2. Define controller
 
+{% hint style="info" %}
+Hyron allows turning from a **normal function to a router**. Allows you to **reuse** better, and allows **testing**, extremely friendly with beginner
+{% endhint %}
+
 This allows you to easily switch from a normal controller to a router. Example
 
 {% code-tabs %}
 {% code-tabs-item title="./controller/UserManager.js" %}
 ```javascript
-const userModel = require('../model/UserModel'); // mongoose model
+const serModel = require('../model/UserModel'); // mongoose model
 
 module.export = class UserManager {
     ...
     // create new user & save to mongo database
     async createUser(name, age, location){
-        var newUser = await new userModel({name, age, location});
+        var newUser = await new UserModel({name, age, location});
         newUser.save((err)=>{
             if(err!=null){
                 // this is a global Error object of hyron that used to break flow to return to client a message with a status code
@@ -66,7 +70,7 @@ module.export = class UserManager {
                 )
             }
         });
-
+        // return a object to response json data
         return newUser;
     }
 }
@@ -97,7 +101,7 @@ module.export = UserModel;
 
 ![sharing mechanism &apos;this&apos; variable allows communication between modules](.gitbook/assets/this-scope.png)
 
-Here are some of the default properties of `this`
+Here are some of the default properties of **`this`**, check out [HyronService](api-reference/hyronservice.md) for more info
 
 | Properties | Type | Description |
 | :--- | :--- | :--- |
@@ -108,7 +112,12 @@ Here are some of the default properties of `this`
 
 ### 3. Router definition
 
-#### Normal Services \(support for http or by 3rth addons\)
+Hyron supports 2 types of services
+
+* [**HyronService**](api-reference/hyronservice.md): used for normal HTTP connection, or supported by addons from 3rd parties
+* [**UnofficialService**](api-reference/unofficialservice.md): used for other special situations, such as sockets, high-level customization, or for another protocol
+
+#### HyronService
 
 Let Hyron know that this is a service that can be supported by the http protocol, you need to **return an interface** specifically that the [`requestConfig`](api-reference/hyronservice.md#function-requestconfig) contains descriptive information about that router. Example
 
@@ -149,7 +158,7 @@ Here are some of the attributes you should keep in mind of [`requestConfig`](api
 | params | string | customize dynamic path, which can be used as input for method. Example : `/user/:name/age/:age` |
 | handle | function | Specifying the function will be used to listen on this router. This method has a higher priority than mapping |
 
-#### Unofficial Services \(not support yet\)
+#### Unofficial Services
 
 Hyron supports a path that allows support for unofficial supported services or by addons from 3rd parties
 
