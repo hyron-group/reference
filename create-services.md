@@ -46,7 +46,7 @@ service-name
 ### 2. Define controller
 
 {% hint style="info" %}
-Hyron allows turning from a **normal function to a router**. Allows you to **reuse** better, and allows **testing**, extremely friendly with beginner
+Hyron allows turning from a **normal function to a router**. Allows you to **reuse** better, and allows **testing**, extremely **friendly** with beginner
 {% endhint %}
 
 This allows you to easily switch from a normal controller to a router. Example
@@ -99,6 +99,8 @@ module.export = UserModel;
 * **executer belongs to the logical layer**, should only contain processing logic for a business
 * **executer** can share `this` variable with [plugins](create-plugins.md)
 
+#### 'this' scope
+
 ![sharing mechanism &apos;this&apos; variable allows communication between modules](.gitbook/assets/this-scope.png)
 
 Here are some of the default properties of **`this`**, check out [HyronService](api-reference/hyronservice.md) for more info
@@ -110,12 +112,14 @@ Here are some of the default properties of **`this`**, check out [HyronService](
 | $requestConfig | string \| object | settings for this router, are declared in `requestConfig` |
 | $config | object | contains settings for this module, declared in `appcfg.yaml` file |
 
+
+
 ### 3. Router definition
 
 Hyron supports 2 types of services
 
-* [**HyronService**](api-reference/hyronservice.md): used for normal HTTP connection, or supported by addons from 3rd parties
-* [**UnofficialService**](api-reference/unofficialservice.md): used for other special situations, such as sockets, high-level customization, or for another protocol
+* [**HyronService**](api-reference/hyronservice.md) ****: used for normal HTTP connection, or supported by addons from 3rd parties
+* [**UnofficialService**](api-reference/unofficialservice.md) ****: used for other special situations, such as sockets, high-level customization, or for another protocol
 
 #### HyronService
 
@@ -144,9 +148,9 @@ module.export = class UserManager {
 Tips : If simple, you only need to declare the method directly instead of a description with an object. Example : `createUser : "post"`
 {% endhint %}
 
-The default [**param\_parser plugins**](ecosystem/plugins/param_parser.md) will help automate the process of passing variables from your request to your controller, saving you time and allowing you to package services more easily to be reused by other services.
+The default [**param\_parser plugins**](ecosystem/plugins/param_parser.md) will help **automate** the process of **passing variables from request to controller**, saving you time and allowing you to package services more easily to be reused by other services.
 
-Here are some of the attributes you should keep in mind of [`requestConfig`](api-reference/hyronservice.md#function-requestconfig)\`\`
+Here are some of the attributes you should keep in mind of [`requestConfig`](api-reference/hyronservice.md#function-requestconfig)
 
 | Attribute | Type | Description |
 | :--- | :--- | :--- |
