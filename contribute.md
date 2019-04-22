@@ -16,6 +16,8 @@ You can contribute in one of the ways below
 4. **Build other parts of Hyron ecosystem**, some great idea
 5. \*\*\*\*[**Donate**](https://liberapay.com/thangdjw/donate) **to support Hyron team** for more funding to maintain and develop
 
+For more information about the group's activities, and the members, please join our [**Trello**](https://trello.com/b/KrKTaKQ8/hyron-ecosystem)\*\*\*\*
+
 You can contact the development team through follow way to get the earliest support
 
 * **Gitter** : [https://gitter.im/hyron-group](https://gitter.im/hyron-group)
