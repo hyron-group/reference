@@ -37,8 +37,6 @@ class **ModuleManager**
 
 Used to register & management elements in project, like instance, service, plugins, addons. It is base of Hyron Framework
 
-### 
-
 ### function build
 
 Used to run the application with a json build file. It supported by AppLoader
@@ -52,8 +50,6 @@ static build(path) : void
 | name | type | description |
 | :--- | :---: | :--- |
 | path | string | referenced to [JSON build file](../json-build-file.md) from root |
-
-### 
 
 ### function getInstance
 
@@ -100,8 +96,6 @@ static getInstance (serverConfig) : ModuleManager
 | :--- | :--- |
 | [ModuleManager](modulemanager.md#class-ModuleManager) | Current instance, that could be used to do something else |
 
-
-
 ### function getInstanceContainer
 
 Used to get all app instance created. This feature usually used by addons and expanded module to handle a central problems
@@ -120,8 +114,6 @@ static getInstanceContainer() : Array<ModuleManager>
 | :--- | :--- |
 | Array&lt;[ModuleManager](modulemanager.md#class-ModuleManager)&gt; | a list of instances represent by baseUrl and instances |
 
-
-
 ### function setting
 
 Used by modules from app, to make app more scalable & easy to management. setting will be overwrite onto setting value loaded by [appcfg.yaml](https://github.com/hyron-group/reference/tree/12153991129d1d848d668cf895f35a0448237f02/appcfg-file.md). Except lock field.
@@ -139,8 +131,6 @@ setting(config) : void
 | config.timeout | number | expert timeout for router connection. default is 60s |
 | config.style | string | style of uri path. Hyron support for 4 style, include : `camel`, `snake`, `lisp`, `lower`. default is lisp |
 | config.secret | string | a private key that used to for encode a sensitive content |
-
-
 
 ### function getConfig
 
@@ -162,8 +152,6 @@ static getConfig(name, defaultValue?) : any
 | type | description |
 | :--- | :--- |
 | any | config data. described in appcfg file |
-
-
 
 ### function enableAddons
 
@@ -196,9 +184,7 @@ enableAddons ( paths ) : void
       </td>
     </tr>
   </tbody>
-</table>```javascript
-enableAddons(packs) : void
-```
+</table>\`\`\`javascript enableAddons\(packs\) : void \`\`\`
 
 <table>
   <thead>
@@ -213,7 +199,6 @@ enableAddons(packs) : void
       <td style="text-align:left">packs</td>
       <td style="text-align:left">object&lt;name,pack&gt;</td>
       <td style="text-align:left">
-        <p></p>
         <p>List of packaged a&#x111;ons</p>
         <ul>
           <li><b>name</b> (string) : name of addons</li>
@@ -223,9 +208,7 @@ enableAddons(packs) : void
       </td>
     </tr>
   </tbody>
-</table>
-
-### function enableGlobalAddons
+</table>### function enableGlobalAddons
 
 Used to register global addons that have been called on each instance when it created
 
@@ -256,9 +239,7 @@ enableGlobalAddons(paths) : void
       </td>
     </tr>
   </tbody>
-</table>```javascript
-enableGlobalAddons(packs) : void
-```
+</table>\`\`\`javascript enableGlobalAddons\(packs\) : void \`\`\`
 
 <table>
   <thead>
@@ -273,7 +254,6 @@ enableGlobalAddons(packs) : void
       <td style="text-align:left">packs</td>
       <td style="text-align:left">object&lt;name,pack&gt;</td>
       <td style="text-align:left">
-        <p></p>
         <p>List of packaged plugins</p>
         <ul>
           <li><b>name</b> (string) : name of addons</li>
@@ -283,9 +263,7 @@ enableGlobalAddons(packs) : void
       </td>
     </tr>
   </tbody>
-</table>
-
-### function enablePlugins
+</table>### function enablePlugins
 
 This method used to register plugins with name provided. After plugins declared, it can be used inside your app by name
 
@@ -318,9 +296,7 @@ enablePlugins(paths) : void
       </td>
     </tr>
   </tbody>
-</table>```javascript
-enablePlugins(packs) : void
-```
+</table>\`\`\`javascript enablePlugins\(packs\) : void \`\`\`
 
 <table>
   <thead>
@@ -344,9 +320,7 @@ enablePlugins(packs) : void
       </td>
     </tr>
   </tbody>
-</table>
-
-### function enableService
+</table>### function enableService
 
 Used to register routers for this instance. Service is a Object contain set of function that serve for a specific business purpose. To distinguish whether a package is a Hyron service or not based on the `requestConfig` method
 
@@ -377,9 +351,7 @@ enableServices(paths) : void
       </td>
     </tr>
   </tbody>
-</table>```javascript
-enableServices(packs) : void
-```
+</table>\`\`\`javascript enableServices\(packs\) : void \`\`\`
 
 <table>
   <thead>
@@ -403,9 +375,7 @@ enableServices(packs) : void
       </td>
     </tr>
   </tbody>
-</table>
-
-### function initServer
+</table>### function initServer
 
 Used to custom server of this instance, and set it default listeners. By default, it called for the first time instance created with node http server.
 
@@ -437,8 +407,6 @@ static setServer(host, port, server) : void
 | port | number | port number of specified instance |
 | server | [Server](https://nodejs.org/api/http.html#http_class_http_server) | server to handle client request and response. default is http.Server |
 
-
-
 ### function startServer
 
 Start this instance for listen client request
@@ -452,6 +420,4 @@ static startServer(callback) : void
 | name | type | description |
 | :--- | :--- | :--- |
 | callback | function | event that will be called when server started |
-
-
 
