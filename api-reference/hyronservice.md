@@ -8,9 +8,9 @@ description: Used to pack routers that can be used by hyron to register routers
 
 * _static_ [**requestConfig**](hyronservice.md#function-requestconfig) \( \) : [ServiceMeta](servicesmeta.md)
 * [**$config**](hyronservice.md) : object
-* \*\*\*\*[**$requestConfig**](hyronservice.md#var-usdrequestconfig) : [RouterMeta](routermeta.md)
+* [**$requestConfig**](hyronservice.md#var-usdrequestconfig) : [RouterMeta](routermeta.md)
 * [**$executer**](hyronservice.md#var-usdexecuter) : Function
-* \*\*\*\*[**$eventName**](hyronservice.md#var-usdeventname) : string
+* [**$eventName**](hyronservice.md#var-usdeventname) : string
 
 ## Details
 
