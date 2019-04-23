@@ -14,6 +14,7 @@ description: >-
 * Easy to use
 * Support external reference
 * Automatically install missing packages
+* Can automate pairing
 
 ## Usage
 

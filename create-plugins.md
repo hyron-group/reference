@@ -10,9 +10,11 @@ description: >-
 
 ## Why ?
 
-1. **Easy to Use**
-   **Easy to Use**
-2. Easy to **Manage**
+1. Easy to **Manage**
+2. **Easy to Use**
+3. Easy to **Reuse**
+4. Easy to **Upgrade** and **Maintain**
+5. **Focus** **more** on processing **Logic**
 
 ## Usage
 

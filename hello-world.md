@@ -1,4 +1,14 @@
+---
+description: >-
+  This article discusses the basic steps to building a simple hello-world
+  project with a hyron
+---
+
 # Hello world
+
+{% hint style="info" %}
+you can clone & run this example on github : [https://github.com/thangdjw/hyron-helloworld](https://github.com/thangdjw/hyron-helloworld)
+{% endhint %}
 
 ## Step 1 : Install Hyron CLI
 
