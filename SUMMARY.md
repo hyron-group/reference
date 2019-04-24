@@ -33,6 +33,7 @@
     * [custom\_response](ecosystem/plugins/custom_response.md)
     * [@hyron/stringer](ecosystem/plugins/hyron-stringer.md)
     * [@hyron/validator](ecosystem/plugins/hyron-validator.md)
-  * [Addons](ecosystem/addons.md)
+  * [Addons](ecosystem/addons/README.md)
+    * [@hyron/static-dir](ecosystem/addons/hyron-static-dir.md)
   * [Services](ecosystem/services.md)
 
